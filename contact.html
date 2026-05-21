@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -18,10 +18,10 @@
 <div class="grain"></div>
 <div class="scroll-progress"></div>
 
-<div class="hidden md:block border-b border-white/[.05] text-[.66rem] mono tracking-[.22em] uppercase">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
-    <div class="flex items-center gap-8">
-      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)">Open 24/7</span></span>
+<div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+    <div class="flex items-center gap-7">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
       <span>520 Hicksville Rd · Massapequa, NY</span>
     </div>
     <div class="flex items-center gap-6">
@@ -32,12 +32,14 @@
     </div>
   </div>
 </div>
+  </div>
+</div>
 
-<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0a07]/85 border-b border-white/[.05]">
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0a0a1f]/85 border-b border-white/[.08]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
-      <div class="display text-[1.6rem]" style="color:var(--amber);text-shadow:0 0 18px rgba(251,191,36,.45)">GLOBAL</div>
-      <span class="mono text-[.65rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co.</span>
+      <div class="neon-script text-[1.8rem] neon-amber leading-none">Global</div>
+      <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co. ★ 1998</span>
     </a>
     <div class="hidden md:flex items-center gap-9">
       <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
@@ -47,11 +49,11 @@
       <a href="contact.html" class="nav-link active" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.68rem]">(516) 882-4437</a>
-      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.66rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
   </div>
-  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.05] px-6 py-5 flex flex-col gap-4">
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.08] px-6 py-5 flex flex-col gap-4">
     <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
     <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
     <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
