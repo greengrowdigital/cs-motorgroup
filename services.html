@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services · Global Gas Station · Massapequa NY</title>
+<meta name="description" content="Fuel grades, car wash, convenience store, fresh coffee, ATM, lottery, free air pump, propane and basic auto extras at Global Gas in Massapequa." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-logo">GLOBAL</div><div class="loader-bar"></div></div>
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.05] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)">Open 24/7</span></span>
+      <span>520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+15168824437" class="hover:text-[var(--amber)]">(516) 882-4437</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0a07]/85 border-b border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="display text-[1.6rem]" style="color:var(--amber);text-shadow:0 0 18px rgba(251,191,36,.45)">GLOBAL</div>
+      <span class="mono text-[.65rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co.</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link active" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.68rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.05] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link active" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+    <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 spotlight-orange"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Services · The full menu" data-es="Servicios · Menú completo">Services · The full menu</div>
+      <h1 class="display-serif text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en-html="Pump. Wash. Stock up.<br/><span style='color:var(--orange)'>Roll on.</span>"
+          data-es-html="Llena. Lava. Surte.<br/><span style='color:var(--orange)'>Sigue.</span>">
+        Pump. Wash. Stock up.<br/><span style="color:var(--orange)">Roll on.</span>
+      </h1>
+    </div>
+    <div class="mt-12 grid md:grid-cols-3 lg:grid-cols-6 gap-3 reveal">
+      <a href="#fuel" class="pylon text-center">01 · Fuel</a>
+      <a href="#wash" class="pylon text-center">02 · Wash</a>
+      <a href="#store" class="pylon text-center">03 · Store</a>
+      <a href="#coffee" class="pylon text-center">04 · Coffee</a>
+      <a href="#atm" class="pylon text-center">05 · ATM</a>
+      <a href="#extras" class="pylon text-center">06 · Extras</a>
+    </div>
+  </div>
+</section>
+
+<!-- FUEL -->
+<section id="fuel" class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">01 / Fuel</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Four grades. One quality."
+          data-es="Cuatro grados. Una calidad.">
+        Four grades. <span style="color:var(--orange)">One quality.</span>
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Every grade includes engine-cleaning additives that meet Top Tier standards. Pumps open 24 hours a day. Cash, debit, credit, Apple Pay. Cash discount available."
+         data-es="Cada grado incluye aditivos de limpieza que cumplen con Top Tier. Bombas 24 horas. Efectivo, débito, crédito, Apple Pay. Descuento por efectivo disponible.">
+        Every grade includes engine-cleaning additives that meet Top Tier standards. Pumps open 24 hours a day. Cash, debit, credit, Apple Pay. Cash discount available.
+      </p>
+    </div>
+    <div class="md:col-span-7 grid grid-cols-2 gap-4 reveal-stagger">
+      <div class="card p-5">
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Regular Unleaded" data-es="Regular sin Plomo">Regular Unleaded</div>
+        <div class="display text-3xl mt-2" style="color:var(--amber)">87</div>
+        <div class="pump-display mt-4" data-ticker-val="regular">$3.49</div>
+        <div class="text-white/55 text-xs mt-3" data-en="Daily driver fuel. Best price/value." data-es="Para uso diario. Mejor relación precio/calidad.">Daily driver fuel. Best price/value.</div>
+      </div>
+      <div class="card p-5">
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40">Plus</div>
+        <div class="display text-3xl mt-2" style="color:var(--amber)">89</div>
+        <div class="pump-display mt-4" data-ticker-val="plus">$3.79</div>
+        <div class="text-white/55 text-xs mt-3" data-en="Mid-grade for older engines and trucks." data-es="Grado medio para motores antiguos y camionetas.">Mid-grade for older engines and trucks.</div>
+      </div>
+      <div class="card p-5">
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40">Premium</div>
+        <div class="display text-3xl mt-2" style="color:var(--amber)">93</div>
+        <div class="pump-display mt-4" data-ticker-val="premium">$3.99</div>
+        <div class="text-white/55 text-xs mt-3" data-en="High-octane for performance and luxury vehicles." data-es="Alto octanaje para autos performance y de lujo.">High-octane for performance and luxury vehicles.</div>
+      </div>
+      <div class="card p-5">
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40">Diesel</div>
+        <div class="display text-3xl mt-2" style="color:var(--amber)">B5</div>
+        <div class="pump-display mt-4" data-ticker-val="diesel">$3.85</div>
+        <div class="text-white/55 text-xs mt-3" data-en="Ultra-low sulfur diesel with biodiesel blend." data-es="Diesel ultra bajo en azufre con mezcla biodiesel.">Ultra-low sulfur diesel with biodiesel blend.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WASH (preview) -->
+<section id="wash" class="py-20 md:py-28 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-7 md:order-1 order-2 reveal">
+      <img src="https://images.unsplash.com/photo-1605651531144-51381895e23d?auto=format&fit=crop&w=1400&q=85" alt="Car wash tunnel" class="w-full aspect-[4/3] object-cover" />
+    </div>
+    <div class="md:col-span-5 md:order-2 order-1 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">02 / Car Wash</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Six minutes. Showroom shine."
+          data-es="Seis minutos. Brillo de showroom.">
+        Six minutes. <span style="color:var(--orange)">Showroom shine.</span>
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Soft-touch foam tunnel. Undercarriage rinse. Ceramic-infused topcoat. Free vacuum at every visit."
+         data-es="Túnel de espuma suave. Lavado de bajos. Top coat con cerámico. Aspiradora gratis en cada visita.">
+        Soft-touch foam tunnel. Undercarriage rinse. Ceramic-infused topcoat. Free vacuum at every visit.
+      </p>
+      <a href="carwash.html" class="btn btn-line mt-8 inline-flex" data-en="See wash packages" data-es="Ver paquetes">See wash packages</a>
+    </div>
+  </div>
+</section>
+
+<!-- STORE -->
+<section id="store" class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">03 / Convenience Store</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="The basics, done right."
+          data-es="Lo básico, bien hecho.">
+        The basics, <span style="color:var(--orange)">done right.</span>
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Cold drinks pulled from the rear of the cooler. Snacks rotated weekly. Hot food kept hot, not warm. The stuff you actually want at 2 AM."
+         data-es="Bebidas frías sacadas del fondo del refrigerador. Snacks rotados cada semana. Comida caliente, no tibia. Lo que de verdad quieres a las 2 AM.">
+        Cold drinks pulled from the rear of the cooler. Snacks rotated weekly. Hot food kept hot, not warm. The stuff you actually want at 2 AM.
+      </p>
+      <a href="store.html" class="btn btn-line mt-8 inline-flex" data-en="Inside the store" data-es="Dentro de la tienda">Inside the store</a>
+    </div>
+    <div class="md:col-span-7 grid grid-cols-3 gap-3 reveal-stagger">
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🥤</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Cold drinks" data-es="Bebidas frías">Cold drinks</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🍫</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Snacks" data-es="Snacks">Snacks</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🌭</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Hot food" data-es="Comida caliente">Hot food</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🚬</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Tobacco" data-es="Cigarros">Tobacco</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">💨</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40">Vape</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🎟️</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40">Lottery</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🧴</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Auto fluids" data-es="Fluidos auto">Auto fluids</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🔋</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Batteries" data-es="Pilas">Batteries</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl mb-2">🍦</div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Ice cream" data-es="Helado">Ice cream</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE -->
+<section id="coffee" class="py-20 md:py-28 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-7 reveal">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1400&q=85" alt="Fresh coffee" class="w-full aspect-[4/3] object-cover" />
+    </div>
+    <div class="md:col-span-5 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">04 / Coffee</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 leading-[.95]"
+          data-en="Brewed every 30 minutes."
+          data-es="Recién hecho cada 30 minutos.">
+        Brewed every <span style="color:var(--orange)">30 minutes.</span>
+      </h2>
+      <p class="mt-5 text-white/70 leading-relaxed"
+         data-en="Drip coffee that doesn't taste like a gas station. House blend, dark roast, decaf and a rotating single-origin. Espresso machine in back if you ask."
+         data-es="Café de filtro que no sabe a gasolinera. Mezcla de la casa, tostado oscuro, descafeinado y rotación de origen único. Espresso atrás si lo pides.">
+        Drip coffee that doesn't taste like a gas station. House blend, dark roast, decaf and a rotating single-origin. Espresso machine in back if you ask.
+      </p>
+      <div class="mt-8 grid grid-cols-3 gap-3">
+        <div class="card p-4">
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Small" data-es="Chico">Small</div>
+          <div class="display text-2xl mt-1" style="color:var(--amber)">$1.79</div>
+        </div>
+        <div class="card p-4">
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Medium" data-es="Mediano">Medium</div>
+          <div class="display text-2xl mt-1" style="color:var(--amber)">$2.29</div>
+        </div>
+        <div class="card p-4">
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40" data-en="Large" data-es="Grande">Large</div>
+          <div class="display text-2xl mt-1" style="color:var(--amber)">$2.79</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATM / LOTTERY / AIR -->
+<section id="atm" class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">05 / Cash & Air</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5"
+          data-en="Quick stops. No surprises."
+          data-es="Paradas rápidas. Sin sorpresas.">
+        Quick stops. <span style="color:var(--orange)">No surprises.</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num" data-en="24-hour · $3 fee" data-es="24 horas · $3 cargo">24-hour · $3 fee</div>
+        <h3 class="display text-2xl mt-3 mb-3">ATM</h3>
+        <p class="text-white/65 text-sm" data-en="Inside the store, near the counter. Cash in 20s and 5s. Receipts on request." data-es="Adentro, junto a la caja. Efectivo en billetes de 20 y 5. Recibos a pedido.">Inside the store, near the counter. Cash in 20s and 5s. Receipts on request.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="NY State agent" data-es="Agente NY State">NY State agent</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Lottery & Scratch" data-es="Lotería y Raspar">Lottery & Scratch</h3>
+        <p class="text-white/65 text-sm" data-en="Powerball, Mega Millions, Pick 10, NY Lotto and a full scratch-off rack." data-es="Powerball, Mega Millions, Pick 10, NY Lotto y un rack completo de raspar.">Powerball, Mega Millions, Pick 10, NY Lotto and a full scratch-off rack.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="Free with fill-up" data-es="Gratis con tanqueada">Free with fill-up</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Air & Vacuum" data-es="Aire y Aspiradora">Air & Vacuum</h3>
+        <p class="text-white/65 text-sm" data-en="Digital tire inflator out back. Heavy-duty vacuum next to the wash bay." data-es="Inflador digital en la parte de atrás. Aspiradora industrial junto al lavado.">Digital tire inflator out back. Heavy-duty vacuum next to the wash bay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section id="extras" class="py-20 md:py-28 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">06 / Extras</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5"
+          data-en="The little things. Without leaving the lot."
+          data-es="Los pequeños detalles. Sin salir del lugar.">
+        The little things. <span style="color:var(--orange)">Without leaving the lot.</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-5 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num" data-en="From $39" data-es="Desde $39">From $39</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Oil Top-Up" data-es="Subida de Aceite">Oil Top-Up</h3>
+        <p class="text-white/65 text-sm" data-en="Quick top-up of synthetic or conventional. While you fill the tank." data-es="Subida rápida de sintético o convencional. Mientras llenas el tanque.">Quick top-up of synthetic or conventional. While you fill the tank.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="From $24" data-es="Desde $24">From $24</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Wiper Blades" data-es="Limpiaparabrisas">Wiper Blades</h3>
+        <p class="text-white/65 text-sm" data-en="Most makes in stock. Installed in 5 minutes. No appointment needed." data-es="La mayoría de modelos en stock. Instalados en 5 minutos. Sin cita.">Most makes in stock. Installed in 5 minutes. No appointment needed.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="From $12" data-es="Desde $12">From $12</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Bulb Swap" data-es="Cambio de Foco">Bulb Swap</h3>
+        <p class="text-white/65 text-sm" data-en="Headlight, taillight, brake. We carry the common bulbs." data-es="Foco delantero, trasero o de freno. Tenemos los más comunes.">Headlight, taillight, brake. We carry the common bulbs.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num" data-en="20lb exchange" data-es="Cambio 20lb">20lb exchange</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Propane Tanks" data-es="Tanques de Propano">Propane Tanks</h3>
+        <p class="text-white/65 text-sm" data-en="Standard 20-lb propane exchange. Refills also available on request." data-es="Cambio estándar de tanque de 20 lb. Recarga disponible a pedido.">Standard 20-lb propane exchange. Refills also available on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.05]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="On your way somewhere?" data-es="¿Vas de paso?">On your way somewhere?</div>
+    <h2 class="display-serif text-4xl md:text-6xl mt-4"
+        data-en-html="The corner is open.<br/><span class='neon-text'>You know the address.</span>"
+        data-es-html="La esquina está abierta.<br/><span class='neon-text'>Ya sabes la dirección.</span>">
+      The corner is open.<br/><span class="neon-text">You know the address.</span>
+    </h2>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-neon" data-en="Get Directions" data-es="Cómo llegar">Get Directions</a>
+      <a href="tel:+15168824437" class="btn btn-line">(516) 882-4437</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.05] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl" style="color:var(--amber)">GLOBAL</span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+      <a href="carwash.html" class="hover:text-[var(--amber)]" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="store.html" class="hover:text-[var(--amber)]" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+15168824437" class="btn-neon" style="background:var(--amber);color:#0c0a07">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

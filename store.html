@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inside the Store · Global Gas · Massapequa</title>
+<meta name="description" content="The convenience store at Global Gas — cold drinks, snacks, hot food, coffee, lottery, ATM, basics. Open 24/7." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-logo">GLOBAL</div><div class="loader-bar"></div></div>
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.05] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)">Open 24/7</span></span>
+      <span>520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+15168824437" class="hover:text-[var(--amber)]">(516) 882-4437</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0a07]/85 border-b border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="display text-[1.6rem]" style="color:var(--amber);text-shadow:0 0 18px rgba(251,191,36,.45)">GLOBAL</div>
+      <span class="mono text-[.65rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co.</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="store.html" class="nav-link active" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.68rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.05] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+    <a href="store.html" class="nav-link active" data-en="Store" data-es="Tienda">Store</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-16 md:pb-24 overflow-hidden">
+  <div class="absolute inset-0 spotlight-orange"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Inside · The store" data-es="Adentro · La tienda">Inside · The store</div>
+      <h1 class="display-serif text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en-html="Snack run.<br/><span style='color:var(--orange)'>Done in 90 seconds.</span>"
+          data-es-html="Por algo de comer.<br/><span style='color:var(--orange)'>Listos en 90 segundos.</span>">
+        Snack run.<br/><span style="color:var(--orange)">Done in 90 seconds.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-white/70"
+         data-en="Cold drinks, hot food, coffee that's actually fresh, an ATM that works, and the lottery rack open 24/7. The Massapequa staple."
+         data-es="Bebidas frías, comida caliente, café fresco, un cajero que sirve y el rack de lotería abierto 24/7. El básico de Massapequa.">
+        Cold drinks, hot food, coffee that's actually fresh, an ATM that works, and the lottery rack open 24/7. The Massapequa staple.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- AISLE GRID -->
+<section class="py-12 md:py-20">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-10">
+      <div class="eyebrow" data-en="The aisles" data-es="Los pasillos">The aisles</div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 reveal-stagger">
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=85" alt="Cold drinks cooler" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Cold drinks</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1564518087877-7a6e29deea8b?auto=format&fit=crop&w=900&q=85" alt="Snacks" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Snacks aisle</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=85" alt="Coffee" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Coffee bar</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=900&q=85" alt="Hot food" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Hot food</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1606293459339-aa7a3ff6c75e?auto=format&fit=crop&w=900&q=85" alt="Ice cream" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Frozen treats</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1602935038876-7d18e0ddd60a?auto=format&fit=crop&w=900&q=85" alt="Beer" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Beer & wine</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1620085236867-2f54b8458bf8?auto=format&fit=crop&w=900&q=85" alt="Auto supplies" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Auto supplies</span></div>
+      </div>
+      <div class="gal-item aspect-square">
+        <img src="https://images.unsplash.com/photo-1622597464056-3a7e0a5f9c4a?auto=format&fit=crop&w=900&q=85" alt="Lottery" />
+        <div class="overlay"><span class="mono text-[.6rem] tracking-[.22em] uppercase text-white">Lottery counter</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR ITEMS -->
+<section class="py-20 md:py-28 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12 grid md:grid-cols-12 gap-10 items-end">
+      <div class="md:col-span-7">
+        <div class="eyebrow" data-en="Massapequa picks" data-es="Lo que pide Massapequa">Massapequa picks</div>
+        <h2 class="display-serif text-4xl md:text-6xl mt-4" data-en="What the regulars grab." data-es="Lo que se llevan los regulares.">What the regulars <span style="color:var(--orange)">grab.</span></h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="text-4xl mb-4">☕</div>
+        <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Morning rush" data-es="Hora pico AM">Morning rush</div>
+        <h3 class="display text-2xl mt-2 mb-3" data-en="Large coffee + bagel" data-es="Café grande + bagel">Large coffee + bagel</h3>
+        <div class="pump-display inline-block">$4.99</div>
+        <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Fresh brew, toasted everything bagel with cream cheese. Add bacon for $1.50." data-es="Café recién hecho, bagel everything tostado con queso crema. Agrega tocino por $1.50.">Fresh brew, toasted everything bagel with cream cheese. Add bacon for $1.50.</p>
+      </div>
+      <div class="card p-7">
+        <div class="text-4xl mb-4">🌭</div>
+        <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Late shift" data-es="Turno nocturno">Late shift</div>
+        <h3 class="display text-2xl mt-2 mb-3" data-en="2 hot dogs + drink" data-es="2 hot dogs + refresco">2 hot dogs + drink</h3>
+        <div class="pump-display inline-block">$6.49</div>
+        <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="Roller-grill hot dogs, every condiment in the bar. Includes any fountain soda." data-es="Hot dogs del roller-grill, todos los aderezos. Incluye cualquier refresco de fuente.">Roller-grill hot dogs, every condiment in the bar. Includes any fountain soda.</p>
+      </div>
+      <div class="card p-7">
+        <div class="text-4xl mb-4">🎟️</div>
+        <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40" data-en="Friday tradition" data-es="Tradición de viernes">Friday tradition</div>
+        <h3 class="display text-2xl mt-2 mb-3" data-en="Scratch pack + Powerball" data-es="Pack de raspar + Powerball">Scratch pack + Powerball</h3>
+        <div class="pump-display inline-block">$15.00</div>
+        <p class="text-white/60 text-sm mt-3 leading-relaxed" data-en="$10 in scratch-offs and a Powerball quick-pick. Hope sold here." data-es="$10 en raspar y un Powerball quick-pick. Aquí se vende la esperanza.">$10 in scratch-offs and a Powerball quick-pick. Hope sold here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="py-20 md:py-32 border-t border-white/[.05]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Hours" data-es="Horarios">Hours</div>
+    <h2 class="display-serif text-4xl md:text-6xl mt-4" data-en="We don't close." data-es="No cerramos.">We don't <span style="color:var(--orange)">close.</span></h2>
+    <p class="mt-5 text-white/70" data-en="Pumps, store, ATM, coffee — all available 24 hours a day, seven days a week, every day of the year. Including holidays." data-es="Bombas, tienda, cajero, café — todo disponible 24 horas al día, los siete días de la semana. Incluyendo días festivos.">Pumps, store, ATM, coffee — all available 24 hours a day, seven days a week, every day of the year. Including holidays.</p>
+    <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-neon mt-8" data-en="Stop in" data-es="Pásate">Stop in</a>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.05] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl" style="color:var(--amber)">GLOBAL</span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-[var(--amber)]" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="hover:text-[var(--amber)]" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+15168824437" class="btn-neon" style="background:var(--amber);color:#0c0a07">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

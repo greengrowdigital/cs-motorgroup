@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Gas · Massapequa · Fuel · Wash · Snacks · 24/7</title>
+<meta name="description" content="Global Gas Station on 520 Hicksville Rd, Massapequa NY. Fuel, car wash, convenience store, coffee, ATM and air. Always open. (516) 882-4437." />
+<meta name="keywords" content="gas station Massapequa, gas station Hicksville Rd, 24/7 fuel Long Island, car wash Massapequa, Global gas">
+<link rel="canonical" href="https://globalgas.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Global Gas Station · 520 Hicksville Rd, Massapequa">
+<meta property="og:description" content="Fuel · Wash · Snacks · Coffee · ATM · Open 24/7">
+<meta property="og:image" content="https://images.unsplash.com/photo-1545459720-aac8509eb02c?w=1200">
+
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<link rel="apple-touch-icon" href="public/brand/favicon.svg" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"GasStation",
+  "name":"Global Gas Station",
+  "url":"https://globalgas.com/",
+  "telephone":"+1-516-882-4437",
+  "address":{"@type":"PostalAddress","streetAddress":"520 Hicksville Rd","addressLocality":"Massapequa","addressRegion":"NY","postalCode":"11758","addressCountry":"US"},
+  "geo":{"@type":"GeoCoordinates","latitude":"40.6782","longitude":"-73.4740"},
+  "openingHours":"Mo-Su 00:00-23:59",
+  "amenityFeature":[
+    {"@type":"LocationFeatureSpecification","name":"Car wash"},
+    {"@type":"LocationFeatureSpecification","name":"Convenience store"},
+    {"@type":"LocationFeatureSpecification","name":"ATM"},
+    {"@type":"LocationFeatureSpecification","name":"Air pump"}
+  ]
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader">
+  <div class="loader-logo">GLOBAL</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<!-- Top utility -->
+<div class="hidden md:block border-b border-white/[.05] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+      <span data-en="520 Hicksville Rd · Massapequa, NY" data-es="520 Hicksville Rd · Massapequa, NY">520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+15168824437" class="hover:text-[var(--amber)] transition-colors">(516) 882-4437</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button>
+        <span class="text-white/20">/</span>
+        <button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0a07]/85 border-b border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="display text-[1.6rem] flex items-center gap-2">
+        <span style="color:var(--amber);text-shadow:0 0 18px rgba(251,191,36,.45)">GLOBAL</span>
+        <span class="mono text-[.65rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co.</span>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.68rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.05] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+    <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    <div class="flex items-center gap-3 pt-3 border-t border-white/[.06]">
+      <span class="mono text-[.6rem] tracking-[.2em] uppercase text-white/40">Lang</span>
+      <div class="lang-toggle flex items-center gap-2 text-[.7rem] mono tracking-[.18em] uppercase">
+        <button data-lang="en">EN</button><span class="text-white/20">/</span><button data-lang="es">ES</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[88vh] md:min-h-[100vh] flex items-end overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1545459720-aac8509eb02c?auto=format&fit=crop&w=2000&q=85" class="absolute inset-0 w-full h-full object-cover hero-img" alt="Global gas station at dusk" />
+  <div class="absolute inset-0 hero-fade"></div>
+  <div class="spotlight-orange"></div>
+  <div class="sun-burst" style="right:-200px;top:5%;"></div>
+
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8 pb-16 md:pb-24 w-full">
+    <div class="reveal-stagger">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="pylon" data-en="Always Open · 24/7" data-es="Siempre Abierto · 24/7">Always Open · 24/7</span>
+        <span class="eyebrow hidden md:inline-block">Massapequa · NY 11758</span>
+      </div>
+      <h1 class="display hero-title max-w-[16ch]"
+          data-en-html="Fill up. Wash up.<br/><span class='neon-text'>Hit the road.</span>"
+          data-es-html="Llena el tanque. Lava el auto.<br/><span class='neon-text'>Sigue tu camino.</span>">
+        Fill up. Wash up.<br/><span class="neon-text">Hit the road.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-white/75 text-base md:text-lg leading-relaxed"
+         data-en="Gasoline, diesel, car wash, snacks, coffee and a 24-hour ATM — right on Hicksville Road. We're the corner that's always on."
+         data-es="Gasolina, diesel, lavado, snacks, café y cajero 24h — justo en Hicksville Road. La esquina que nunca cierra.">
+        Gasoline, diesel, car wash, snacks, coffee and a 24-hour ATM — right on Hicksville Road. We're the corner that's always on.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3">
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-neon">
+          <span data-en="Get Directions" data-es="Cómo llegar">Get Directions</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="carwash.html" class="btn btn-line" data-en="Car wash menu" data-es="Menú de lavado">Car wash menu</a>
+      </div>
+
+      <!-- Pump pricing -->
+      <div class="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl">
+        <div class="ticker">
+          <div>
+            <div class="label" data-en="Regular 87" data-es="Regular 87">Regular 87</div>
+            <div class="val" data-ticker-val="regular">$3.49</div>
+          </div>
+        </div>
+        <div class="ticker">
+          <div>
+            <div class="label">Plus 89</div>
+            <div class="val" data-ticker-val="plus">$3.79</div>
+          </div>
+        </div>
+        <div class="ticker">
+          <div>
+            <div class="label" data-en="Premium 93" data-es="Premium 93">Premium 93</div>
+            <div class="val" data-ticker-val="premium">$3.99</div>
+          </div>
+        </div>
+        <div class="ticker">
+          <div>
+            <div class="label">Diesel</div>
+            <div class="val" data-ticker-val="diesel">$3.85</div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-2 mono text-[.6rem] tracking-[.22em] uppercase text-white/30" data-en="Live · Updated continuously · per gallon" data-es="En vivo · Actualizado · por galón">Live · Updated continuously · per gallon</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="border-y border-white/[.05] py-6 overflow-hidden bg-[#13110c]">
+  <div class="marquee gap-10 mono text-[.78rem] tracking-[.24em] uppercase whitespace-nowrap" style="color:var(--amber)">
+    <span>Gasoline · 24/7</span><span class="text-orange-500">★</span>
+    <span>Diesel</span><span class="text-orange-500">★</span>
+    <span>Car Wash</span><span class="text-orange-500">★</span>
+    <span>Coffee</span><span class="text-orange-500">★</span>
+    <span>Snacks</span><span class="text-orange-500">★</span>
+    <span>ATM</span><span class="text-orange-500">★</span>
+    <span>Lottery</span><span class="text-orange-500">★</span>
+    <span>Free Air</span><span class="text-orange-500">★</span>
+    <span>Oil Change</span><span class="text-orange-500">★</span>
+    <span>Wipers · Bulbs</span><span class="text-orange-500">★</span>
+    <span>Propane Exchange</span><span class="text-orange-500">★</span>
+    <!-- repeat -->
+    <span>Gasoline · 24/7</span><span class="text-orange-500">★</span>
+    <span>Diesel</span><span class="text-orange-500">★</span>
+    <span>Car Wash</span><span class="text-orange-500">★</span>
+    <span>Coffee</span><span class="text-orange-500">★</span>
+    <span>Snacks</span><span class="text-orange-500">★</span>
+    <span>ATM</span><span class="text-orange-500">★</span>
+    <span>Lottery</span><span class="text-orange-500">★</span>
+    <span>Free Air</span><span class="text-orange-500">★</span>
+    <span>Oil Change</span><span class="text-orange-500">★</span>
+    <span>Wipers · Bulbs</span><span class="text-orange-500">★</span>
+    <span>Propane Exchange</span><span class="text-orange-500">★</span>
+  </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="py-20 md:py-32">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-end mb-14 reveal">
+      <div class="md:col-span-7">
+        <div class="eyebrow" data-en="What you'll find · 01" data-es="Lo que encontrarás · 01">What you'll find · 01</div>
+        <h2 class="display-serif text-4xl md:text-7xl mt-4 leading-[.95]"
+            data-en="A real stop. Not just pumps."
+            data-es="Una parada real. No solo bombas.">
+          A real stop. <span style="color:var(--orange)">Not just pumps.</span>
+        </h2>
+      </div>
+      <p class="md:col-span-5 text-white/70 leading-relaxed"
+         data-en="Coffee that's been brewed in the last 30 minutes. A car wash that actually cleans your wheels. A bathroom you'd let your kid use. That's the bar — and we hit it every shift."
+         data-es="Café recién hecho en los últimos 30 minutos. Un lavado que de verdad limpia las llantas. Un baño que dejarías que use tu hijo. Esa es la vara — y la cumplimos en cada turno.">
+        Coffee that's been brewed in the last 30 minutes. A car wash that actually cleans your wheels. A bathroom you'd let your kid use. That's the bar — and we hit it every shift.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 reveal-stagger">
+      <a href="services.html#fuel" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">01 / Fuel</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="Regular · Plus · Premium · Diesel" data-es="Regular · Plus · Premium · Diesel">Regular · Plus · Premium · Diesel</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="Top-tier additives in every grade. Pumps open 24 hours. Cash and card."
+           data-es="Aditivos premium en todos los grados. Bombas 24 horas. Efectivo y tarjeta.">
+          Top-tier additives in every grade. Pumps open 24 hours. Cash and card.
+        </p>
+      </a>
+
+      <a href="carwash.html" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">02 / Wash</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="Touchless Car Wash" data-es="Lavado sin Contacto">Touchless Car Wash</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="Soft-touch foam, undercarriage rinse, ceramic-infused sealant. Six minutes, three packages."
+           data-es="Espuma suave, lavado de bajos, sellante con cerámico. Seis minutos, tres paquetes.">
+          Soft-touch foam, undercarriage rinse, ceramic-infused sealant. Six minutes, three packages.
+        </p>
+      </a>
+
+      <a href="store.html" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">03 / Store</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="Convenience Store" data-es="Mini-tienda">Convenience Store</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="Cold drinks, snacks, hot food, energy bars, vape, basics. Stocked all day, every day."
+           data-es="Bebidas frías, snacks, comida caliente, energéticos, vape, lo básico. Surtido todo el día.">
+          Cold drinks, snacks, hot food, energy bars, vape, basics. Stocked all day, every day.
+        </p>
+      </a>
+
+      <a href="services.html#coffee" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">04 / Brew</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="Fresh Coffee" data-es="Café Recién Hecho">Fresh Coffee</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="House blend, dark roast, decaf and a single-origin rotation. Hot all night."
+           data-es="Mezcla de la casa, tostado oscuro, descafeinado y rotación de origen único. Caliente toda la noche.">
+          House blend, dark roast, decaf and a single-origin rotation. Hot all night.
+        </p>
+      </a>
+
+      <a href="services.html#atm" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">05 / Cash</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="ATM · Lottery · Air" data-es="Cajero · Lotería · Aire">ATM · Lottery · Air</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="24-hour ATM at the counter. NY State Lottery agent. Free air pump out back."
+           data-es="Cajero 24 horas en la caja. Agente de Lotería de NY. Aire gratis en el costado.">
+          24-hour ATM at the counter. NY State Lottery agent. Free air pump out back.
+        </p>
+      </a>
+
+      <a href="services.html#extras" class="svc-card p-7 md:p-9 group">
+        <div class="flex items-start justify-between mb-8">
+          <span class="num">06 / Extras</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </div>
+        <h3 class="display text-2xl md:text-3xl mb-3" data-en="Wipers · Oil · Propane" data-es="Limpiadores · Aceite · Propano">Wipers · Oil · Propane</h3>
+        <p class="text-white/55 text-sm leading-relaxed"
+           data-en="Need a new bulb? An oil top-up? A propane swap? Pull up, we'll handle it."
+           data-es="¿Una bombilla? ¿Aceite? ¿Cambio de tanque de propano? Llégate, lo resolvemos.">
+          Need a new bulb? An oil top-up? A propane swap? Pull up, we'll handle it.
+        </p>
+      </a>
+    </div>
+
+    <div class="mt-12 flex justify-center reveal">
+      <a href="services.html" class="btn btn-line">
+        <span data-en="See full menu" data-es="Ver menú completo">See full menu</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- THE STATION SECTION (sunset photo + story) -->
+<section class="py-20 md:py-32 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
+    <div class="md:col-span-6 reveal">
+      <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1400&q=85" alt="Gas pumps at dusk" class="w-full aspect-[4/3] object-cover" />
+    </div>
+    <div class="md:col-span-6 reveal">
+      <div class="eyebrow" data-en="The corner that's always on" data-es="La esquina que nunca cierra">The corner that's always on</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4 leading-[.95]"
+          data-en="On Hicksville Road since 1998."
+          data-es="En Hicksville Road desde 1998.">
+        On Hicksville Road since <span style="color:var(--orange)">1998.</span>
+      </h2>
+      <p class="mt-6 text-white/70 leading-relaxed"
+         data-en="Global Gas has been the late-night light on the corner of Hicksville Rd for over two decades. We've fueled commuters, taxi drivers, paramedics on shift, parents on the way to baseball games and everyone in between."
+         data-es="Global Gas ha sido la luz que se queda prendida toda la noche en la esquina de Hicksville Rd por más de dos décadas. Hemos llenado autos de gente que va al trabajo, taxis, paramédicos, papás camino al partido de beisbol y todo lo que está en medio.">
+        Global Gas has been the late-night light on the corner of Hicksville Rd for over two decades. We've fueled commuters, taxi drivers, paramedics on shift, parents on the way to baseball games and everyone in between.
+      </p>
+      <p class="mt-4 text-white/70 leading-relaxed"
+         data-en="The fuel is competitive. The wash is clean. The coffee is fresh. The bathroom is open. That's the whole sales pitch."
+         data-es="El combustible es competitivo. El lavado es limpio. El café está fresco. El baño está abierto. Ese es el pitch completo.">
+        The fuel is competitive. The wash is clean. The coffee is fresh. The bathroom is open. That's the whole sales pitch.
+      </p>
+      <div class="mt-10 grid grid-cols-3 gap-6">
+        <div>
+          <div class="display text-3xl md:text-4xl" style="color:var(--amber)">27<span class="text-white/40 text-2xl">y</span></div>
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="On the corner" data-es="En la esquina">On the corner</div>
+        </div>
+        <div>
+          <div class="display text-3xl md:text-4xl" style="color:var(--amber)">24/7</div>
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Always open" data-es="Siempre abierto">Always open</div>
+        </div>
+        <div>
+          <div class="display text-3xl md:text-4xl" style="color:var(--amber)">4<span class="text-white/40 text-2xl">★</span></div>
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Google rating" data-es="Rating Google">Google rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOYALTY / REWARDS -->
+<section class="py-20 md:py-32 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="Rewards · 02" data-es="Recompensas · 02">Rewards · 02</div>
+      <h2 class="display-serif text-4xl md:text-7xl mt-4"
+          data-en="Fill more. Save more."
+          data-es="Llena más. Ahorra más.">
+        Fill more. <span style="color:var(--orange)">Save more.</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="pump-display inline-block mb-5 text-2xl">$0.05</div>
+        <h3 class="display text-2xl mb-3" data-en="Every Gallon" data-es="Cada Galón">Every Gallon</h3>
+        <p class="text-white/65 text-sm leading-relaxed"
+           data-en="5¢ off per gallon when you swipe your Global Rewards card. No minimum. Stacks with cash discount."
+           data-es="5¢ de descuento por galón con tu tarjeta Global Rewards. Sin mínimo. Se acumula con descuento en efectivo.">
+          5¢ off per gallon when you swipe your Global Rewards card. No minimum. Stacks with cash discount.
+        </p>
+      </div>
+      <div class="card p-7" style="border-color:var(--amber)">
+        <div class="pump-display inline-block mb-5 text-2xl">$0.15</div>
+        <h3 class="display text-2xl mb-3" data-en="Wash + Fuel Combo" data-es="Combo Lavado + Gas">Wash + Fuel Combo</h3>
+        <p class="text-white/65 text-sm leading-relaxed"
+           data-en="Wash your car, save 15¢/gal on your fill. Same visit. Up to 25 gallons."
+           data-es="Lava el auto, ahorra 15¢/gal en el tanque. Misma visita. Hasta 25 galones.">
+          Wash your car, save 15¢/gal on your fill. Same visit. Up to 25 gallons.
+        </p>
+      </div>
+      <div class="card p-7">
+        <div class="pump-display inline-block mb-5 text-2xl">FREE</div>
+        <h3 class="display text-2xl mb-3" data-en="10th Coffee On Us" data-es="El 10º Café va por la Casa">10th Coffee On Us</h3>
+        <p class="text-white/65 text-sm leading-relaxed"
+           data-en="Buy nine, the tenth is free. Punch card or app — your call. Refills are half-price all day."
+           data-es="Compra nueve, el décimo va gratis. Tarjeta o app — tú decides. Refills mitad de precio todo el día.">
+          Buy nine, the tenth is free. Punch card or app — your call. Refills are half-price all day.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW STRIP -->
+<section class="py-20 md:py-28 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="The corner approves" data-es="La esquina aprueba">The corner approves</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4"
+          data-en="What Massapequa says."
+          data-es="Lo que dice Massapequa.">
+        What Massapequa <span style="color:var(--orange)">says.</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 display">D</div>
+          <div>
+            <div class="text-white">Danny K.</div>
+            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Massapequa · Google</div>
+          </div>
+          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
+        </div>
+        <p class="text-white/75 text-sm italic leading-relaxed"
+           data-en='"My go-to stop on Hicksville Rd. Pumps work, coffee is hot at 4am, and the bathroom is actually clean. That last part is rare."'
+           data-es='"Mi parada en Hicksville Rd. Las bombas funcionan, el café está caliente a las 4am y el baño está limpio. Eso último es raro."'>
+          "My go-to stop on Hicksville Rd. Pumps work, coffee is hot at 4am, and the bathroom is actually clean. That last part is rare."
+        </p>
+      </div>
+      <div class="card p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 display">L</div>
+          <div>
+            <div class="text-white">Lisa P.</div>
+            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Wantagh · Google</div>
+          </div>
+          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
+        </div>
+        <p class="text-white/75 text-sm italic leading-relaxed"
+           data-en='"The car wash is better than the $25 places by Sunrise Highway. Wheels actually come out clean. I pay the upgrade — worth it."'
+           data-es='"El lavado es mejor que los de $25 cerca de Sunrise Hwy. Las llantas salen limpias. Pago el upgrade — vale la pena."'>
+          "The car wash is better than the $25 places by Sunrise Highway. Wheels actually come out clean. I pay the upgrade — worth it."
+        </p>
+      </div>
+      <div class="card p-7">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-300 display">R</div>
+          <div>
+            <div class="text-white">Ramon S.</div>
+            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Massapequa Park</div>
+          </div>
+          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
+        </div>
+        <p class="text-white/75 text-sm italic leading-relaxed"
+           data-en='"Cheapest premium on this part of Hicksville and the Plus is always within a few cents of competitors. They earned me as a regular."'
+           data-es='"El premium más barato en esta parte de Hicksville y el Plus siempre está a unos centavos. Me hicieron cliente regular."'>
+          "Cheapest premium on this part of Hicksville and the Plus is always within a few cents of competitors. They earned me as a regular."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="relative py-24 md:py-40 overflow-hidden border-t border-white/[.05]">
+  <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=2000&q=85" class="absolute inset-0 w-full h-full object-cover hero-img" alt="Highway gas station at night" />
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0c0a07]/75 via-[#0c0a07]/65 to-[#0c0a07]"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8 text-center">
+    <div class="reveal">
+      <div class="eyebrow" data-en="Drop in" data-es="Pásate">Drop in</div>
+      <h2 class="display-serif text-4xl md:text-7xl mt-4 max-w-4xl mx-auto"
+          data-en-html="The pump is open.<br/><span class='neon-text'>So is the coffee.</span>"
+          data-es-html="La bomba está abierta.<br/><span class='neon-text'>El café también.</span>">
+        The pump is open.<br/><span class="neon-text">So is the coffee.</span>
+      </h2>
+      <p class="mt-6 max-w-xl mx-auto text-white/70"
+         data-en="520 Hicksville Road, Massapequa. Right between Sunrise and Merrick. Open every minute of every day."
+         data-es="520 Hicksville Road, Massapequa. Entre Sunrise y Merrick. Abierto cada minuto de cada día.">
+        520 Hicksville Road, Massapequa. Right between Sunrise and Merrick. Open every minute of every day.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-neon" data-en="Get Directions" data-es="Cómo llegar">Get Directions</a>
+        <a href="tel:+15168824437" class="btn btn-line">(516) 882-4437</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/[.05] py-14 md:py-20">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <div class="display text-3xl" style="color:var(--amber)">GLOBAL</div>
+        <div class="mono text-[.66rem] tracking-[.22em] uppercase text-white/40 mt-1">Gas · Wash · Snacks · Since 1998</div>
+        <p class="text-white/55 text-sm mt-6 max-w-sm leading-relaxed"
+           data-en="The corner that's always on. 520 Hicksville Rd, Massapequa NY. Fuel, car wash, store, coffee, ATM, lottery."
+           data-es="La esquina que nunca cierra. 520 Hicksville Rd, Massapequa NY. Combustible, lavado, tienda, café, cajero, lotería.">
+          The corner that's always on. 520 Hicksville Rd, Massapequa NY. Fuel, car wash, store, coffee, ATM, lottery.
+        </p>
+      </div>
+      <div class="md:col-span-2">
+        <div class="eyebrow mb-4" data-en="Explore" data-es="Explorar">Explore</div>
+        <div class="flex flex-col gap-3 text-sm text-white/70">
+          <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+          <a href="services.html" class="hover:text-[var(--amber)]" data-en="Services" data-es="Servicios">Services</a>
+          <a href="carwash.html" class="hover:text-[var(--amber)]" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+          <a href="store.html" class="hover:text-[var(--amber)]" data-en="Store" data-es="Tienda">Store</a>
+          <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="eyebrow mb-4" data-en="Visit" data-es="Visítanos">Visit</div>
+        <div class="text-sm text-white/70 leading-relaxed">
+          520 Hicksville Rd<br/>Massapequa, NY 11758
+        </div>
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="text-[.7rem] mono tracking-[.18em] uppercase text-white/55 hover:text-[var(--amber)] mt-3 inline-block">Map ↗</a>
+      </div>
+      <div class="md:col-span-3">
+        <div class="eyebrow mb-4" data-en="Get in touch" data-es="Contacto">Get in touch</div>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="tel:+15168824437" class="text-white hover:text-[var(--amber)]">(516) 882-4437</a>
+          <a href="mailto:hello@globalgas.com" class="text-white/70 hover:text-white">hello@globalgas.com</a>
+          <div class="text-white/55 mono text-[.7rem] tracking-[.18em] uppercase pt-2" data-en="Open 24/7 · 365 days/year" data-es="Abierto 24/7 · 365 días">Open 24/7 · 365 days/year</div>
+        </div>
+      </div>
+    </div>
+    <div class="divider my-10"></div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[.7rem] mono tracking-[.18em] uppercase text-white/40">
+      <div>© <span data-year></span> Global Gas Co.</div>
+      <div data-en="NY Lottery Agent · ATM Available" data-es="Agente NY Lottery · Cajero">NY Lottery Agent · ATM Available</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky -->
+<div class="mobile-cta">
+  <a href="tel:+15168824437" class="btn-neon" style="background:var(--amber);color:#0c0a07">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

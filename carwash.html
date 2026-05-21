@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Car Wash · Global Gas Station · Massapequa</title>
+<meta name="description" content="Three touchless car wash packages at Global Gas in Massapequa. Soft-touch foam, ceramic sealant, free vacuum. Unlimited memberships available." />
+<link rel="icon" type="image/svg+xml" href="public/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-logo">GLOBAL</div><div class="loader-bar"></div></div>
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<div class="hidden md:block border-b border-white/[.05] text-[.66rem] mono tracking-[.22em] uppercase">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between text-white/55">
+    <div class="flex items-center gap-8">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)">Open 24/7</span></span>
+      <span>520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+15168824437" class="hover:text-[var(--amber)]">(516) 882-4437</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0c0a07]/85 border-b border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="display text-[1.6rem]" style="color:var(--amber);text-shadow:0 0 18px rgba(251,191,36,.45)">GLOBAL</div>
+      <span class="mono text-[.65rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Gas Co.</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link active" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+      <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.68rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.05] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link active" data-en="Car Wash" data-es="Lavado">Car Wash</a>
+    <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative min-h-[70vh] flex items-end overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1605651531144-51381895e23d?auto=format&fit=crop&w=2000&q=85" class="absolute inset-0 w-full h-full object-cover hero-img" alt="Car wash" />
+  <div class="absolute inset-0 hero-fade"></div>
+  <div class="spotlight-orange"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8 pb-16 md:pb-24 w-full">
+    <div class="reveal-stagger">
+      <span class="pylon" data-en="Car Wash · Touchless" data-es="Lavado · Sin Contacto">Car Wash · Touchless</span>
+      <h1 class="display-serif hero-title max-w-[15ch] mt-6"
+          data-en-html="Six minutes to <span class='neon-text'>showroom shine.</span>"
+          data-es-html="Seis minutos a <span class='neon-text'>brillo de showroom.</span>">
+        Six minutes to <span class="neon-text">showroom shine.</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-white/75 leading-relaxed text-base md:text-lg"
+         data-en="Three packages. Touchless foam tunnel. Heated dry. Free vacuum at every wash. Unlimited memberships available."
+         data-es="Tres paquetes. Túnel de espuma sin contacto. Secado con aire caliente. Aspiradora gratis en cada lavado. Membresías ilimitadas disponibles.">
+        Three packages. Touchless foam tunnel. Heated dry. Free vacuum at every wash. Unlimited memberships available.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="py-20 md:py-32">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="Pick your package" data-es="Elige tu paquete">Pick your package</div>
+      <h2 class="display-serif text-4xl md:text-7xl mt-4" data-en="One pass. Three levels." data-es="Una pasada. Tres niveles.">One pass. <span style="color:var(--orange)">Three levels.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 md:gap-6 reveal-stagger">
+      <!-- BASIC -->
+      <div class="card p-8 flex flex-col">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Basic Wash" data-es="Lavado Básico">Basic Wash</div>
+        <div class="display text-5xl mt-3" style="color:var(--amber)">$9</div>
+        <div class="text-white/40 text-sm mt-1" data-en="per car · single wash" data-es="por auto · lavado simple">per car · single wash</div>
+        <ul class="mt-7 space-y-3 text-white/75 text-sm flex-1">
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Pre-soak rinse" data-es="Pre-enjuague">Pre-soak rinse</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Soft-touch foam wash" data-es="Lavado con espuma">Soft-touch foam wash</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="High-pressure rinse" data-es="Enjuague a presión">High-pressure rinse</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Spot-free final rinse" data-es="Enjuague sin manchas">Spot-free final rinse</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Heated air dry" data-es="Secado con aire caliente">Heated air dry</span></li>
+        </ul>
+        <a href="#membership" class="btn btn-line mt-8" data-en="Pick basic" data-es="Elegir básico">Pick basic</a>
+      </div>
+
+      <!-- DELUXE -->
+      <div class="card p-8 flex flex-col relative" style="border-color:var(--amber);box-shadow:0 0 40px rgba(251,191,36,.18);">
+        <div class="absolute -top-3 left-6 pylon" data-en="Most popular" data-es="Más popular">Most popular</div>
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Deluxe Wash" data-es="Lavado Deluxe">Deluxe Wash</div>
+        <div class="display text-5xl mt-3" style="color:var(--amber)">$14</div>
+        <div class="text-white/40 text-sm mt-1" data-en="per car · single wash" data-es="por auto · lavado simple">per car · single wash</div>
+        <ul class="mt-7 space-y-3 text-white/75 text-sm flex-1">
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Everything in Basic" data-es="Todo el Básico">Everything in Basic</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Triple-foam color wax" data-es="Cera color triple espuma">Triple-foam color wax</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Wheel cleaner + tire shine" data-es="Limpiador de rines + brillo">Wheel cleaner + tire shine</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Undercarriage rinse" data-es="Lavado de bajos">Undercarriage rinse</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Free vacuum after" data-es="Aspiradora gratis después">Free vacuum after</span></li>
+        </ul>
+        <a href="#membership" class="btn btn-neon mt-8" data-en="Pick deluxe" data-es="Elegir deluxe">Pick deluxe</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="card p-8 flex flex-col">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40" data-en="Premium Ceramic" data-es="Cerámico Premium">Premium Ceramic</div>
+        <div class="display text-5xl mt-3" style="color:var(--amber)">$22</div>
+        <div class="text-white/40 text-sm mt-1" data-en="per car · single wash" data-es="por auto · lavado simple">per car · single wash</div>
+        <ul class="mt-7 space-y-3 text-white/75 text-sm flex-1">
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Everything in Deluxe" data-es="Todo el Deluxe">Everything in Deluxe</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Ceramic-infused sealant" data-es="Sellante con cerámico">Ceramic-infused sealant</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Bug & tar pre-treatment" data-es="Pre-tratamiento insectos">Bug & tar pre-treatment</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Rain repellent on windshield" data-es="Repelente en parabrisas">Rain repellent on windshield</span></li>
+          <li class="flex gap-3"><span class="dot mt-1.5"></span><span data-en="Hand-towel dry on request" data-es="Secado a mano con toalla">Hand-towel dry on request</span></li>
+        </ul>
+        <a href="#membership" class="btn btn-line mt-8" data-en="Pick premium" data-es="Elegir premium">Pick premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership" class="py-20 md:py-32 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-14 grid md:grid-cols-12 gap-10 items-end">
+      <div class="md:col-span-7">
+        <div class="eyebrow" data-en="Unlimited membership" data-es="Membresía ilimitada">Unlimited membership</div>
+        <h2 class="display-serif text-4xl md:text-6xl mt-4 leading-[.95]"
+            data-en="Wash as much as you want. One flat price."
+            data-es="Lava cuanto quieras. Un solo precio.">
+          Wash as much as you want. <span style="color:var(--orange)">One flat price.</span>
+        </h2>
+      </div>
+      <p class="md:col-span-5 text-white/70 leading-relaxed"
+         data-en="No commitment. Cancel anytime in the app or at the counter. License plate recognition — pull up, the gate opens."
+         data-es="Sin compromiso. Cancela cuando quieras en la app o en la caja. Reconocimiento de placa — llegas y la puerta se abre.">
+        No commitment. Cancel anytime in the app or at the counter. License plate recognition — pull up, the gate opens.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
+      <div class="card p-7">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">Basic Unlimited</div>
+        <div class="display text-4xl mt-3" style="color:var(--amber)">$19<span class="text-base text-white/40">/mo</span></div>
+        <p class="text-white/65 text-sm mt-4 leading-relaxed" data-en="Unlimited Basic washes. Worth it after 3 washes a month." data-es="Lavados Básicos ilimitados. Vale la pena después de 3 lavados al mes.">Unlimited Basic washes. Worth it after 3 washes a month.</p>
+      </div>
+      <div class="card p-7" style="border-color:var(--amber)">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">Deluxe Unlimited</div>
+        <div class="display text-4xl mt-3" style="color:var(--amber)">$29<span class="text-base text-white/40">/mo</span></div>
+        <p class="text-white/65 text-sm mt-4 leading-relaxed" data-en="Unlimited Deluxe washes plus 15¢/gal off every fill-up. Most popular." data-es="Lavados Deluxe ilimitados más 15¢/gal de descuento en cada tanqueada. El más popular.">Unlimited Deluxe washes plus 15¢/gal off every fill-up. Most popular.</p>
+      </div>
+      <div class="card p-7">
+        <div class="mono text-[.7rem] tracking-[.22em] uppercase text-white/40">Premium Unlimited</div>
+        <div class="display text-4xl mt-3" style="color:var(--amber)">$44<span class="text-base text-white/40">/mo</span></div>
+        <p class="text-white/65 text-sm mt-4 leading-relaxed" data-en="Unlimited Premium Ceramic washes. Includes free coffee with every visit." data-es="Lavados Premium Cerámico ilimitados. Café gratis en cada visita.">Unlimited Premium Ceramic washes. Includes free coffee with every visit.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center reveal">
+      <a href="contact.html" class="btn btn-neon" data-en="Sign up at the kiosk" data-es="Regístrate en el kiosko">Sign up at the kiosk</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="py-20 md:py-32 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-14">
+      <div class="eyebrow" data-en="The six-minute lap" data-es="La vuelta de seis minutos">The six-minute lap</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4" data-en="Drive in. Drive out. Cleaner." data-es="Entras. Sales. Más limpio.">Drive in. Drive out. <span style="color:var(--orange)">Cleaner.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 reveal-stagger">
+      <div>
+        <div class="display text-5xl md:text-6xl" style="color:var(--text-3)">01</div>
+        <div class="chrome-rule my-4" style="background:linear-gradient(90deg,transparent 0,rgba(251,191,36,.3) 50%,transparent 100%)"></div>
+        <h3 class="display text-xl mb-2" data-en="Pay at the kiosk" data-es="Paga en el kiosko">Pay at the kiosk</h3>
+        <p class="text-white/60 text-sm leading-relaxed" data-en="Or scan your membership tag. Cash, card, mobile pay." data-es="O escanea tu membresía. Efectivo, tarjeta, pago móvil.">Or scan your membership tag. Cash, card, mobile pay.</p>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-6xl" style="color:var(--text-3)">02</div>
+        <div class="chrome-rule my-4" style="background:linear-gradient(90deg,transparent 0,rgba(251,191,36,.3) 50%,transparent 100%)"></div>
+        <h3 class="display text-xl mb-2" data-en="Pull onto the conveyor" data-es="Sube al transportador">Pull onto the conveyor</h3>
+        <p class="text-white/60 text-sm leading-relaxed" data-en="Put it in neutral. Hands off the wheel. We take it from here." data-es="Pon neutral. Manos fuera del volante. Nosotros nos encargamos.">Put it in neutral. Hands off the wheel. We take it from here.</p>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-6xl" style="color:var(--text-3)">03</div>
+        <div class="chrome-rule my-4" style="background:linear-gradient(90deg,transparent 0,rgba(251,191,36,.3) 50%,transparent 100%)"></div>
+        <h3 class="display text-xl mb-2" data-en="Foam · rinse · wax" data-es="Espuma · enjuague · cera">Foam · rinse · wax</h3>
+        <p class="text-white/60 text-sm leading-relaxed" data-en="Six minutes through the tunnel. Soft cloth touches paint, not bristles." data-es="Seis minutos por el túnel. Tela suave toca la pintura, no cerdas.">Six minutes through the tunnel. Soft cloth touches paint, not bristles.</p>
+      </div>
+      <div>
+        <div class="display text-5xl md:text-6xl" style="color:var(--text-3)">04</div>
+        <div class="chrome-rule my-4" style="background:linear-gradient(90deg,transparent 0,rgba(251,191,36,.3) 50%,transparent 100%)"></div>
+        <h3 class="display text-xl mb-2" data-en="Vacuum + go" data-es="Aspira + sigue">Vacuum + go</h3>
+        <p class="text-white/60 text-sm leading-relaxed" data-en="Pull into a vacuum stall. Free with any wash. Towels at the kiosk." data-es="Pásate a un cubículo de aspiradora. Gratis con cualquier lavado. Toallas en el kiosko.">Pull into a vacuum stall. Free with any wash. Towels at the kiosk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.05] bg-[#13110c]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Dirty car?" data-es="¿Carro sucio?">Dirty car?</div>
+    <h2 class="display-serif text-4xl md:text-6xl mt-4" data-en="Bay's open. Foam's hot." data-es="Bahía abierta. Espuma caliente.">Bay's open. <span style="color:var(--orange)">Foam's hot.</span></h2>
+    <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-neon mt-8" data-en="Drive over" data-es="Vente para acá">Drive over</a>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.05] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl" style="color:var(--amber)">GLOBAL</span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-[var(--amber)]" data-en="Services" data-es="Servicios">Services</a>
+      <a href="store.html" class="hover:text-[var(--amber)]" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+15168824437" class="btn-neon" style="background:var(--amber);color:#0c0a07">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<script src="public/app.js"></script>
+</body>
+</html>

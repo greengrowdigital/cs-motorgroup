@@ -1,0 +1,135 @@
+/* Global Gas Station — Retro highway design system */
+:root{
+  --bg:#0c0a07;
+  --bg-1:#13110c;
+  --bg-2:#1c1812;
+  --line:rgba(255,200,120,.08);
+  --line-2:rgba(255,200,120,.18);
+  --text:#fef9ed;
+  --text-2:#b8a98a;
+  --text-3:#7c6e58;
+  --orange:#f97316;
+  --amber:#fbbf24;
+  --green:#22c55e;
+  --neon:#fde047;
+  --accent-glow:rgba(249,115,22,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg);}
+body{font-family:'Inter','Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;font-weight:300;-webkit-font-smoothing:antialiased;letter-spacing:-.005em;}
+
+/* Typography */
+.display{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-.04em;line-height:.95;}
+.display-serif{font-family:'Bricolage Grotesque',serif;font-weight:200;letter-spacing:-.035em;line-height:1;}
+.mono{font-family:'Space Mono',monospace;}
+.eyebrow{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);}
+.sign{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 0 24px rgba(251,191,36,.4);}
+::selection{background:var(--orange);color:#fff;}
+
+/* Grain */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.06;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:1rem 1.7rem;font-family:'Space Grotesk',sans-serif;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;transition:all .3s ease;border-radius:0;cursor:pointer;border:none;}
+.btn-solid{background:var(--orange);color:#fff;}
+.btn-solid:hover{background:#ea580c;transform:translateY(-1px);box-shadow:0 8px 24px var(--accent-glow);}
+.btn-neon{background:var(--amber);color:#0c0a07;box-shadow:0 0 24px rgba(251,191,36,.35);}
+.btn-neon:hover{background:var(--neon);box-shadow:0 0 40px rgba(253,224,71,.55);}
+.btn-line{border:1px solid var(--line-2);color:var(--text);background:transparent;}
+.btn-line:hover{border-color:var(--amber);color:var(--amber);}
+
+/* Nav */
+.nav-link{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-2);font-weight:400;transition:color .3s;text-decoration:none;}
+.nav-link:hover,.nav-link.active{color:var(--amber);}
+.nav-link.active{position:relative;}
+.nav-link.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--amber);}
+
+/* Cards */
+.card{background:var(--bg-1);border:1px solid var(--line);transition:border-color .35s ease,transform .35s ease;}
+.card:hover{border-color:var(--line-2);}
+
+/* Sign / pylon style — retro gas station */
+.pylon{position:relative;display:inline-block;padding:.4rem 1rem;border:2px solid var(--amber);color:var(--amber);font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;background:rgba(251,191,36,.04);}
+.neon-text{color:var(--neon);text-shadow:0 0 12px rgba(253,224,71,.6),0 0 24px rgba(249,115,22,.3);}
+
+/* Decorative */
+.divider{height:1px;background:var(--line);width:100%;}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--amber);vertical-align:middle;box-shadow:0 0 8px rgba(251,191,36,.6);}
+.dot-live{background:var(--green);box-shadow:0 0 10px rgba(34,197,94,.5);animation:lp 1.8s infinite;}
+@keyframes lp{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* Stripes */
+.stripes{background-image:repeating-linear-gradient(45deg,transparent 0,transparent 8px,rgba(251,191,36,.06) 8px,rgba(251,191,36,.06) 16px);}
+
+/* HERO */
+.hero-img{filter:brightness(.55) contrast(1.05) saturate(.85);}
+.hero-fade{background:linear-gradient(180deg,rgba(12,10,7,.25) 0%,rgba(12,10,7,.65) 60%,var(--bg) 100%);}
+.spotlight-orange{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 30% 60%,rgba(249,115,22,.18) 0%,transparent 50%),radial-gradient(ellipse at 70% 30%,rgba(251,191,36,.12) 0%,transparent 50%);}
+
+/* Pump display style numbers */
+.pump-display{font-family:'Space Mono',monospace;color:var(--amber);background:#000;padding:.4rem .7rem;border:1px solid var(--amber);box-shadow:inset 0 0 24px rgba(251,191,36,.15);letter-spacing:.04em;}
+
+/* Marquee */
+.marquee{display:flex;animation:scroll 50s linear infinite;}
+.marquee:hover{animation-play-state:paused;}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Service cards */
+.svc-card{background:var(--bg-1);border:1px solid var(--line);transition:all .45s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;}
+.svc-card::before{content:'';position:absolute;left:0;top:0;right:0;height:2px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.svc-card:hover{border-color:var(--line-2);background:var(--bg-2);transform:translateY(-2px);}
+.svc-card:hover::before{transform:scaleX(1);}
+.svc-card .num{font-family:'Space Mono',monospace;color:var(--text-3);font-size:.72rem;letter-spacing:.25em;}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1);}
+.reveal.in{opacity:1;transform:translateY(0);}
+.reveal-stagger>*{opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);}
+.reveal-stagger.in>*{opacity:1;transform:translateY(0);}
+.reveal-stagger.in>*:nth-child(1){transition-delay:0s}
+.reveal-stagger.in>*:nth-child(2){transition-delay:.08s}
+.reveal-stagger.in>*:nth-child(3){transition-delay:.16s}
+.reveal-stagger.in>*:nth-child(4){transition-delay:.24s}
+.reveal-stagger.in>*:nth-child(5){transition-delay:.32s}
+.reveal-stagger.in>*:nth-child(6){transition-delay:.4s}
+
+/* Gallery */
+.gal-item{overflow:hidden;position:relative;}
+.gal-item img{transition:transform .9s cubic-bezier(.16,1,.3,1),filter .5s;display:block;width:100%;height:100%;object-fit:cover;}
+.gal-item:hover img{transform:scale(1.05);filter:brightness(.9);}
+.gal-item .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(12,10,7,.85) 100%);display:flex;align-items:flex-end;padding:1.5rem;opacity:0;transition:opacity .4s;}
+.gal-item:hover .overlay{opacity:1;}
+
+/* Scroll progress */
+.scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--orange);z-index:99;width:0;transition:width .1s;box-shadow:0 0 10px var(--accent-glow);}
+
+/* Loader */
+.loader{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s;flex-direction:column;gap:1rem;}
+.loader.hidden{opacity:0;visibility:hidden;}
+.loader-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3rem;letter-spacing:-.03em;color:var(--amber);text-shadow:0 0 24px rgba(251,191,36,.5);}
+.loader-bar{width:200px;height:1px;background:var(--line);overflow:hidden;position:relative;}
+.loader-bar::after{content:'';position:absolute;inset:0;background:var(--orange);width:0;animation:load 1.2s cubic-bezier(.7,0,.3,1) forwards;}
+@keyframes load{from{width:0}to{width:100%}}
+
+/* Forms */
+.input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line-2);padding:.9rem 0;color:var(--text);font-family:'Inter',sans-serif;font-weight:300;font-size:1rem;outline:none;transition:border-color .3s;}
+.input:focus{border-bottom-color:var(--orange);}
+.input::placeholder{color:var(--text-3);}
+textarea.input{resize:vertical;min-height:120px;}
+.label{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:.4rem;display:block;}
+
+/* Hero responsive */
+.hero-title{font-size:clamp(3rem,min(9vw,11vh),8rem);}
+
+/* Sticky CTA mobile */
+.mobile-cta{position:fixed;bottom:0;left:0;right:0;background:var(--bg-1);border-top:1px solid var(--line-2);padding:.8rem;display:flex;gap:.5rem;z-index:40;}
+.mobile-cta a{flex:1;padding:.85rem;text-align:center;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;}
+@media(min-width:768px){.mobile-cta{display:none;}}
+
+/* Price ticker */
+.ticker{background:#000;border:1px solid var(--amber);box-shadow:inset 0 0 32px rgba(251,191,36,.15);padding:1rem 1.5rem;display:inline-flex;align-items:center;gap:1.5rem;}
+.ticker .label{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-3);margin:0;}
+.ticker .val{font-family:'Space Mono',monospace;font-size:2rem;font-weight:500;color:var(--amber);text-shadow:0 0 12px rgba(251,191,36,.5);line-height:1;}
+
+/* Sun rays / sunset */
+.sun-burst{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(251,191,36,.18) 0%,transparent 65%);pointer-events:none;}
