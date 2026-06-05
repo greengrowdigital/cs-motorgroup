@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Car Rentals · Economy · Luxury · SUV · Exotic · Global · Massapequa</title>
+<meta name="description" content="Daily and weekly car rentals on Long Island. Economy, Luxury, Large SUV and Exotic tiers. Pickup and drop-off available. Insurance + 25+ with valid license." />
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-logo">GLOBAL</div><div class="loader-bar"></div></div>
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="scroll-progress"></div>
+
+<!-- Top utility -->
+<div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+    <div class="flex items-center gap-7">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
+      <span>520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+15168824437" class="hover:text-[var(--amber)]">(516) 882-4437</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0a0a1f]/85 border-b border-white/[.08]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="neon-script text-[1.8rem] neon-amber leading-none">Global</div>
+      <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Auto Center ★ 1998</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
+      <a href="rentals.html" class="nav-link active" data-en="Rentals" data-es="Alquiler">Rentals</a>
+      <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+15168824437" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.66rem]">(516) 882-4437</a>
+      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.08] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
+    <a href="rentals.html" class="nav-link active" data-en="Rentals" data-es="Alquiler">Rentals</a>
+    <a href="store.html" class="nav-link" data-en="Store" data-es="Tienda">Store</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
+  <div class="absolute inset-0 spotlight-orange"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="pylon" data-en="Car Rental Agency · 25+ years" data-es="Agencia de Alquiler · 25+ años">Car Rental Agency · 25+ years</span>
+        <span class="sticker sticker-amber" style="font-size:.78rem" data-en="Free pickup 5mi" data-es="Pickup gratis 5mi">Free pickup 5mi</span>
+      </div>
+      <h1 class="display-serif text-5xl md:text-8xl mt-5 leading-[.95] max-w-5xl"
+          data-en-html="Pick the tier.<br/><span style='color:var(--orange)'>Drive away.</span>"
+          data-es-html="Elige el tier.<br/><span style='color:var(--orange)'>Maneja.</span>">
+        Pick the tier.<br/><span style="color:var(--orange)">Drive away.</span>
+      </h1>
+      <p class="mt-7 max-w-2xl text-white/80 text-base md:text-lg leading-relaxed font-light"
+         data-en="Four tiers — Economy, Luxury, Large SUV, Exotic. Daily and weekly rates. Insurance available. Pickup and drop-off included within 5 miles. 25+ with valid license. Quick keys, clean cars, no surprises at return."
+         data-es="Cuatro tiers — Economy, Lujo, SUV grande, Exóticos. Tarifas diarias y semanales. Seguro disponible. Pickup y drop-off incluidos hasta 5 millas. 25+ con licencia válida. Llaves rápido, autos limpios, sin sorpresas al devolver.">
+        Four tiers — Economy, Luxury, Large SUV, Exotic. Daily and weekly rates. Insurance available. Pickup and drop-off included within 5 miles. 25+ with valid license. Quick keys, clean cars, no surprises at return.
+      </p>
+    </div>
+    <div class="mt-12 grid md:grid-cols-4 gap-3 reveal">
+      <a href="#economy" class="pylon text-center">01 · Economy</a>
+      <a href="#luxury" class="pylon text-center">02 · Luxury</a>
+      <a href="#suv" class="pylon text-center">03 · Large SUV</a>
+      <a href="#exotic" class="pylon text-center">04 · Exotic</a>
+    </div>
+  </div>
+</section>
+
+<!-- ECONOMY -->
+<section id="economy" class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-4 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">01 / Economy</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 mb-4"
+          data-en-html="Get there.<br/><span style='color:var(--orange)'>Cheap.</span>"
+          data-es-html="Llega.<br/><span style='color:var(--orange)'>Barato.</span>">
+        Get there.<br/><span style="color:var(--orange)">Cheap.</span>
+      </h2>
+      <p class="text-white/65 leading-relaxed mb-6"
+         data-en="Compact sedans with great MPG. Bluetooth, backup cam, automatic. Great for airport runs, family visits, the back-up car during a repair."
+         data-es="Sedanes compactos con buen rendimiento. Bluetooth, cámara, automático. Perfecto para llevar al aeropuerto, visitas familiares, o como auto de respaldo durante una reparación.">
+        Compact sedans with great MPG. Bluetooth, backup cam, automatic. Great for airport runs, family visits, the back-up car during a repair.
+      </p>
+      <div class="flex items-baseline gap-3 mb-1"><span class="display text-5xl" style="color:var(--amber)">$45</span><span class="mono text-[.7rem] tracking-[.22em] uppercase text-white/60" data-en="per day · from" data-es="por día · desde">per day · from</span></div>
+      <div class="mono text-[.7rem] tracking-[.18em] uppercase text-white/45" data-en="$249/week · 200 mi/day included" data-es="$249/semana · 200 mi/día incluidas">$249/week · 200 mi/day included</div>
+    </div>
+    <div class="md:col-span-8 grid md:grid-cols-3 gap-4 reveal-stagger">
+      <div class="svc-card p-6">
+        <div class="num">Toyota</div>
+        <h3 class="display text-2xl mt-2 mb-2">Corolla LE</h3>
+        <p class="text-white/65 text-sm" data-en="40 MPG hwy · 4 adults · trunk for 3 carry-ons" data-es="40 MPG carretera · 4 adultos · maletero para 3">40 MPG hwy · 4 adults · trunk for 3 carry-ons</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Honda</div>
+        <h3 class="display text-2xl mt-2 mb-2">Civic Sport</h3>
+        <p class="text-white/65 text-sm" data-en="36 MPG · Android Auto + CarPlay · sport seats" data-es="36 MPG · Android Auto + CarPlay · asientos sport">36 MPG · Android Auto + CarPlay · sport seats</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Nissan</div>
+        <h3 class="display text-2xl mt-2 mb-2">Versa SV</h3>
+        <p class="text-white/65 text-sm" data-en="Cheapest in the fleet · 5 doors · ProPilot" data-es="El más barato de la flota · 5 puertas · ProPilot">Cheapest in the fleet · 5 doors · ProPilot</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LUXURY -->
+<section id="luxury" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-4 reveal md:order-2">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">02 / Luxury</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 mb-4"
+          data-en-html="Show up.<br/><span style='color:var(--orange)'>Properly.</span>"
+          data-es-html="Llega.<br/><span style='color:var(--orange)'>Como se debe.</span>">
+        Show up.<br/><span style="color:var(--orange)">Properly.</span>
+      </h2>
+      <p class="text-white/65 leading-relaxed mb-6"
+         data-en="German sedans and full-size luxury. Leather, panoramic roofs, premium audio. For weddings, executive travel, and the days you want to feel like the principal."
+         data-es="Sedanes alemanes y lujo full-size. Cuero, techos panorámicos, audio premium. Para bodas, viajes ejecutivos, y los días que quieres sentirte importante.">
+        German sedans and full-size luxury. Leather, panoramic roofs, premium audio. For weddings, executive travel, and the days you want to feel like the principal.
+      </p>
+      <div class="flex items-baseline gap-3 mb-1"><span class="display text-5xl" style="color:var(--amber)">$149</span><span class="mono text-[.7rem] tracking-[.22em] uppercase text-white/60" data-en="per day · from" data-es="por día · desde">per day · from</span></div>
+      <div class="mono text-[.7rem] tracking-[.18em] uppercase text-white/45" data-en="$849/week · weekend specials" data-es="$849/semana · specials de fin de semana">$849/week · weekend specials</div>
+    </div>
+    <div class="md:col-span-8 grid md:grid-cols-3 gap-4 reveal-stagger md:order-1">
+      <div class="svc-card p-6">
+        <div class="num">BMW</div>
+        <h3 class="display text-2xl mt-2 mb-2">5 Series</h3>
+        <p class="text-white/65 text-sm" data-en="Executive trim · driver assist · Harman Kardon" data-es="Acabado ejecutivo · asistencia · Harman Kardon">Executive trim · driver assist · Harman Kardon</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Mercedes</div>
+        <h3 class="display text-2xl mt-2 mb-2">E-Class</h3>
+        <p class="text-white/65 text-sm" data-en="MBUX hyperscreen · massage seats · pano roof" data-es="MBUX hyperscreen · asientos con masaje · techo pano">MBUX hyperscreen · massage seats · pano roof</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Audi</div>
+        <h3 class="display text-2xl mt-2 mb-2">A7 Sportback</h3>
+        <p class="text-white/65 text-sm" data-en="Quattro AWD · virtual cockpit · Bang &amp; Olufsen" data-es="Quattro AWD · virtual cockpit · Bang &amp; Olufsen">Quattro AWD · virtual cockpit · Bang &amp; Olufsen</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LARGE SUV -->
+<section id="suv" class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-4 reveal">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">03 / Large SUV</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 mb-4"
+          data-en-html="The whole crew.<br/><span style='color:var(--orange)'>The whole trip.</span>"
+          data-es-html="Toda la banda.<br/><span style='color:var(--orange)'>Todo el viaje.</span>">
+        The whole crew.<br/><span style="color:var(--orange)">The whole trip.</span>
+      </h2>
+      <p class="text-white/65 leading-relaxed mb-6"
+         data-en="Three-row body-on-frame and full-size SUVs. Tow packages, captain's chairs, panoramic moonroofs. For family road trips, ski weekends, and getting eight people to LaGuardia."
+         data-es="SUVs full-size y body-on-frame de tres filas. Paquetes de arrastre, asientos capitán, techos panorámicos. Para viajes familiares, fin de semana de ski, y llevar ocho personas a LaGuardia.">
+        Three-row body-on-frame and full-size SUVs. Tow packages, captain's chairs, panoramic moonroofs. For family road trips, ski weekends, and getting eight people to LaGuardia.
+      </p>
+      <div class="flex items-baseline gap-3 mb-1"><span class="display text-5xl" style="color:var(--amber)">$179</span><span class="mono text-[.7rem] tracking-[.22em] uppercase text-white/60" data-en="per day · from" data-es="por día · desde">per day · from</span></div>
+      <div class="mono text-[.7rem] tracking-[.18em] uppercase text-white/45" data-en="$1,049/week · tow add-on $25/day" data-es="$1,049/semana · arrastre $25/día">$1,049/week · tow add-on $25/day</div>
+    </div>
+    <div class="md:col-span-8 grid md:grid-cols-3 gap-4 reveal-stagger">
+      <div class="svc-card p-6">
+        <div class="num">Chevrolet</div>
+        <h3 class="display text-2xl mt-2 mb-2">Suburban LT</h3>
+        <p class="text-white/65 text-sm" data-en="8 seats · 7,800 lb tow · 121 cu ft cargo" data-es="8 asientos · arrastre 7,800 lb · 121 cu ft carga">8 seats · 7,800 lb tow · 121 cu ft cargo</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Cadillac</div>
+        <h3 class="display text-2xl mt-2 mb-2">Escalade ESV</h3>
+        <p class="text-white/65 text-sm" data-en="38" OLED dash · Super Cruise · executive 2nd row" data-es="Tablero OLED 38" · Super Cruise · 2da fila ejecutiva">38" OLED dash · Super Cruise · executive 2nd row</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Lincoln</div>
+        <h3 class="display text-2xl mt-2 mb-2">Navigator L</h3>
+        <p class="text-white/65 text-sm" data-en="Perfect Position seats · 28-speaker Revel · 4x4" data-es="Asientos Perfect Position · Revel 28 bocinas · 4x4">Perfect Position seats · 28-speaker Revel · 4x4</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXOTIC -->
+<section id="exotic" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
+    <div class="md:col-span-4 reveal md:order-2">
+      <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">04 / Exotic</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-5 mb-4"
+          data-en-html="Bucket list.<br/><span style='color:var(--orange)'>By the day.</span>"
+          data-es-html="Bucket list.<br/><span style='color:var(--orange)'>Por día.</span>">
+        Bucket list.<br/><span style="color:var(--orange)">By the day.</span>
+      </h2>
+      <p class="text-white/65 leading-relaxed mb-6"
+         data-en="Lamborghini, Ferrari and McLaren — supercars rented by the day. Birthdays, anniversaries, the one weekend a year you want a V12 in your driveway. Full insurance required, deposit on file."
+         data-es="Lamborghini, Ferrari y McLaren — supercars por día. Cumpleaños, aniversarios, el fin de semana al año que quieres un V12 en tu cochera. Seguro completo requerido, depósito en garantía.">
+        Lamborghini, Ferrari and McLaren — supercars rented by the day. Birthdays, anniversaries, the one weekend a year you want a V12 in your driveway. Full insurance required, deposit on file.
+      </p>
+      <div class="flex items-baseline gap-3 mb-1"><span class="display text-5xl" style="color:var(--amber)">$899</span><span class="mono text-[.7rem] tracking-[.22em] uppercase text-white/60" data-en="per day · from" data-es="por día · desde">per day · from</span></div>
+      <div class="mono text-[.7rem] tracking-[.18em] uppercase text-white/45" data-en="100 mi/day included · $5/mi over · 25+" data-es="100 mi/día incluidas · $5/mi extra · 25+">100 mi/day included · $5/mi over · 25+</div>
+    </div>
+    <div class="md:col-span-8 grid md:grid-cols-3 gap-4 reveal-stagger md:order-1">
+      <div class="svc-card p-6">
+        <div class="num">Lamborghini</div>
+        <h3 class="display text-2xl mt-2 mb-2">Huracán EVO</h3>
+        <p class="text-white/65 text-sm" data-en="5.2L V10 · 631 hp · 0–60 in 2.9s" data-es="5.2L V10 · 631 hp · 0–60 en 2.9s">5.2L V10 · 631 hp · 0–60 in 2.9s</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">Ferrari</div>
+        <h3 class="display text-2xl mt-2 mb-2">Roma</h3>
+        <p class="text-white/65 text-sm" data-en="3.9L V8 turbo · 612 hp · GT-tuned chassis" data-es="3.9L V8 turbo · 612 hp · chasis GT-tuned">3.9L V8 turbo · 612 hp · GT-tuned chassis</p>
+      </div>
+      <div class="svc-card p-6">
+        <div class="num">McLaren</div>
+        <h3 class="display text-2xl mt-2 mb-2">720S Spider</h3>
+        <p class="text-white/65 text-sm" data-en="4.0L twin-turbo V8 · 710 hp · retractable hardtop" data-es="4.0L twin-turbo V8 · 710 hp · techo retráctil">4.0L twin-turbo V8 · 710 hp · retractable hardtop</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-20 md:py-28 border-t border-white/[.05]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal mb-12">
+      <div class="eyebrow" data-en="How it works · 05" data-es="Cómo funciona · 05">How it works · 05</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4"
+          data-en-html="Four steps.<br/><span style='color:var(--orange)'>Keys today.</span>"
+          data-es-html="Cuatro pasos.<br/><span style='color:var(--orange)'>Llaves hoy.</span>">
+        Four steps.<br/><span style="color:var(--orange)">Keys today.</span>
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-4 gap-5 reveal-stagger">
+      <div class="svc-card p-7">
+        <div class="num">Step 01</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Pick the tier" data-es="Elige el tier">Pick the tier</h3>
+        <p class="text-white/65 text-sm" data-en="Economy, Luxury, SUV or Exotic. Pick your dates. Call or use the form." data-es="Economy, Lujo, SUV o Exótico. Elige fechas. Llama o usa el formulario.">Economy, Luxury, SUV or Exotic. Pick your dates. Call or use the form.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Step 02</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="License + card" data-es="Licencia + tarjeta">License + card</h3>
+        <p class="text-white/65 text-sm" data-en="Send a photo of your driver's license. Authorize the deposit. We'll confirm by text." data-es="Manda foto de tu licencia. Autoriza el depósito. Te confirmamos por SMS.">Send a photo of your driver's license. Authorize the deposit. We'll confirm by text.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Step 03</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Pickup or delivery" data-es="Pickup o entrega">Pickup or delivery</h3>
+        <p class="text-white/65 text-sm" data-en="Come to the lot or we'll deliver to your driveway. Free within 5 mi, $25 within 15 mi." data-es="Ven al lot o te lo llevamos. Gratis hasta 5 mi, $25 hasta 15 mi.">Come to the lot or we'll deliver to your driveway. Free within 5 mi, $25 within 15 mi.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Step 04</div>
+        <h3 class="display text-2xl mt-3 mb-3" data-en="Drive. Return." data-es="Maneja. Devuelve.">Drive. Return.</h3>
+        <p class="text-white/65 text-sm" data-en="Bring it back gassed and clean — or pay the convenience fee. Inspection takes 10 minutes." data-es="Devuélvelo con gasolina y limpio — o paga la cuota de conveniencia. La inspección toma 10 minutos.">Bring it back gassed and clean — or pay the convenience fee. Inspection takes 10 minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUIREMENTS -->
+<section class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5 reveal">
+      <div class="eyebrow" data-en="The fine print · 06" data-es="Lo importante · 06">The fine print · 06</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4"
+          data-en-html="What we'll need.<br/><span style='color:var(--orange)'>What you'll get.</span>"
+          data-es-html="Lo que pedimos.<br/><span style='color:var(--orange)'>Lo que recibes.</span>">
+        What we'll need.<br/><span style="color:var(--orange)">What you'll get.</span>
+      </h2>
+    </div>
+    <div class="md:col-span-7 reveal-stagger grid md:grid-cols-2 gap-5">
+      <div class="svc-card p-7">
+        <div class="num">Required</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="25+ with valid license" data-es="25+ con licencia válida">25+ with valid license</h3>
+        <p class="text-white/65 text-sm" data-en="US license accepted. International + passport for foreign visitors. 21–24 with $25/day young-driver fee." data-es="Licencia US aceptada. Internacional + pasaporte para visitantes. 21–24 con cuota de young-driver $25/día.">US license accepted. International + passport for foreign visitors. 21–24 with $25/day young-driver fee.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Required</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Credit card on file" data-es="Tarjeta de crédito en archivo">Credit card on file</h3>
+        <p class="text-white/65 text-sm" data-en="Deposit varies by tier — $250 Economy, $500 Luxury, $750 SUV, $5,000 Exotic. Released at return." data-es="Depósito varía por tier — $250 Economy, $500 Lujo, $750 SUV, $5,000 Exótico. Se libera al devolver.">Deposit varies by tier — $250 Economy, $500 Luxury, $750 SUV, $5,000 Exotic. Released at return.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Included</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Liability + roadside" data-es="Liability + asistencia">Liability + roadside</h3>
+        <p class="text-white/65 text-sm" data-en="State-minimum liability included on Economy/Luxury/SUV. Roadside assistance 24/7 on every rental." data-es="Liability mínimo estatal incluido en Economy/Lujo/SUV. Asistencia en carretera 24/7 en cada alquiler.">State-minimum liability included on Economy/Luxury/SUV. Roadside assistance 24/7 on every rental.</p>
+      </div>
+      <div class="svc-card p-7">
+        <div class="num">Optional</div>
+        <h3 class="display text-xl mt-3 mb-2" data-en="Full coverage + LDW" data-es="Cobertura total + LDW">Full coverage + LDW</h3>
+        <p class="text-white/65 text-sm" data-en="$19/day Economy, $29/day Luxury, $39/day SUV. Required for Exotic. Bring proof of coverage if you skip ours." data-es="$19/día Economy, $29/día Lujo, $39/día SUV. Obligatorio en Exóticos. Trae prueba de tu seguro si no tomas el nuestro.">$19/day Economy, $29/day Luxury, $39/day SUV. Required for Exotic. Bring proof of coverage if you skip ours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="py-20 md:py-32 border-t border-white/[.05]">
+  <div class="max-w-3xl mx-auto px-6 reveal">
+    <div class="text-center mb-10">
+      <div class="eyebrow" data-en="Reserve · 07" data-es="Reservar · 07">Reserve · 07</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4"
+          data-en-html="Lock the keys.<br/><span class='neon-text'>We text back in 30 min.</span>"
+          data-es-html="Aparta las llaves.<br/><span class='neon-text'>Te contestamos en 30 min.</span>">
+        Lock the keys.<br/><span class="neon-text">We text back in 30 min.</span>
+      </h2>
+    </div>
+    <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault();document.getElementById('bookingConfirm').classList.remove('hidden');this.classList.add('hidden');">
+      <label class="block md:col-span-2">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Tier" data-es="Tier">Tier</span>
+        <select required class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]">
+          <option>Economy · from $45/day</option>
+          <option>Luxury · from $149/day</option>
+          <option>Large SUV · from $179/day</option>
+          <option>Exotic · from $899/day</option>
+        </select>
+      </label>
+      <label class="block">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Pickup date" data-es="Fecha pickup">Pickup date</span>
+        <input required type="date" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+      </label>
+      <label class="block">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Return date" data-es="Fecha devolución">Return date</span>
+        <input required type="date" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+      </label>
+      <label class="block">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Full name" data-es="Nombre completo">Full name</span>
+        <input required type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+      </label>
+      <label class="block">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Phone" data-es="Teléfono">Phone</span>
+        <input required type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+      </label>
+      <label class="block md:col-span-2">
+        <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Pickup option" data-es="Opción de entrega">Pickup option</span>
+        <select class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]">
+          <option data-en="I'll come to the lot" data-es="Voy al lot">I'll come to the lot</option>
+          <option data-en="Free delivery (within 5 mi)" data-es="Entrega gratis (5 mi)">Free delivery (within 5 mi)</option>
+          <option data-en="Delivery 5–15 mi ($25)" data-es="Entrega 5–15 mi ($25)">Delivery 5–15 mi ($25)</option>
+        </select>
+      </label>
+      <button type="submit" class="btn btn-neon md:col-span-2 mt-3" data-en="Request rental" data-es="Solicitar alquiler">Request rental</button>
+      <p class="md:col-span-2 mono text-[.62rem] tracking-[.18em] uppercase text-white/40 text-center"
+         data-en="Demo form. Final pricing confirmed by phone within 30 minutes."
+         data-es="Formulario demo. Precio final confirmado por teléfono en 30 minutos.">Demo form. Final pricing confirmed by phone within 30 minutes.</p>
+    </form>
+    <div id="bookingConfirm" class="hidden text-center reveal">
+      <div class="display text-7xl mb-4" style="color:var(--amber)">★</div>
+      <h3 class="display-serif text-3xl md:text-4xl mb-3" data-en="Request received." data-es="Solicitud recibida.">Request received.</h3>
+      <p class="text-white/65" data-en="We'll text you within 30 minutes with confirmation, deposit details, and the keys are yours." data-es="Te escribimos en 30 minutos con confirmación, detalles del depósito, y las llaves son tuyas.">We'll text you within 30 minutes with confirmation, deposit details, and the keys are yours.</p>
+      <div class="mono text-[.7rem] tracking-[.22em] uppercase mt-6" style="color:var(--amber)">Confirmation · GR-1024</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 md:py-32 border-t border-white/[.05] bg-[#0a0a14]">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="eyebrow" data-en="Already a regular?" data-es="¿Ya nos conoces?">Already a regular?</div>
+    <h2 class="display-serif text-4xl md:text-6xl mt-4"
+        data-en-html="Skip the form.<br/><span class='neon-text'>Just call.</span>"
+        data-es-html="Sáltate el formulario.<br/><span class='neon-text'>Solo llama.</span>">
+      Skip the form.<br/><span class="neon-text">Just call.</span>
+    </h2>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="tel:+15168824437" class="btn btn-neon">(516) 882-4437</a>
+      <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-line" data-en="Get Directions" data-es="Cómo llegar">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.05] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl" style="color:var(--amber)">GLOBAL</span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-[var(--amber)]" data-en="Services" data-es="Servicios">Services</a>
+      <a href="rentals.html" class="hover:text-[var(--amber)]" data-en="Rentals" data-es="Alquiler">Rentals</a>
+      <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+15168824437" class="btn-neon" style="background:var(--amber);color:#0c0a07">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
