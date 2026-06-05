@@ -1,11 +1,4 @@
-// Global Gas Station — interactions
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const l = document.querySelector('.loader');
-    if (l) l.classList.add('hidden');
-  }, 1100);
-});
-
+// CS Motor Group — interactions
 const scrollBar = document.querySelector('.scroll-progress');
 if (scrollBar) {
   window.addEventListener('scroll', () => {
