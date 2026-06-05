@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
 
 <!-- Top utility -->
 <div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
     <div class="flex items-center gap-7">
       <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
       <span>520 Hicksville Rd · Massapequa, NY</span>
@@ -35,7 +35,7 @@
   </div>
 </div>
 
-<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0a0a1f]/85 border-b border-white/[.08]">
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.08]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
       <div class="neon-script text-[1.8rem] neon-amber leading-none">CS Motor</div>
@@ -134,7 +134,7 @@
 </section>
 
 <!-- LUXURY -->
-<section id="luxury" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+<section id="luxury" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a0a]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
     <div class="md:col-span-4 reveal md:order-2">
       <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">02 / Luxury</div>
@@ -210,7 +210,7 @@
 </section>
 
 <!-- EXOTIC -->
-<section id="exotic" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+<section id="exotic" class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a0a]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16">
     <div class="md:col-span-4 reveal md:order-2">
       <div class="mono text-[.7rem] tracking-[.24em] uppercase" style="color:var(--orange)">04 / Exotic</div>
@@ -284,7 +284,7 @@
 </section>
 
 <!-- REQUIREMENTS -->
-<section class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a14]">
+<section class="py-20 md:py-28 border-t border-white/[.05] bg-[#0a0a0a]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-5 reveal">
       <div class="eyebrow" data-en="The fine print · 06" data-es="Lo importante · 06">The fine print · 06</div>
@@ -333,7 +333,7 @@
     <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="event.preventDefault();document.getElementById('bookingConfirm').classList.remove('hidden');this.classList.add('hidden');">
       <label class="block md:col-span-2">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Tier" data-es="Tier">Tier</span>
-        <select required class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]">
+        <select required class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]">
           <option>Economy · from $45/day</option>
           <option>Luxury · from $149/day</option>
           <option>Large SUV · from $179/day</option>
@@ -342,23 +342,23 @@
       </label>
       <label class="block">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Pickup date" data-es="Fecha pickup">Pickup date</span>
-        <input required type="date" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+        <input required type="date" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]"/>
       </label>
       <label class="block">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Return date" data-es="Fecha devolución">Return date</span>
-        <input required type="date" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+        <input required type="date" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]"/>
       </label>
       <label class="block">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Full name" data-es="Nombre completo">Full name</span>
-        <input required type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+        <input required type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]"/>
       </label>
       <label class="block">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Phone" data-es="Teléfono">Phone</span>
-        <input required type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]"/>
+        <input required type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]"/>
       </label>
       <label class="block md:col-span-2">
         <span class="mono text-[.66rem] tracking-[.22em] uppercase text-white/55" data-en="Pickup option" data-es="Opción de entrega">Pickup option</span>
-        <select class="mt-2 w-full bg-[#0a0a14] border border-white/15 px-4 py-3 text-white/90 font-[Space_Grotesk]">
+        <select class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white/90 font-[Inter]">
           <option data-en="I'll come to the lot" data-es="Voy al lot">I'll come to the lot</option>
           <option data-en="Free delivery (within 5 mi)" data-es="Entrega gratis (5 mi)">Free delivery (within 5 mi)</option>
           <option data-en="Delivery 5–15 mi ($25)" data-es="Entrega 5–15 mi ($25)">Delivery 5–15 mi ($25)</option>
@@ -379,7 +379,7 @@
 </section>
 
 <!-- CTA -->
-<section class="py-20 md:py-32 border-t border-white/[.05] bg-[#0a0a14]">
+<section class="py-20 md:py-32 border-t border-white/[.05] bg-[#0a0a0a]">
   <div class="max-w-3xl mx-auto px-6 text-center reveal">
     <div class="eyebrow" data-en="Already a regular?" data-es="¿Ya nos conoces?">Already a regular?</div>
     <h2 class="display-serif text-4xl md:text-6xl mt-4"

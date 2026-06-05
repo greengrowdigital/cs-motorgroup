@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
 <!-- Top utility -->
 <div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
     <div class="flex items-center gap-7">
       <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
       <span>520 Hicksville Rd · Massapequa, NY</span>
@@ -127,16 +127,16 @@
         <legend class="eyebrow mb-4" data-en="02 · Vehicle info" data-es="02 · Datos del vehículo">02 · Vehicle info</legend>
         <div class="grid md:grid-cols-3 gap-4">
           <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Vehicle type" data-es="Tipo de vehículo">Vehicle type</span>
-            <select name="vehicleType" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]">
+            <select name="vehicleType" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]">
               <option value="sedan">Sedan / Coupe</option>
               <option value="suv">SUV / Truck</option>
               <option value="van">Van / Minivan</option>
               <option value="exotic">Exotic / Performance</option>
             </select>
           </label>
-          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Year" data-es="Año">Year</span><input name="year" type="text" inputmode="numeric" placeholder="2022" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
-          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Make / Model" data-es="Marca / Modelo">Make / Model</span><input name="makeModel" type="text" placeholder="Honda Civic" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
-          <label class="block md:col-span-3"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Notes (optional)" data-es="Notas (opcional)">Notes (optional)</span><textarea name="notes" rows="3" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" placeholder="Particular paint scratches, custom interior, fleet vehicle, etc."></textarea></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Year" data-es="Año">Year</span><input name="year" type="text" inputmode="numeric" placeholder="2022" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]"/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Make / Model" data-es="Marca / Modelo">Make / Model</span><input name="makeModel" type="text" placeholder="Honda Civic" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]"/></label>
+          <label class="block md:col-span-3"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Notes (optional)" data-es="Notas (opcional)">Notes (optional)</span><textarea name="notes" rows="3" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]" placeholder="Particular paint scratches, custom interior, fleet vehicle, etc."></textarea></label>
         </div>
         <div class="mt-8 flex justify-between">
           <button type="button" class="btn btn-line back-btn" data-target="1">←</button>
@@ -148,9 +148,9 @@
       <fieldset id="step-3" class="step-panel hidden">
         <legend class="eyebrow mb-4" data-en="03 · Pick a slot" data-es="03 · Elige horario">03 · Pick a slot</legend>
         <div class="grid md:grid-cols-2 gap-4">
-          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Date" data-es="Fecha">Date</span><input name="date" type="date" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Date" data-es="Fecha">Date</span><input name="date" type="date" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]"/></label>
           <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Time window" data-es="Horario">Time window</span>
-            <select name="window" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]">
+            <select name="window" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]">
               <option value="morning" data-en="Morning · 8am – 11am" data-es="Mañana · 8am – 11am">Morning · 8am – 11am</option>
               <option value="midday" data-en="Mid-day · 11am – 2pm" data-es="Medio día · 11am – 2pm">Mid-day · 11am – 2pm</option>
               <option value="afternoon" data-en="Afternoon · 2pm – 5pm" data-es="Tarde · 2pm – 5pm">Afternoon · 2pm – 5pm</option>
@@ -181,9 +181,9 @@
       <fieldset id="step-4" class="step-panel hidden">
         <legend class="eyebrow mb-4" data-en="04 · Contact" data-es="04 · Contacto">04 · Contact</legend>
         <div class="grid md:grid-cols-2 gap-4">
-          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Full name" data-es="Nombre completo">Full name</span><input name="fullName" type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" required/></label>
-          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Phone" data-es="Teléfono">Phone</span><input name="phone" type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" required/></label>
-          <label class="block md:col-span-2"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Email (optional)" data-es="Email (opcional)">Email (optional)</span><input name="email" type="email" placeholder="you@email.com" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Full name" data-es="Nombre completo">Full name</span><input name="fullName" type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]" required/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Phone" data-es="Teléfono">Phone</span><input name="phone" type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]" required/></label>
+          <label class="block md:col-span-2"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Email (optional)" data-es="Email (opcional)">Email (optional)</span><input name="email" type="email" placeholder="you@email.com" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Inter]"/></label>
         </div>
 
         <!-- Summary card -->
@@ -255,7 +255,7 @@
 .svc-pick{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;background:#0a0a0a;border:1px solid rgba(255,255,255,.10);cursor:pointer;transition:border-color .25s,background .25s}
 .svc-pick:hover{border-color:rgba(255,203,0,.4)}
 .svc-pick:has(input:checked){border-color:var(--amber);background:rgba(255,203,0,.05);box-shadow:0 0 20px rgba(255,203,0,.18)}
-.svc-pick .badge{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;padding:6px 10px;color:var(--amber);border:1px solid rgba(255,203,0,.4)}
+.svc-pick .badge{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;padding:6px 10px;color:var(--amber);border:1px solid rgba(255,203,0,.4)}
 .svc-pick:has(input:checked) .badge{background:var(--amber);color:#0a0a0a;border-color:var(--amber)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 </style>

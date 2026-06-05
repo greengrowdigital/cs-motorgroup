@@ -18,7 +18,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
 
 <!-- Top utility -->
 <div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
     <div class="flex items-center gap-7">
       <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
       <span>520 Hicksville Rd · Massapequa, NY</span>
@@ -52,7 +52,7 @@
 </div>
 
 <!-- NAV -->
-<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#0a0a1f]/85 border-b border-white/[.08]">
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.08]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
     <a href="index.html" class="flex items-center gap-3">
       <div class="neon-script text-[1.8rem] neon-amber leading-none">CS Motor</div>
@@ -83,36 +83,18 @@
   </div>
 </nav>
 
-<!-- HERO — NEON COLLAGE -->
-<section class="relative min-h-[90vh] md:min-h-[100vh] flex items-end overflow-hidden" style="background:linear-gradient(180deg,#050514 0%,#0a0a1f 50%,#1a0a2e 100%)">
-  <!-- Neon grid floor (perspective) -->
-  <div class="absolute inset-0 opacity-25" style="background-image:linear-gradient(rgba(0,225,255,.4) 1px,transparent 1px),linear-gradient(90deg,rgba(0,225,255,.4) 1px,transparent 1px);background-size:60px 60px;background-position:center bottom;transform:perspective(500px) rotateX(60deg);transform-origin:center bottom;mask-image:linear-gradient(180deg,transparent 50%,#000 100%);-webkit-mask-image:linear-gradient(180deg,transparent 50%,#000 100%);"></div>
-  <!-- Sunset horizon glow -->
-  <div class="absolute left-0 right-0 top-1/2 h-px" style="background:linear-gradient(90deg,transparent,var(--cyan),var(--pink),var(--amber),transparent);box-shadow:0 0 80px var(--pink-glow),0 0 120px var(--cyan-glow);"></div>
-  <!-- Sun -->
-  <div class="absolute" style="top:18%;right:14%;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,var(--amber) 0%,var(--pink) 60%,transparent 75%);filter:blur(2px);box-shadow:0 0 120px var(--amber-glow);"></div>
-  <div class="absolute" style="top:18%;right:14%;width:280px;height:280px;border-radius:50%;background:repeating-linear-gradient(0deg,transparent 0,transparent 22px,#0a0a1f 22px,#0a0a1f 28px);mix-blend-mode:multiply;"></div>
-  <!-- Mountains silhouette -->
-  <svg viewBox="0 0 1600 200" class="absolute left-0 right-0" style="bottom:46%;width:100%;height:14vh;opacity:.6">
-    <path d="M0,200 L80,120 L180,160 L300,90 L430,150 L560,80 L700,140 L850,70 L980,130 L1120,90 L1260,150 L1400,100 L1520,140 L1600,110 L1600,200 Z" fill="#0a0a1f"/>
-  </svg>
-  <div class="sun-burst" style="left:-200px;bottom:10%;width:480px;height:480px;background:radial-gradient(circle,rgba(255,45,135,.22),transparent 60%);"></div>
-
-  <!-- Decorative SVG decals — floating stickers/arrows -->
-  <!-- Big neon arrow pointing to OPEN -->
-  <svg viewBox="0 0 200 220" class="absolute z-10 decal-arrow" style="top:8%;right:6%;width:140px;color:var(--amber);transform:rotate(8deg)">
-    <path d="M100 10 Q90 100 110 130" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-    <path d="M85 115 L115 135 L100 155 Z" fill="currentColor"/>
-    <text x="100" y="195" text-anchor="middle" font-family="Monoton" font-size="22" fill="currentColor" letter-spacing="2">OPEN</text>
-  </svg>
-  <!-- Sticker top-left -->
-  <div class="absolute z-10 hidden md:block" style="top:14%;left:6%;">
-    <div class="sticker sticker-pink" style="transform:rotate(-8deg);font-size:1.1rem;padding:.5rem 1.1rem">24 HRS</div>
-  </div>
-  <!-- Sticker bottom-right -->
-  <div class="absolute z-10 hidden lg:block" style="bottom:32%;right:18%;">
-    <div class="sticker sticker-cyan" style="transform:rotate(5deg);font-size:.92rem">FREE AIR</div>
-  </div>
+<!-- HERO — Premium -->
+<section class="relative min-h-[90vh] md:min-h-[100vh] flex items-end overflow-hidden" style="background:#050505">
+  <!-- Hero image fill with deep dim filter -->
+  <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" />
+  <!-- Ambient gold spotlights -->
+  <div class="absolute inset-0 pointer-events-none" style="background:
+    radial-gradient(900px 500px at 70% 30%, rgba(255,203,0,.14), transparent 60%),
+    radial-gradient(700px 400px at 15% 80%, rgba(255,224,102,.08), transparent 60%);"></div>
+  <!-- Bottom fade into bg -->
+  <div class="absolute inset-0 hero-fade pointer-events-none"></div>
+  <!-- Subtle horizon rule -->
+  <div class="absolute left-0 right-0 chrome-rule" style="top:55%;opacity:.55"></div>
 
   <div class="relative z-20 max-w-[1500px] mx-auto px-6 md:px-8 pb-16 md:pb-28 w-full">
     <div class="reveal-stagger">
@@ -338,7 +320,7 @@
 <!-- CTA -->
 <section class="relative py-24 md:py-40 overflow-hidden border-t border-white/[.08]">
   <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=2000&q=85" class="absolute inset-0 w-full h-full object-cover hero-img" alt="Open road at night" />
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1f]/70 via-[#0a0a1f]/55 to-[#0a0a1f]"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/55 to-[#0a0a0a]"></div>
   <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8 text-center">
     <div class="reveal">
       <div class="eyebrow" data-en="Drop in" data-es="Pásate">Drop in</div>
@@ -361,7 +343,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="py-14 md:py-20 border-t border-white/[.08]" style="background:#050514">
+<footer class="py-14 md:py-20 border-t border-white/[.08]" style="background:#050505">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8">
     <div class="grid md:grid-cols-12 gap-10">
       <div class="md:col-span-5">
@@ -407,7 +389,7 @@
 
 <!-- Mobile sticky -->
 <div class="mobile-cta">
-  <a href="tel:+16316019865" class="btn-neon" style="background:var(--amber);color:#0a0a1f">Call</a>
+  <a href="tel:+16316019865" class="btn-neon" style="background:var(--amber);color:#0a0a0a">Call</a>
   <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
 </div>
 
