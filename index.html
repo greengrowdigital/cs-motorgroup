@@ -139,34 +139,6 @@
         <a href="rentals.html" class="btn btn-outline-cyan" data-en="Reserve a rental" data-es="Reservar alquiler">Reserve a rental</a>
       </div>
 
-      <!-- Pump pricing — big neon board -->
-      <div class="mt-14 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl">
-        <div class="ticker">
-          <div>
-            <div class="lbl" data-en="Regular 87" data-es="Regular 87">Regular 87</div>
-            <div class="val" data-ticker-val="regular">$3.49</div>
-          </div>
-        </div>
-        <div class="ticker">
-          <div>
-            <div class="lbl">Plus 89</div>
-            <div class="val" data-ticker-val="plus">$3.79</div>
-          </div>
-        </div>
-        <div class="ticker">
-          <div>
-            <div class="lbl" data-en="Premium 93" data-es="Premium 93">Premium 93</div>
-            <div class="val" data-ticker-val="premium">$3.99</div>
-          </div>
-        </div>
-        <div class="ticker">
-          <div>
-            <div class="lbl">Diesel</div>
-            <div class="val" data-ticker-val="diesel">$3.85</div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-3 mono text-[.62rem] tracking-[.22em] uppercase" style="color:var(--cyan);text-shadow:0 0 8px var(--cyan-glow);" data-en="● Live · Updated continuously · per gallon" data-es="● En vivo · Actualizado · por galón">● Live · Updated continuously · per gallon</div>
     </div>
   </div>
 </section>
@@ -192,287 +164,171 @@
   </div>
 </section>
 
-<!-- WHAT WE OFFER — colorful cards -->
-<section class="py-20 md:py-32 relative">
+
+<!-- DETAILING FEATURE -->
+<section class="py-20 md:py-28 relative">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-14 items-center">
+    <div class="md:col-span-7 reveal relative">
+      <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1400&q=85" alt="Car detailing" class="w-full aspect-[4/3] object-cover" style="filter:saturate(1.05) contrast(1.05);"/>
+      <div class="absolute -top-5 -right-5 md:-top-7 md:-right-7 sticker sticker-amber" style="font-size:1rem;padding:.65rem 1.2rem">FULL DETAIL ★ HALF-DAY</div>
+      <div class="absolute -bottom-5 -left-5 md:-bottom-7 md:-left-7 sticker sticker-cyan" style="font-size:.9rem;padding:.55rem 1rem">CERAMIC ★ OPTIONAL</div>
+    </div>
+    <div class="md:col-span-5 reveal">
+      <div class="eyebrow" data-en="Detailing · Featured" data-es="Detallado · Destacado">Detailing · Featured</div>
+      <h2 class="display-serif text-4xl md:text-6xl mt-4 leading-[.95]"
+          data-en-html="Brought back to <span style='color:var(--amber)'>showroom.</span>"
+          data-es-html="De vuelta al <span style='color:var(--amber)'>showroom.</span>">
+        Brought back to <span style="color:var(--amber)">showroom.</span>
+      </h2>
+      <p class="mt-5 text-white/75 leading-relaxed"
+         data-en="Hand wash, clay bar, interior shampoo, leather treatment, paint sealant. Optional 9H ceramic coating that lasts five years. Half-day full detail, in by 9am, out by 3pm."
+         data-es="Lavado a mano, clay bar, shampoo interior, tratamiento de cuero, sellante. Coating cerámico 9H opcional que dura cinco años. Detallado completo en medio día.">
+        Hand wash, clay bar, interior shampoo, leather treatment, paint sealant. Optional 9H ceramic coating that lasts five years. Half-day full detail, in by 9am, out by 3pm.
+      </p>
+      <div class="mt-7 grid grid-cols-3 gap-3 text-center">
+        <div class="border border-white/10 p-3">
+          <div class="display text-3xl" style="color:var(--amber)">$89</div>
+          <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Express" data-es="Express">Express</div>
+        </div>
+        <div class="border border-white/10 p-3">
+          <div class="display text-3xl" style="color:var(--amber)">$199</div>
+          <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Full Detail" data-es="Completo">Full Detail</div>
+        </div>
+        <div class="border border-white/10 p-3">
+          <div class="display text-3xl" style="color:var(--amber)">$799</div>
+          <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="9H Ceramic" data-es="9H Cerámico">9H Ceramic</div>
+        </div>
+      </div>
+      <a href="carwash.html" class="btn btn-neon mt-7"><span data-en="See detail packages" data-es="Ver paquetes">See detail packages</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- RENTALS FEATURE -->
+<section class="py-20 md:py-28 border-t border-white/[.05]" style="background:#0a0a14">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="grid md:grid-cols-12 gap-10 md:gap-16 items-end mb-14 reveal">
+    <div class="grid md:grid-cols-12 gap-8 mb-12 items-end reveal">
       <div class="md:col-span-7">
-        <div class="eyebrow" data-en="What you'll find · 01" data-es="Lo que encontrarás · 01">What you'll find · 01</div>
-        <h2 class="display text-4xl md:text-7xl mt-4 leading-[.95]"
-            data-en-html="A real stop. <span class='neon-pink'>Not just pumps.</span>"
-            data-es-html="Una parada real. <span class='neon-pink'>No solo bombas.</span>">
-          A real stop. <span class="neon-pink">Not just pumps.</span>
+        <div class="eyebrow" data-en="Car Rental Agency · Featured" data-es="Agencia de Alquiler · Destacado">Car Rental Agency · Featured</div>
+        <h2 class="display-serif text-4xl md:text-7xl mt-4 leading-[.92]"
+            data-en-html="Four tiers.<br/><span style='color:var(--amber)'>Keys today.</span>"
+            data-es-html="Cuatro tiers.<br/><span style='color:var(--amber)'>Llaves hoy.</span>">
+          Four tiers.<br/><span style="color:var(--amber)">Keys today.</span>
         </h2>
       </div>
       <p class="md:col-span-5 text-white/70 leading-relaxed"
-         data-en="Coffee brewed in the last 30 minutes. A car wash that actually cleans your wheels. A bathroom you'd let your kid use. That's the bar — and we hit it every shift."
-         data-es="Café recién hecho en los últimos 30 minutos. Un lavado que de verdad limpia las llantas. Un baño que dejarías que use tu hijo. Esa es la vara — y la cumplimos en cada turno.">
-        Coffee brewed in the last 30 minutes. A car wash that actually cleans your wheels. A bathroom you'd let your kid use. That's the bar — and we hit it every shift.
+         data-en="From a Corolla to a Lambo. Daily and weekly rates, insurance available, free pickup and drop-off within 5 miles. 25+ with a valid license."
+         data-es="De un Corolla a un Lambo. Tarifas diarias y semanales, seguro disponible, pickup y drop-off gratis hasta 5 millas. 25+ con licencia válida.">
+        From a Corolla to a Lambo. Daily and weekly rates, insurance available, free pickup and drop-off within 5 miles. 25+ with a valid license.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 reveal-stagger">
-      <a href="services.html#fuel" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">01 / Fuel</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Regular · Plus · Premium · Diesel" data-es="Regular · Plus · Premium · Diesel">Regular · Plus · Premium · Diesel</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Top-tier additives in every grade. Pumps open 24 hours. Cash and card."
-           data-es="Aditivos premium en cada grado. Bombas 24 horas. Efectivo y tarjeta.">
-          Top-tier additives in every grade. Pumps open 24 hours. Cash and card.
-        </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 reveal-stagger">
+      <a href="rentals.html#economy" class="card p-6 group">
+        <div class="num">01 / Economy</div>
+        <div class="display text-4xl md:text-5xl mt-3" style="color:var(--amber)">$45<span class="text-white/40 text-lg" data-en="/day" data-es="/día">/day</span></div>
+        <h3 class="condensed text-xl mt-3">Corolla · Civic · Versa</h3>
+        <p class="text-white/55 text-xs mt-2" data-en="40 MPG · Bluetooth · backup cam" data-es="40 MPG · Bluetooth · cámara">40 MPG · Bluetooth · backup cam</p>
       </a>
-
-      <a href="services.html#repairs" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">02 / Repairs</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="General Repairs &amp; Maintenance" data-es="Reparaciones &amp; Mantenimiento">General Repairs &amp; Maintenance</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Brakes, suspension, alignment, electrical, AC, diagnostics. ASE-certified techs, all makes."
-           data-es="Frenos, suspensión, alineación, eléctrico, AC, diagnóstico. Técnicos ASE-certificados, todas las marcas.">
-          Brakes, suspension, alignment, electrical, AC, diagnostics. ASE-certified techs, all makes.
-        </p>
+      <a href="rentals.html#luxury" class="card p-6 group">
+        <div class="num">02 / Luxury</div>
+        <div class="display text-4xl md:text-5xl mt-3" style="color:var(--amber)">$149<span class="text-white/40 text-lg" data-en="/day" data-es="/día">/day</span></div>
+        <h3 class="condensed text-xl mt-3">BMW 5 · E-Class · A7</h3>
+        <p class="text-white/55 text-xs mt-2" data-en="Leather · pano roof · premium audio" data-es="Cuero · techo pano · audio premium">Leather · pano roof · premium audio</p>
       </a>
-
-      <a href="services.html#oil" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">03 / Oil</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Oil Change Express" data-es="Cambio de Aceite Express">Oil Change Express</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Conventional, synthetic blend, full synthetic. 21-point check included. Out in 25 minutes."
-           data-es="Convencional, semisintético, sintético total. Inspección de 21 puntos. Listo en 25 minutos.">
-          Conventional, synthetic blend, full synthetic. 21-point check included. Out in 25 minutes.
-        </p>
+      <a href="rentals.html#suv" class="card p-6 group">
+        <div class="num">03 / Large SUV</div>
+        <div class="display text-4xl md:text-5xl mt-3" style="color:var(--amber)">$179<span class="text-white/40 text-lg" data-en="/day" data-es="/día">/day</span></div>
+        <h3 class="condensed text-xl mt-3">Suburban · Escalade · Navigator</h3>
+        <p class="text-white/55 text-xs mt-2" data-en="3 rows · 7,800 lb tow · 4x4" data-es="3 filas · arrastre 7,800 lb · 4x4">3 rows · 7,800 lb tow · 4x4</p>
       </a>
-
-      <a href="services.html#body" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">04 / Body</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Body Work &amp; Paint" data-es="Body Work &amp; Pintura">Body Work &amp; Paint</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Collision, dent removal, paint match, bumper repair, panel work. Insurance estimates accepted."
-           data-es="Colisión, deshelladuras, igualación de pintura, reparación de paragolpes. Aceptamos estimados de seguro.">
-          Collision, dent removal, paint match, bumper repair, panel work. Insurance estimates accepted.
-        </p>
-      </a>
-
-      <a href="carwash.html" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">05 / Detail</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Car Detailing" data-es="Detallado">Car Detailing</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Hand wash, clay bar, interior shampoo, leather treatment, paint sealant. Half-day full detail."
-           data-es="Lavado a mano, clay bar, shampoo interior, tratamiento de cuero, sellante. Detallado completo en medio día.">
-          Hand wash, clay bar, interior shampoo, leather treatment, paint sealant. Half-day full detail.
-        </p>
-      </a>
-
-      <a href="rentals.html" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">06 / Rentals</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Economy · Luxury · SUV · Exotic" data-es="Economy · Lujo · SUV · Exóticos">Economy · Luxury · SUV · Exotic</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Daily and weekly rentals across four tiers. Insurance available. 25+ with valid license."
-           data-es="Alquiler diario y semanal en cuatro tiers. Seguro disponible. 25+ con licencia válida.">
-          Daily and weekly rentals across four tiers. Insurance available. 25+ with valid license.
-        </p>
-      </a>
-
-      <a href="services.html#pickup" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">07 / Pickup</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Pickup &amp; Drop-Off" data-es="Pickup &amp; Drop-Off">Pickup &amp; Drop-Off</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="We'll get the car from your driveway, do the work, drop it back washed and gassed. Free within 5 mi."
-           data-es="Recogemos el auto en tu casa, hacemos el trabajo, lo regresamos lavado y con gasolina. Gratis hasta 5 millas.">
-          We'll get the car from your driveway, do the work, drop it back washed and gassed. Free within 5 mi.
-        </p>
-      </a>
-
-      <a href="store.html" class="svc-card p-7 md:p-9 group">
-        <div class="flex items-start justify-between mb-8">
-          <span class="num">08 / Store</span>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/35 group-hover:text-[var(--amber)] transition-colors"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </div>
-        <h3 class="condensed text-3xl md:text-4xl mb-3" data-en="Convenience Store" data-es="Mini-tienda">Convenience Store</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Cold drinks, snacks, hot coffee, energy bars, basics. Stocked all day, every day."
-           data-es="Bebidas frías, snacks, café caliente, energéticos, lo básico. Surtido todo el día.">
-          Cold drinks, snacks, hot coffee, energy bars, basics. Stocked all day, every day.
-        </p>
+      <a href="rentals.html#exotic" class="card p-6 group" style="border-color:var(--amber);box-shadow:0 0 28px var(--amber-glow)">
+        <div class="num" style="color:var(--amber)">04 / Exotic</div>
+        <div class="display text-4xl md:text-5xl mt-3" style="color:var(--amber)">$899<span class="text-white/40 text-lg" data-en="/day" data-es="/día">/day</span></div>
+        <h3 class="condensed text-xl mt-3">Huracán · Roma · 720S</h3>
+        <p class="text-white/55 text-xs mt-2" data-en="V8/V10 · 600+ hp · bucket list" data-es="V8/V10 · 600+ hp · bucket list">V8/V10 · 600+ hp · bucket list</p>
       </a>
     </div>
 
-    <div class="mt-12 flex justify-center reveal">
-      <a href="services.html" class="btn btn-line">
-        <span data-en="See full menu" data-es="Ver menú completo">See full menu</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
+    <div class="mt-10 flex flex-wrap gap-3 reveal">
+      <a href="rentals.html" class="btn btn-neon"><span data-en="Reserve a rental" data-es="Reservar alquiler">Reserve a rental</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="rentals.html" class="btn btn-line" data-en="See the requirements" data-es="Ver requisitos">See the requirements</a>
     </div>
   </div>
 </section>
 
-<!-- THE STATION SECTION — sticker collage -->
-<section class="py-20 md:py-32 border-t border-white/[.08] relative" style="background:linear-gradient(180deg,#11112a 0%,#0a0a1f 100%)">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8 grid md:grid-cols-12 gap-10 md:gap-16 items-center">
-    <div class="md:col-span-6 reveal relative">
-      <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1400&q=85" alt="Gas pump at night" class="w-full aspect-[4/3] object-cover" style="filter:saturate(1.2) contrast(1.05);" />
-      <!-- Floating sticker collage -->
-      <div class="absolute -top-6 -right-6 md:-top-8 md:-right-8 sticker sticker-pink" style="font-size:1.4rem;padding:.7rem 1.4rem">CASH ONLY ★ DISCOUNT</div>
-      <div class="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 sticker sticker-cyan" style="font-size:1.2rem;padding:.7rem 1.2rem">PUMP №3 ★ READY</div>
-    </div>
-    <div class="md:col-span-6 reveal">
-      <div class="eyebrow">The corner that's always on</div>
-      <h2 class="display text-4xl md:text-6xl mt-4 leading-[.95]"
-          data-en-html="On Hicksville since <span class='neon-amber'>1998</span>."
-          data-es-html="En Hicksville desde <span class='neon-amber'>1998</span>.">
-        On Hicksville since <span class="neon-amber">1998</span>.
-      </h2>
-      <p class="mt-6 text-white/75 leading-relaxed"
-         data-en="Global Gas has been the late-night light on the corner of Hicksville Rd for over two decades. We've fueled commuters, taxi drivers, paramedics on shift, parents on the way to baseball games, and everyone in between."
-         data-es="Global Gas ha sido la luz que se queda prendida toda la noche en la esquina de Hicksville Rd por más de dos décadas. Hemos llenado autos de gente que va al trabajo, taxis, paramédicos, papás camino al partido, y todo lo que está en medio.">
-        Global Gas has been the late-night light on the corner of Hicksville Rd for over two decades. We've fueled commuters, taxi drivers, paramedics on shift, parents on the way to baseball games, and everyone in between.
-      </p>
-      <p class="mt-4 text-white/70 leading-relaxed"
-         data-en="Fuel is competitive. The wash is clean. The coffee is fresh. The bathroom is open. That's the whole sales pitch."
-         data-es="El combustible es competitivo. El lavado es limpio. El café está fresco. El baño está abierto. Ese es el pitch completo.">
-        Fuel is competitive. The wash is clean. The coffee is fresh. The bathroom is open. That's the whole sales pitch.
-      </p>
-      <div class="mt-10 grid grid-cols-3 gap-6">
-        <div>
-          <div class="display text-4xl md:text-5xl neon-amber">27<span class="text-white/40 text-2xl">y</span></div>
-          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-2" data-en="On the corner" data-es="En la esquina">On the corner</div>
-        </div>
-        <div>
-          <div class="display text-4xl md:text-5xl neon-pink">24/7</div>
-          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-2" data-en="Always open" data-es="Siempre abierto">Always open</div>
-        </div>
-        <div>
-          <div class="display text-4xl md:text-5xl neon-cyan">4★</div>
-          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 mt-2" data-en="Google rating" data-es="Rating Google">Google rating</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LOYALTY / REWARDS -->
-<section class="py-20 md:py-32 border-t border-white/[.08]">
+<!-- SERVICES STRIP — compact 6 cards -->
+<section class="py-20 md:py-28 border-t border-white/[.05]">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal mb-12">
-      <div class="eyebrow" data-en="Rewards · 02" data-es="Recompensas · 02">Rewards · 02</div>
-      <h2 class="display text-4xl md:text-7xl mt-4"
-          data-en-html="Fill more. <span class='neon-amber'>Save more.</span>"
-          data-es-html="Llena más. <span class='neon-amber'>Ahorra más.</span>">
-        Fill more. <span class="neon-amber">Save more.</span>
-      </h2>
+    <div class="grid md:grid-cols-12 gap-8 mb-12 items-end reveal">
+      <div class="md:col-span-7">
+        <div class="eyebrow" data-en="The shop · Everything else" data-es="El taller · Todo lo demás">The shop · Everything else</div>
+        <h2 class="display text-4xl md:text-6xl mt-4 leading-[.95]"
+            data-en-html="One bay. <span class='neon-pink'>Six tools.</span>"
+            data-es-html="Un taller. <span class='neon-pink'>Seis herramientas.</span>">
+          One bay. <span class="neon-pink">Six tools.</span>
+        </h2>
+      </div>
+      <p class="md:col-span-5 text-white/70 leading-relaxed"
+         data-en="ASE-certified techs in-house. Pickup and drop-off included on most jobs. We even pump your gas on the way out."
+         data-es="Técnicos ASE-certificados en casa. Pickup y drop-off incluido en la mayoría de trabajos. Hasta te llenamos el tanque al salir.">
+        ASE-certified techs in-house. Pickup and drop-off included on most jobs. We even pump your gas on the way out.
+      </p>
     </div>
-    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
-      <div class="card p-7 relative">
-        <div class="absolute -top-3 -right-3 sticker sticker-amber" style="font-size:.78rem">5¢ OFF</div>
-        <div class="pump-display inline-block mb-5 text-2xl">$0.05</div>
-        <h3 class="condensed text-3xl mb-3" data-en="Every Gallon" data-es="Cada Galón">Every Gallon</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="5¢ off per gallon when you swipe your Global Rewards card. No minimum. Stacks with cash discount."
-           data-es="5¢ de descuento por galón con tu Global Rewards. Sin mínimo. Acumula con descuento en efectivo.">
-          5¢ off per gallon when you swipe your Global Rewards card. No minimum. Stacks with cash discount.
-        </p>
-      </div>
-      <div class="card p-7 relative" style="border-color:var(--amber);box-shadow:0 0 32px var(--amber-glow);">
-        <div class="absolute -top-3 -right-3 sticker sticker-pink" style="font-size:.78rem">BEST DEAL</div>
-        <div class="pump-display inline-block mb-5 text-2xl">$0.15</div>
-        <h3 class="condensed text-3xl mb-3" data-en="Wash + Fuel" data-es="Lavado + Gas">Wash + Fuel</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Wash your car, save 15¢/gal on your fill. Same visit. Up to 25 gallons."
-           data-es="Lava el auto, ahorra 15¢/gal. Misma visita. Hasta 25 galones.">
-          Wash your car, save 15¢/gal on your fill. Same visit. Up to 25 gallons.
-        </p>
-      </div>
-      <div class="card p-7 relative">
-        <div class="absolute -top-3 -right-3 sticker sticker-cyan" style="font-size:.78rem">FREE</div>
-        <div class="pump-display inline-block mb-5 text-2xl">FREE</div>
-        <h3 class="condensed text-3xl mb-3" data-en="10th Coffee On Us" data-es="10º Café Gratis">10th Coffee On Us</h3>
-        <p class="text-white/65 text-sm leading-relaxed"
-           data-en="Buy nine, the tenth is free. Punch card or app. Refills half-price all day."
-           data-es="Compra nueve, el décimo va gratis. Tarjeta o app. Refills mitad de precio todo el día.">
-          Buy nine, the tenth is free. Punch card or app. Refills half-price all day.
-        </p>
-      </div>
+    <div class="grid md:grid-cols-3 gap-4 reveal-stagger">
+      <a href="services.html#repairs" class="svc-card p-7 group">
+        <div class="num">01 / Repairs</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="General Repairs" data-es="Reparaciones">General Repairs</h3>
+        <p class="text-white/60 text-sm" data-en="Brakes, suspension, alignment, electrical, AC, diagnostics. All makes." data-es="Frenos, suspensión, alineación, eléctrico, AC, diagnóstico. Todas las marcas.">Brakes, suspension, alignment, electrical, AC, diagnostics. All makes.</p>
+      </a>
+      <a href="services.html#oil" class="svc-card p-7 group">
+        <div class="num">02 / Oil</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="Oil Change Express" data-es="Aceite Express">Oil Change Express</h3>
+        <p class="text-white/60 text-sm" data-en="21-point check, conventional or full synthetic. Out in 25 minutes." data-es="Inspección de 21 puntos, convencional o sintético total. Listo en 25 min.">21-point check, conventional or full synthetic. Out in 25 minutes.</p>
+      </a>
+      <a href="services.html#body" class="svc-card p-7 group">
+        <div class="num">03 / Body</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="Body Work &amp; Paint" data-es="Body Work &amp; Pintura">Body Work &amp; Paint</h3>
+        <p class="text-white/60 text-sm" data-en="Collision, dents, panel work, paint match. Insurance estimates accepted." data-es="Colisión, abolladuras, paneles, igualación de pintura. Aceptamos seguros.">Collision, dents, panel work, paint match. Insurance estimates accepted.</p>
+      </a>
+      <a href="services.html#pickup" class="svc-card p-7 group">
+        <div class="num">04 / Pickup</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="Pickup &amp; Drop-off" data-es="Pickup &amp; Drop-off">Pickup &amp; Drop-off</h3>
+        <p class="text-white/60 text-sm" data-en="We grab the car from your driveway. Free within 5 miles." data-es="Recogemos el auto en tu casa. Gratis hasta 5 millas.">We grab the car from your driveway. Free within 5 miles.</p>
+      </a>
+      <a href="services.html#fuel" class="svc-card p-7 group">
+        <div class="num">05 / Fuel</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="Pumps 24/7" data-es="Bombas 24/7">Pumps 24/7</h3>
+        <p class="text-white/60 text-sm" data-en="Regular, Plus, Premium, Diesel. Top-tier additives. Cash + card." data-es="Regular, Plus, Premium, Diesel. Aditivos premium. Efectivo + tarjeta.">Regular, Plus, Premium, Diesel. Top-tier additives. Cash + card.</p>
+      </a>
+      <a href="store.html" class="svc-card p-7 group">
+        <div class="num">06 / Store</div>
+        <h3 class="condensed text-2xl md:text-3xl mt-2 mb-2" data-en="Convenience Store" data-es="Mini-tienda">Convenience Store</h3>
+        <p class="text-white/60 text-sm" data-en="Cold drinks, coffee, snacks, basics. Open 24/7." data-es="Bebidas frías, café, snacks, lo básico. Abierto 24/7.">Cold drinks, coffee, snacks, basics. Open 24/7.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="py-20 md:py-28 border-t border-white/[.08]" style="background:#11112a">
+<!-- PUMP PRICING — compact band -->
+<section class="py-14 md:py-20 border-t border-white/[.05]" style="background:#000">
   <div class="max-w-[1500px] mx-auto px-6 md:px-8">
-    <div class="reveal mb-12">
-      <div class="eyebrow" data-en="The corner approves" data-es="La esquina aprueba">The corner approves</div>
-      <h2 class="display text-4xl md:text-6xl mt-4"
-          data-en-html="What Massapequa <span class='neon-pink'>says.</span>"
-          data-es-html="Lo que dice <span class='neon-pink'>Massapequa.</span>">
-        What Massapequa <span class="neon-pink">says.</span>
-      </h2>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 reveal">
+      <div>
+        <div class="mono text-[.62rem] tracking-[.22em] uppercase" style="color:var(--cyan);text-shadow:0 0 8px var(--cyan-glow);" data-en="● Live · per gallon · updated continuously" data-es="● En vivo · por galón · actualizado">● Live · per gallon · updated continuously</div>
+        <h3 class="display text-3xl md:text-5xl mt-3 leading-[.95]"
+            data-en-html="Still pumping <span class='neon-amber'>since '98.</span>"
+            data-es-html="Bombeando desde el <span class='neon-amber'>'98.</span>">
+          Still pumping <span class="neon-amber">since '98.</span>
+        </h3>
+      </div>
+      <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn btn-line" data-en="Pull up" data-es="Pásate">Pull up</a>
     </div>
-    <div class="grid md:grid-cols-3 gap-5 reveal-stagger">
-      <div class="card p-7">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full bg-pink-500/15 border-2 border-pink-500/60 flex items-center justify-center text-white display text-base">D</div>
-          <div>
-            <div class="text-white font-bold">Danny K.</div>
-            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Massapequa · Google</div>
-          </div>
-          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
-        </div>
-        <p class="text-white/80 text-sm italic leading-relaxed"
-           data-en='"My go-to stop on Hicksville Rd. Pumps work, coffee is hot at 4am, and the bathroom is actually clean. That last part is rare."'
-           data-es='"Mi parada en Hicksville Rd. Las bombas funcionan, el café está caliente a las 4am y el baño está limpio. Eso último es raro."'>
-          "My go-to stop on Hicksville Rd. Pumps work, coffee is hot at 4am, and the bathroom is actually clean. That last part is rare."
-        </p>
-      </div>
-      <div class="card p-7">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full bg-cyan-500/15 border-2 border-cyan-500/60 flex items-center justify-center text-white display text-base">L</div>
-          <div>
-            <div class="text-white font-bold">Lisa P.</div>
-            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Wantagh · Google</div>
-          </div>
-          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
-        </div>
-        <p class="text-white/80 text-sm italic leading-relaxed"
-           data-en='"The car wash is better than the $25 places by Sunrise Highway. Wheels actually come out clean. I pay the upgrade — worth it."'
-           data-es='"El lavado es mejor que los de $25 cerca de Sunrise Hwy. Las llantas salen limpias. Pago el upgrade — vale la pena."'>
-          "The car wash is better than the $25 places by Sunrise Highway. Wheels actually come out clean. I pay the upgrade — worth it."
-        </p>
-      </div>
-      <div class="card p-7">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full bg-amber-500/15 border-2 border-amber-500/60 flex items-center justify-center text-white display text-base">R</div>
-          <div>
-            <div class="text-white font-bold">Ramon S.</div>
-            <div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40">Massapequa Park</div>
-          </div>
-          <div class="ml-auto text-amber-400 text-sm">★★★★★</div>
-        </div>
-        <p class="text-white/80 text-sm italic leading-relaxed"
-           data-en='"Cheapest premium on this part of Hicksville and the Plus is always within a few cents of competitors. They earned me as a regular."'
-           data-es='"El premium más barato en esta parte de Hicksville. Me hicieron cliente regular."'>
-          "Cheapest premium on this part of Hicksville and the Plus is always within a few cents of competitors. They earned me as a regular."
-        </p>
-      </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="ticker"><div><div class="lbl" data-en="Regular 87" data-es="Regular 87">Regular 87</div><div class="val" data-ticker-val="regular">$3.49</div></div></div>
+      <div class="ticker"><div><div class="lbl">Plus 89</div><div class="val" data-ticker-val="plus">$3.79</div></div></div>
+      <div class="ticker"><div><div class="lbl" data-en="Premium 93" data-es="Premium 93">Premium 93</div><div class="val" data-ticker-val="premium">$3.99</div></div></div>
+      <div class="ticker"><div><div class="lbl">Diesel</div><div class="val" data-ticker-val="diesel">$3.85</div></div></div>
     </div>
   </div>
 </section>
