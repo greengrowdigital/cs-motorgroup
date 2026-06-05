@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Service · CS Motor Group · Massapequa</title>
+<meta name="description" content="Reserve a detailing package, rental, oil change, body work or general repair at CS Motor Group on Hicksville Rd. We confirm by phone within 30 minutes." />
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Monoton&family=Bowlby+One&family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="loader"><div class="loader-logo">CS MOTOR</div><div class="loader-bar"></div></div>
+<div class="grain"></div>
+<div class="scroll-progress"></div>
+
+<!-- Top utility -->
+<div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
+  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[Space_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
+    <div class="flex items-center gap-7">
+      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
+      <span>520 Hicksville Rd · Massapequa, NY</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="tel:+16316019865" class="hover:text-[var(--amber)]">(631) 601-9865</a>
+      <div class="lang-toggle flex items-center gap-1">
+        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.08]">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="display text-[1.65rem] tracking-tight" style="color:var(--amber);text-shadow:0 0 18px var(--amber-glow)">CS Motor</div>
+      <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/40 hidden md:inline">Auto Group ★ 1998</span>
+    </a>
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
+      <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
+      <a href="booking.html" class="nav-link active" data-en="Book" data-es="Reservar">Book</a>
+      <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+16316019865" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.66rem]">(631) 601-9865</a>
+      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    </div>
+  </div>
+  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.08] px-6 py-5 flex flex-col gap-4">
+    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
+    <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
+    <a href="booking.html" class="nav-link active" data-en="Book" data-es="Reservar">Book</a>
+    <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="relative pt-20 md:pt-28 pb-10 md:pb-14">
+  <div class="absolute inset-0 spotlight-orange"></div>
+  <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
+    <div class="reveal">
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="pylon" style="border-color:var(--amber);color:var(--amber)" data-en="Booking · Beta" data-es="Reservas · Beta">Booking · Beta</span>
+        <span class="sticker sticker-amber" style="font-size:.78rem" data-en="Confirmation in 30 min" data-es="Confirmamos en 30 min">Confirmation in 30 min</span>
+      </div>
+      <h1 class="display-serif text-5xl md:text-8xl leading-[.92] max-w-5xl"
+          data-en-html="Reserve.<br/><span style='color:var(--amber)'>Drop off.</span>"
+          data-es-html="Reserva.<br/><span style='color:var(--amber)'>Entrega.</span>">
+        Reserve.<br/><span style="color:var(--amber)">Drop off.</span>
+      </h1>
+      <p class="mt-6 max-w-2xl text-white/80 text-base md:text-lg leading-relaxed"
+         data-en="Pick the service, the date, and a window. We text confirmation within 30 minutes during business hours. All bookings are tracked in our internal dashboard."
+         data-es="Elige el servicio, la fecha y un horario. Confirmamos por SMS en 30 minutos durante el día. Todas las reservas se manejan desde nuestro dashboard interno.">
+        Pick the service, the date, and a window. We text confirmation within 30 minutes during business hours. All bookings are tracked in our internal dashboard.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FLOW -->
+<section class="py-12 md:py-16">
+  <div class="max-w-[1100px] mx-auto px-6 md:px-8">
+
+    <!-- Stepper -->
+    <ol class="grid grid-cols-4 gap-2 mb-10 reveal" id="stepper">
+      <li data-step="1" class="step active"><span class="mono text-[.6rem] tracking-[.22em] uppercase">Step 01</span><span class="display text-lg mt-1 block" data-en="Service" data-es="Servicio">Service</span></li>
+      <li data-step="2" class="step"><span class="mono text-[.6rem] tracking-[.22em] uppercase">Step 02</span><span class="display text-lg mt-1 block" data-en="Vehicle" data-es="Vehículo">Vehicle</span></li>
+      <li data-step="3" class="step"><span class="mono text-[.6rem] tracking-[.22em] uppercase">Step 03</span><span class="display text-lg mt-1 block" data-en="Date / Time" data-es="Fecha / Hora">Date / Time</span></li>
+      <li data-step="4" class="step"><span class="mono text-[.6rem] tracking-[.22em] uppercase">Step 04</span><span class="display text-lg mt-1 block" data-en="Contact" data-es="Contacto">Contact</span></li>
+    </ol>
+
+    <form id="bookingForm" novalidate class="reveal">
+
+      <!-- STEP 01 — SERVICE -->
+      <fieldset id="step-1" class="step-panel">
+        <legend class="eyebrow mb-4" data-en="01 · Pick a service" data-es="01 · Elige un servicio">01 · Pick a service</legend>
+        <div class="grid md:grid-cols-2 gap-3" id="serviceGrid">
+          <label class="svc-pick"><input type="radio" name="service" value="detail-gold" class="sr-only" data-price="150"><div><div class="condensed text-xl" data-en="Gold Detail" data-es="Detail Gold">Gold Detail</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">Sedan $150 · SUV $190</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="detail-platinum" class="sr-only" data-price="250"><div><div class="condensed text-xl" data-en="Platinum Detail" data-es="Detail Platinum">Platinum Detail</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">Sedan $250 · SUV $300</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="paint-correction" class="sr-only" data-price="150"><div><div class="condensed text-xl" data-en="Paint Correction" data-es="Corrección de Pintura">Paint Correction</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">Stage 1 $150 · Stage 2 $250</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="ceramic-5yr" class="sr-only" data-price="400"><div><div class="condensed text-xl" data-en="5-Year Ceramic Coat" data-es="Cerámico 5 años">5-Year Ceramic Coat</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">From $400</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="oil-change" class="sr-only" data-price="55"><div><div class="condensed text-xl" data-en="Oil Change Express" data-es="Cambio de Aceite">Oil Change Express</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">From $55 · 25 min</div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="general-repairs" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="General Repairs" data-es="Reparaciones">General Repairs</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Diagnostic · quote on-site" data-es="Diagnóstico · cotización en taller">Diagnostic · quote on-site</div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="body-work" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Body Work &amp; Paint" data-es="Body Work &amp; Pintura">Body Work &amp; Paint</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Estimate by photo" data-es="Estimado por foto">Estimate by photo</div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="tint" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Window Tinting" data-es="Polarizado">Window Tinting</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Quote per vehicle" data-es="Cotización por vehículo">Quote per vehicle</div></div><span class="badge" data-en="Add-on" data-es="Add-on">Add-on</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="ppf" class="sr-only" data-price="0"><div><div class="condensed text-xl">PPF Protection</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Partial or full · quoted" data-es="Parcial o completo · cotizado">Partial or full · quoted</div></div><span class="badge" data-en="Add-on" data-es="Add-on">Add-on</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="wrap" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Car Wrapping" data-es="Wrap Vehicular">Car Wrapping</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Color change · partial · quoted" data-es="Cambio de color · parcial · cotizado">Color change · partial · quoted</div></div><span class="badge" data-en="Add-on" data-es="Add-on">Add-on</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="dent" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Paint-less Dent Removal" data-es="Dent Removal sin Pintura">Paint-less Dent Removal</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Per panel · on-site" data-es="Por panel · en taller">Per panel · on-site</div></div><span class="badge" data-en="Add-on" data-es="Add-on">Add-on</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="rental" class="sr-only" data-price="45"><div><div class="condensed text-xl" data-en="Car Rental" data-es="Alquiler de Auto">Car Rental</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Economy from $45/day · 4 tiers" data-es="Economy desde $45/día · 4 tiers">Economy from $45/day · 4 tiers</div></div><span class="badge" data-en="Rentals" data-es="Alquiler">Rentals</span></label>
+        </div>
+        <div class="mt-8 flex justify-end">
+          <button type="button" class="btn btn-neon next-btn" data-target="2"><span data-en="Continue" data-es="Continuar">Continue</span> →</button>
+        </div>
+      </fieldset>
+
+      <!-- STEP 02 — VEHICLE -->
+      <fieldset id="step-2" class="step-panel hidden">
+        <legend class="eyebrow mb-4" data-en="02 · Vehicle info" data-es="02 · Datos del vehículo">02 · Vehicle info</legend>
+        <div class="grid md:grid-cols-3 gap-4">
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Vehicle type" data-es="Tipo de vehículo">Vehicle type</span>
+            <select name="vehicleType" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]">
+              <option value="sedan">Sedan / Coupe</option>
+              <option value="suv">SUV / Truck</option>
+              <option value="van">Van / Minivan</option>
+              <option value="exotic">Exotic / Performance</option>
+            </select>
+          </label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Year" data-es="Año">Year</span><input name="year" type="text" inputmode="numeric" placeholder="2022" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Make / Model" data-es="Marca / Modelo">Make / Model</span><input name="makeModel" type="text" placeholder="Honda Civic" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+          <label class="block md:col-span-3"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Notes (optional)" data-es="Notas (opcional)">Notes (optional)</span><textarea name="notes" rows="3" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" placeholder="Particular paint scratches, custom interior, fleet vehicle, etc."></textarea></label>
+        </div>
+        <div class="mt-8 flex justify-between">
+          <button type="button" class="btn btn-line back-btn" data-target="1">←</button>
+          <button type="button" class="btn btn-neon next-btn" data-target="3"><span data-en="Continue" data-es="Continuar">Continue</span> →</button>
+        </div>
+      </fieldset>
+
+      <!-- STEP 03 — DATE / TIME -->
+      <fieldset id="step-3" class="step-panel hidden">
+        <legend class="eyebrow mb-4" data-en="03 · Pick a slot" data-es="03 · Elige horario">03 · Pick a slot</legend>
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Date" data-es="Fecha">Date</span><input name="date" type="date" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Time window" data-es="Horario">Time window</span>
+            <select name="window" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]">
+              <option value="morning" data-en="Morning · 8am – 11am" data-es="Mañana · 8am – 11am">Morning · 8am – 11am</option>
+              <option value="midday" data-en="Mid-day · 11am – 2pm" data-es="Medio día · 11am – 2pm">Mid-day · 11am – 2pm</option>
+              <option value="afternoon" data-en="Afternoon · 2pm – 5pm" data-es="Tarde · 2pm – 5pm">Afternoon · 2pm – 5pm</option>
+              <option value="evening" data-en="Evening · 5pm – 8pm" data-es="Noche · 5pm – 8pm">Evening · 5pm – 8pm</option>
+            </select>
+          </label>
+        </div>
+        <div class="mt-6 p-5 border border-dashed border-white/20">
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/45 mb-2" data-en="Pickup &amp; drop-off · optional" data-es="Pickup &amp; drop-off · opcional">Pickup &amp; drop-off · optional</div>
+          <div class="flex flex-wrap gap-3">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="pickup" class="accent-amber-400"/>
+              <span class="text-white/80 text-sm" data-en="Pick up from my address (free within 5 mi)" data-es="Recogen en mi dirección (gratis hasta 5 mi)">Pick up from my address (free within 5 mi)</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" name="loaner" class="accent-amber-400"/>
+              <span class="text-white/80 text-sm" data-en="Loaner / rental needed while in shop" data-es="Necesito loaner / alquiler mientras está en taller">Loaner / rental needed while in shop</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-8 flex justify-between">
+          <button type="button" class="btn btn-line back-btn" data-target="2">←</button>
+          <button type="button" class="btn btn-neon next-btn" data-target="4"><span data-en="Continue" data-es="Continuar">Continue</span> →</button>
+        </div>
+      </fieldset>
+
+      <!-- STEP 04 — CONTACT -->
+      <fieldset id="step-4" class="step-panel hidden">
+        <legend class="eyebrow mb-4" data-en="04 · Contact" data-es="04 · Contacto">04 · Contact</legend>
+        <div class="grid md:grid-cols-2 gap-4">
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Full name" data-es="Nombre completo">Full name</span><input name="fullName" type="text" placeholder="Daniel Lopez" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" required/></label>
+          <label class="block"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Phone" data-es="Teléfono">Phone</span><input name="phone" type="tel" placeholder="(516) 555-0144" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]" required/></label>
+          <label class="block md:col-span-2"><span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55" data-en="Email (optional)" data-es="Email (opcional)">Email (optional)</span><input name="email" type="email" placeholder="you@email.com" class="mt-2 w-full bg-[#0a0a0a] border border-white/15 px-4 py-3 text-white font-[Space_Grotesk]"/></label>
+        </div>
+
+        <!-- Summary card -->
+        <div class="mt-8 p-6 border border-white/15" style="background:#0a0a0a">
+          <div class="mono text-[.62rem] tracking-[.22em] uppercase" style="color:var(--amber)" data-en="Summary" data-es="Resumen">Summary</div>
+          <dl class="mt-3 grid md:grid-cols-2 gap-x-10 gap-y-2 text-sm">
+            <div class="flex justify-between border-b border-white/10 py-2"><dt class="text-white/55" data-en="Service" data-es="Servicio">Service</dt><dd class="text-white" data-summary="service">—</dd></div>
+            <div class="flex justify-between border-b border-white/10 py-2"><dt class="text-white/55" data-en="Vehicle" data-es="Vehículo">Vehicle</dt><dd class="text-white" data-summary="vehicle">—</dd></div>
+            <div class="flex justify-between border-b border-white/10 py-2"><dt class="text-white/55" data-en="Date" data-es="Fecha">Date</dt><dd class="text-white" data-summary="date">—</dd></div>
+            <div class="flex justify-between border-b border-white/10 py-2"><dt class="text-white/55" data-en="Window" data-es="Horario">Window</dt><dd class="text-white" data-summary="window">—</dd></div>
+            <div class="flex justify-between md:col-span-2 py-2 mt-2 border-t border-white/15"><dt class="display text-xl" style="color:var(--amber)" data-en="Estimate" data-es="Estimado">Estimate</dt><dd class="display text-2xl" style="color:var(--amber)" data-summary="estimate">—</dd></div>
+          </dl>
+          <p class="mono text-[.6rem] tracking-[.18em] uppercase text-white/40 mt-3" data-en="Final price confirmed by phone within 30 min. Some services are quoted on-site." data-es="Precio final confirmado por teléfono en 30 min. Algunos servicios se cotizan en taller.">Final price confirmed by phone within 30 min. Some services are quoted on-site.</p>
+        </div>
+
+        <div class="mt-8 flex justify-between">
+          <button type="button" class="btn btn-line back-btn" data-target="3">←</button>
+          <button type="submit" class="btn btn-neon"><span data-en="Submit booking" data-es="Enviar reserva">Submit booking</span> ★</button>
+        </div>
+      </fieldset>
+
+    </form>
+
+    <!-- Confirmation panel (hidden until submit) -->
+    <div id="bookingConfirm" class="hidden text-center reveal max-w-2xl mx-auto py-16">
+      <div class="display text-7xl mb-4" style="color:var(--amber);text-shadow:0 0 30px var(--amber-glow)">★</div>
+      <h3 class="display-serif text-4xl md:text-5xl mb-4" data-en="Booking received." data-es="Reserva recibida.">Booking received.</h3>
+      <p class="text-white/75 leading-relaxed mb-2" data-en="We'll text you within 30 minutes during business hours with confirmation and any prep instructions for the service." data-es="Te escribimos por SMS en 30 minutos durante horario de servicio con confirmación e instrucciones de preparación.">We'll text you within 30 minutes during business hours with confirmation and any prep instructions for the service.</p>
+      <p class="text-white/55 text-sm" data-en="Your booking is now in our internal dashboard for the technicians to assign." data-es="Tu reserva ya está en nuestro dashboard interno para asignarla a un técnico.">Your booking is now in our internal dashboard for the technicians to assign.</p>
+      <div class="mono text-[.7rem] tracking-[.22em] uppercase mt-8 inline-block px-5 py-3" style="color:var(--amber);border:1px solid var(--amber)">Confirmation · <span id="confNum">CSM-0000</span></div>
+      <div class="mt-10 flex gap-3 justify-center">
+        <a href="index.html" class="btn btn-line" data-en="Back home" data-es="Volver al home">Back home</a>
+        <a href="tel:+16316019865" class="btn btn-neon">(631) 601-9865</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/[.05] py-14">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="display text-2xl" style="color:var(--amber)">CS MOTOR</span>
+      <span class="mono text-[.66rem] tracking-[.2em] uppercase text-white/40">© <span data-year></span></span>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-white/60">
+      <a href="index.html" class="hover:text-[var(--amber)]" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" class="hover:text-[var(--amber)]" data-en="Services" data-es="Servicios">Services</a>
+      <a href="carwash.html" class="hover:text-[var(--amber)]" data-en="Detailing" data-es="Detallado">Detailing</a>
+      <a href="rentals.html" class="hover:text-[var(--amber)]" data-en="Rentals" data-es="Alquiler">Rentals</a>
+      <a href="contact.html" class="hover:text-[var(--amber)]" data-en="Contact" data-es="Contacto">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+16316019865" class="btn-neon" style="background:var(--amber);color:#0a0a0a">Call</a>
+  <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="btn-line border border-white/15 text-white" data-en="Directions" data-es="Cómo llegar">Directions</a>
+</div>
+
+<!-- Booking-specific styles -->
+<style>
+.step{padding:14px 16px;border:1px solid rgba(255,255,255,.10);background:#0a0a0a;display:flex;flex-direction:column;gap:2px;transition:border-color .3s,background .3s}
+.step.active{border-color:var(--amber);background:rgba(255,203,0,.06)}
+.step.done{border-color:rgba(255,203,0,.4)}
+.step .display{color:#fff}
+.step .mono{color:rgba(255,255,255,.4)}
+.step.active .mono{color:var(--amber)}
+
+.svc-pick{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;background:#0a0a0a;border:1px solid rgba(255,255,255,.10);cursor:pointer;transition:border-color .25s,background .25s}
+.svc-pick:hover{border-color:rgba(255,203,0,.4)}
+.svc-pick:has(input:checked){border-color:var(--amber);background:rgba(255,203,0,.05);box-shadow:0 0 20px rgba(255,203,0,.18)}
+.svc-pick .badge{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;padding:6px 10px;color:var(--amber);border:1px solid rgba(255,203,0,.4)}
+.svc-pick:has(input:checked) .badge{background:var(--amber);color:#0a0a0a;border-color:var(--amber)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  const form = document.getElementById('bookingForm');
+  if(!form) return;
+  const stepper = document.getElementById('stepper');
+
+  function showStep(n){
+    document.querySelectorAll('.step-panel').forEach(p=>p.classList.add('hidden'));
+    const panel = document.getElementById('step-'+n);
+    if(panel) panel.classList.remove('hidden');
+    stepper.querySelectorAll('li').forEach(li=>{
+      const i = +li.dataset.step;
+      li.classList.toggle('active', i===n);
+      li.classList.toggle('done', i<n);
+    });
+    if(n===4) renderSummary();
+    window.scrollTo({top:form.offsetTop-80, behavior:'smooth'});
+  }
+
+  form.querySelectorAll('.next-btn').forEach(b=>b.addEventListener('click',()=>showStep(+b.dataset.target)));
+  form.querySelectorAll('.back-btn').forEach(b=>b.addEventListener('click',()=>showStep(+b.dataset.target)));
+
+  function svcLabel(val){
+    const map = {
+      'detail-gold':'Gold Detail',
+      'detail-platinum':'Platinum Detail',
+      'paint-correction':'Paint Correction',
+      'ceramic-5yr':'5-Year Ceramic Coat',
+      'oil-change':'Oil Change Express',
+      'general-repairs':'General Repairs',
+      'body-work':'Body Work & Paint',
+      'tint':'Window Tinting',
+      'ppf':'PPF Protection',
+      'wrap':'Car Wrapping',
+      'dent':'Paint-less Dent Removal',
+      'rental':'Car Rental'
+    };
+    return map[val] || '—';
+  }
+
+  function renderSummary(){
+    const data = new FormData(form);
+    const svc = data.get('service');
+    const vtype = data.get('vehicleType') || '';
+    const yr = data.get('year') || '';
+    const mm = data.get('makeModel') || '';
+    const date = data.get('date') || '';
+    const win = (form.querySelector('select[name=window] option:checked')||{}).textContent || '';
+    const sel = form.querySelector('input[name=service]:checked');
+    const price = sel ? +sel.dataset.price : 0;
+
+    document.querySelector('[data-summary=service]').textContent = svc ? svcLabel(svc) : '—';
+    document.querySelector('[data-summary=vehicle]').textContent = (yr||mm||vtype) ? [yr,mm,vtype?'· '+vtype:''].filter(Boolean).join(' ') : '—';
+    document.querySelector('[data-summary=date]').textContent = date || '—';
+    document.querySelector('[data-summary=window]').textContent = win || '—';
+    document.querySelector('[data-summary=estimate]').textContent = price > 0 ? '$'+price : 'Quoted';
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.fullName.value.trim() || !form.phone.value.trim()){
+      form.fullName.focus();
+      return;
+    }
+
+    // ============ MOCK SUBMIT — replace with real API later ============
+    // const payload = Object.fromEntries(new FormData(form).entries());
+    // await fetch('/api/bookings', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+    // ============ END MOCK ============
+
+    const num = 'CSM-' + Math.floor(1000 + Math.random()*9000);
+    document.getElementById('confNum').textContent = num;
+    form.classList.add('hidden');
+    document.querySelectorAll('.step').forEach(s=>{s.classList.add('done');s.classList.remove('active')});
+    document.getElementById('bookingConfirm').classList.remove('hidden');
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Pre-select service from query string ?service=detail / ?package=gold
+  const qs = new URLSearchParams(location.search);
+  const want = qs.get('package') ? 'detail-' + qs.get('package') : (qs.get('service') === 'detail' ? 'detail-gold' : qs.get('service'));
+  if(want){
+    const radio = form.querySelector(`input[name=service][value="${want}"]`);
+    if(radio){ radio.checked = true; }
+  }
+})();
+</script>
+</body>
+</html>
