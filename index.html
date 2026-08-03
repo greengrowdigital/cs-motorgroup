@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>document.documentElement.classList.add('js')</script>
 <title>CS Motor Group · Auto Detailing · Rentals · Repairs · Massapequa, NY</title>
 <meta name="description" content="One stop on Hicksville Rd: Black Label AutoSpa detailing, exotic & luxury rentals, general repairs, oil change, body work, and 24-hour fueling. Pickup & drop-off available." />
 <link rel="canonical" href="https://csmotorgroup.com/">
@@ -23,7 +24,6 @@
 </head>
 <body>
 
-<div class="grain"></div>
 <div class="scroll-progress"></div>
 
 <!-- TOP TICKER -->
@@ -57,12 +57,13 @@
       <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
       <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
+      <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
       <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <div class="flex items-center gap-3">
       <a href="tel:+16316019865" class="hidden md:inline-flex btn-ghost text-[.66rem]">(631) 601-9865</a>
-      <a href="booking.html" class="hidden md:inline-flex btn-premium magnetic shine">
+      <a href="booking.html" class="hidden md:inline-flex btn-premium shine">
         <span data-en="Book Now" data-es="Reservar">Book Now</span>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -74,6 +75,7 @@
     <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
     <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
+    <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
     <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
     <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
@@ -82,33 +84,11 @@
 <!-- HERO — parallax + slow-zoom + mask-reveal -->
 <section class="relative overflow-hidden" style="background:#050505;min-height:100svh">
   <div class="absolute inset-0 hero-parallax" data-parallax-bg>
-    <img src="https://media.gq-magazine.co.uk/photos/617955b460d3ea547b8fe639/16:9/w_2560%2Cc_limit/271021_RR_HP.jpg" alt="" class="absolute inset-0 w-full h-full object-cover animate-slow-zoom" style="filter:brightness(.42) contrast(1.08) saturate(.85)" />
+    <img src="assets/img/hero-rolls.jpg" alt="" class="absolute inset-0 w-full h-full object-cover animate-slow-zoom" style="filter:brightness(.42) contrast(1.08) saturate(.85)" />
   </div>
-  <div class="absolute inset-0 diagonal-stripes opacity-50 pointer-events-none"></div>
   <div class="absolute inset-0 pointer-events-none" style="background:
-    radial-gradient(900px 500px at 70% 30%, rgba(255,203,0,.20), transparent 60%),
-    radial-gradient(700px 400px at 12% 85%, rgba(255,224,102,.10), transparent 60%);"></div>
+    radial-gradient(900px 500px at 70% 30%, rgba(255,203,0,.16), transparent 60%);"></div>
   <div class="absolute left-0 right-0 bottom-0 h-1/2 pointer-events-none" style="background:linear-gradient(180deg,transparent 0%,rgba(5,5,5,.85) 80%,#050505 100%)"></div>
-
-  <div class="hidden xl:flex absolute left-6 top-1/2 -translate-y-1/2 z-10 flex-col items-center gap-4" style="writing-mode:vertical-rl">
-    <span class="mono text-[.6rem] tracking-[.4em] uppercase text-white/40">Est. 1998 · Massapequa, NY</span>
-    <span class="block w-px h-16 bg-gradient-to-b from-white/40 to-transparent"></span>
-  </div>
-
-  <div class="hidden xl:flex absolute right-8 top-1/2 -translate-y-1/2 z-10 flex-col gap-7 items-end">
-    <div class="text-right">
-      <div class="font-[Syne] text-3xl font-bold gradient-text-gold counter" data-counter data-to="27">0</div>
-      <div class="mono text-[.6rem] tracking-[.32em] uppercase text-white/40 mt-1" data-en="Years" data-es="Años">Years</div>
-    </div>
-    <div class="text-right">
-      <div class="font-[Syne] text-3xl font-bold gradient-text-gold counter" data-counter data-to="12000" data-dur="2400">0</div>
-      <div class="mono text-[.6rem] tracking-[.32em] uppercase text-white/40 mt-1" data-en="Cars served" data-es="Autos atendidos">Cars served</div>
-    </div>
-    <div class="text-right">
-      <div class="font-[Syne] text-3xl font-bold gradient-text-gold counter" data-counter data-to="4.8" data-decimals="1">0</div>
-      <div class="mono text-[.6rem] tracking-[.32em] uppercase text-white/40 mt-1" data-en="Google rating" data-es="Calificación">Google rating</div>
-    </div>
-  </div>
 
   <div class="relative z-20 max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20 pt-40 md:pt-44 pb-24 md:pb-36 min-h-[100svh] flex flex-col justify-end" data-parallax-content>
     <div class="iv-stagger">
@@ -129,7 +109,7 @@
       </p>
 
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="booking.html" class="btn-premium magnetic shine animate-pulse-glow">
+        <a href="booking.html" class="btn-premium shine">
           <span data-en="Book a service" data-es="Reservar servicio">Book a service</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
@@ -141,39 +121,48 @@
 
       <div class="mt-16 md:mt-20 grid grid-cols-3 max-w-2xl border-t border-white/10 pt-6">
         <div>
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="2">0</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Detail Packages" data-es="Paquetes Detail">Detail Packages</div>
+          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="27">27</div>
+          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Years on the corner" data-es="Años en la esquina">Years on the corner</div>
         </div>
         <div class="border-l border-white/10 pl-6">
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="4">0</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Rental Tiers" data-es="Tiers Alquiler">Rental Tiers</div>
+          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="4.8" data-decimals="1">4.8</div>
+          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="★ Google rating" data-es="★ Rating Google">★ Google rating</div>
         </div>
         <div class="border-l border-white/10 pl-6">
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="24">0</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Hours open" data-es="Horas abierto">Hours open</div>
+          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="24">24</div>
+          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Hours open · 7 days" data-es="Horas · 7 días">Hours open · 7 days</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BRAND MARQUEE -->
+<!-- MARQUES WE SERVICE — authority wall (Blackout / Topaz pattern) -->
 <div class="brand-marquee-wrap">
-  <div class="brand-marquee-track">
-    <span class="item">Black Label AutoSpa</span> <span class="item"><i>✦</i></span>
-    <span class="item">Exotic Rentals</span> <span class="item"><i>✦</i></span>
-    <span class="item">Hicksville Road</span> <span class="item"><i>✦</i></span>
-    <span class="item">Massapequa</span> <span class="item"><i>✦</i></span>
-    <span class="item">9H Ceramic Coat</span> <span class="item"><i>✦</i></span>
-    <span class="item">Lamborghini · Ferrari · McLaren</span> <span class="item"><i>✦</i></span>
-    <span class="item">Since 1998</span> <span class="item"><i>✦</i></span>
-    <span class="item">Black Label AutoSpa</span> <span class="item"><i>✦</i></span>
-    <span class="item">Exotic Rentals</span> <span class="item"><i>✦</i></span>
-    <span class="item">Hicksville Road</span> <span class="item"><i>✦</i></span>
-    <span class="item">Massapequa</span> <span class="item"><i>✦</i></span>
-    <span class="item">9H Ceramic Coat</span> <span class="item"><i>✦</i></span>
-    <span class="item">Lamborghini · Ferrari · McLaren</span> <span class="item"><i>✦</i></span>
-    <span class="item">Since 1998</span> <span class="item"><i>✦</i></span>
+  <div class="brand-marquee-label">
+    <span class="mono text-[.6rem] tracking-[.34em] uppercase text-white/35" data-en="Trusted with the marques we service daily" data-es="Las marcas que atendemos a diario">Trusted with the marques we service daily</span>
+  </div>
+  <div class="brand-marquee-track mt-4">
+    <span class="item">Rolls-Royce</span> <span class="item"><i>✦</i></span>
+    <span class="item">Bentley</span> <span class="item"><i>✦</i></span>
+    <span class="item">Mercedes-AMG</span> <span class="item"><i>✦</i></span>
+    <span class="item">BMW M</span> <span class="item"><i>✦</i></span>
+    <span class="item">Porsche</span> <span class="item"><i>✦</i></span>
+    <span class="item">Lamborghini</span> <span class="item"><i>✦</i></span>
+    <span class="item">Ferrari</span> <span class="item"><i>✦</i></span>
+    <span class="item">Range Rover</span> <span class="item"><i>✦</i></span>
+    <span class="item">Audi RS</span> <span class="item"><i>✦</i></span>
+    <span class="item">Tesla</span> <span class="item"><i>✦</i></span>
+    <span class="item">Rolls-Royce</span> <span class="item"><i>✦</i></span>
+    <span class="item">Bentley</span> <span class="item"><i>✦</i></span>
+    <span class="item">Mercedes-AMG</span> <span class="item"><i>✦</i></span>
+    <span class="item">BMW M</span> <span class="item"><i>✦</i></span>
+    <span class="item">Porsche</span> <span class="item"><i>✦</i></span>
+    <span class="item">Lamborghini</span> <span class="item"><i>✦</i></span>
+    <span class="item">Ferrari</span> <span class="item"><i>✦</i></span>
+    <span class="item">Range Rover</span> <span class="item"><i>✦</i></span>
+    <span class="item">Audi RS</span> <span class="item"><i>✦</i></span>
+    <span class="item">Tesla</span> <span class="item"><i>✦</i></span>
   </div>
 </div>
 
@@ -192,25 +181,25 @@
     <div class="stats-grid grid-cols-2 md:grid-cols-4 iv-stagger">
       <div>
         <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">01</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="27">0</div>
+        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="27">27</div>
         <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
         <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Years open" data-es="Años abiertos">Years open</span>
       </div>
       <div>
         <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">02</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="12000" data-dur="2400">0</div>
+        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="12000" data-dur="2400">12,000</div>
         <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
         <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Cars detailed" data-es="Autos detallados">Cars detailed</span>
       </div>
       <div>
         <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">03</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="48">0</div>
+        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="48">48</div>
         <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
         <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Rental units" data-es="Unidades alquiler">Rental units</span>
       </div>
       <div>
         <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">04</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="4.8" data-decimals="1">0</div>
+        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="4.8" data-decimals="1">4.8</div>
         <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
         <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Google rating" data-es="Rating Google">Google rating</span>
       </div>
@@ -288,10 +277,41 @@
       </div>
 
       <div class="mt-8 flex gap-3">
-        <a href="booking.html?service=detail" class="btn-premium magnetic shine">
+        <a href="booking.html?service=detail" class="btn-premium shine">
           <span data-en="Reserve detail" data-es="Reservar detail">Reserve detail</span> →
         </a>
         <a href="carwash.html" class="btn-ghost"><span data-en="Full menu" data-es="Menú completo">Full menu</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER — proof of work (Blackout pattern) -->
+<section class="relative py-24 md:py-32 border-t border-white/[.06]" style="background:#070707">
+  <div class="max-w-[1500px] mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="lg:col-span-4 iv">
+      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ The proof" data-es="✦ La prueba">✦ The proof</span>
+      <h2 class="font-[Syne] uppercase mt-5 leading-[.92]" style="font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.025em">
+        <span data-en="Drag the line." data-es="Arrastra la línea.">Drag the line.</span>
+        <br>
+        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="See the work." data-es="Mira el trabajo.">See the work.</span>
+      </h2>
+      <p class="mt-6 text-white/65 leading-relaxed text-sm md:text-base"
+         data-en="Stage-2 paint correction plus ceramic coat on a daily-driven AMG coupe. Same shot, same light — the only difference is our process."
+         data-es="Corrección de pintura stage-2 más coating cerámico en un coupé AMG de uso diario. Misma toma, misma luz — la única diferencia es nuestro proceso.">
+        Stage-2 paint correction plus ceramic coat on a daily-driven AMG coupe. Same shot, same light — the only difference is our process.
+      </p>
+      <div class="mt-8">
+        <a href="carwash.html" class="btn-ghost"><span data-en="Detail packages" data-es="Paquetes detail">Detail packages</span> →</a>
+      </div>
+    </div>
+    <div class="lg:col-span-8 iv">
+      <div class="ba-slider">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=85" alt="Before detailing" class="ba-before" />
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=85" alt="After detailing" class="ba-after" />
+        <span class="ba-tag ba-tag-before" data-en="Before" data-es="Antes">Before</span>
+        <span class="ba-tag ba-tag-after" data-en="After · Ceramic" data-es="Después · Cerámico">After · Ceramic</span>
+        <div class="ba-handle"></div>
       </div>
     </div>
   </div>
@@ -388,10 +408,40 @@
     </div>
 
     <div class="mt-14 flex flex-wrap gap-3 iv">
-      <a href="rentals.html" class="btn-premium magnetic shine">
+      <a href="rentals.html" class="btn-premium shine">
         <span data-en="See the full fleet" data-es="Ver flota completa">See the full fleet</span> →
       </a>
       <a href="booking.html?service=rental" class="btn-ghost"><span data-en="Reserve a tier" data-es="Reservar tier">Reserve a tier</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SALES TEASER — used inventory, standby until Square goes live -->
+<section class="relative py-20 md:py-24 border-t border-white/[.06] overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(800px 400px at 85% 50%,rgba(255,203,0,.07),transparent 60%)"></div>
+  <div class="relative max-w-[1500px] mx-auto px-6 md:px-12">
+    <div class="grid lg:grid-cols-12 gap-10 items-center iv">
+      <div class="lg:col-span-8">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ New · Sales" data-es="✦ Nuevo · Ventas">✦ New · Sales</span>
+          <span class="px-3 py-1 rounded-full mono text-[.55rem] tracking-[.22em] uppercase font-bold" style="background:rgba(255,203,0,.12);border:1px solid rgba(255,203,0,.4);color:var(--gold)" data-en="First lot arriving" data-es="Primer lote en camino">First lot arriving</span>
+        </div>
+        <h2 class="font-[Syne] uppercase leading-[.92]" style="font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.025em">
+          <span data-en="Used inventory." data-es="Inventario usado.">Used inventory.</span>
+          <span class="gradient-text-gold ml-2" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="Hand-picked." data-es="Selección propia.">Hand-picked.</span>
+        </h2>
+        <p class="mt-5 max-w-xl text-white/65 leading-relaxed"
+           data-en="Every car is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and delivery available. Tell us what you're hunting and we'll find it first."
+           data-es="Cada auto se inspecciona y detalla en nuestro propio taller antes de entrar al lote. Financiamiento, trade-ins y entrega disponibles. Dinos qué buscas y lo encontramos primero.">
+          Every car is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and delivery available. Tell us what you're hunting and we'll find it first.
+        </p>
+      </div>
+      <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
+        <a href="sales.html" class="btn-premium shine w-full sm:w-auto justify-center">
+          <span data-en="Browse inventory" data-es="Ver inventario">Browse inventory</span> →
+        </a>
+        <a href="sales.html#request" class="btn-ghost w-full sm:w-auto justify-center"><span data-en="Request a car" data-es="Buscar mi auto">Request a car</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -464,7 +514,10 @@
   <div class="relative max-w-[1100px] mx-auto px-6 iv">
     <div class="text-center mb-10">
       <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ What the block says" data-es="✦ Lo que dice el barrio">✦ What the block says</span>
-      <span class="block text-[var(--gold)] text-lg tracking-[.4em] mt-4">★★★★★</span>
+      <div class="mt-4 flex items-center justify-center gap-3">
+        <span class="text-[var(--gold)] text-lg tracking-[.4em]">★★★★★</span>
+        <a href="https://www.google.com/maps/search/CS+Motor+Group+520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="mono text-[.62rem] tracking-[.22em] uppercase text-white/50 hover:text-[var(--gold)] underline-sweep" data-en="4.8 on Google · Read reviews ↗" data-es="4.8 en Google · Leer reseñas ↗">4.8 on Google · Read reviews ↗</a>
+      </div>
     </div>
 
     <!-- Carousel viewport -->
@@ -550,7 +603,7 @@
     </div>
 
     <div class="mt-16 flex flex-wrap justify-center gap-3">
-      <a href="booking.html" class="btn-premium magnetic shine animate-pulse-glow">
+      <a href="booking.html" class="btn-premium shine">
         <span data-en="Book a service" data-es="Reservar servicio">Book a service</span> →
       </a>
       <a href="tel:+16316019865" class="btn-ghost">
@@ -623,6 +676,7 @@
           <a href="services.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Services" data-es="Servicios">Services</a>
           <a href="carwash.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Detailing" data-es="Detallado">Detailing</a>
           <a href="rentals.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Rentals" data-es="Alquiler">Rentals</a>
+          <a href="sales.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Sales" data-es="Ventas">Sales</a>
           <a href="booking.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Book" data-es="Reservar">Book</a>
           <a href="contact.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Contact" data-es="Contacto">Contact</a>
         </div>

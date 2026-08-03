@@ -3,9 +3,9 @@ const scrollBar = document.querySelector('.scroll-progress');
 if (scrollBar) {
   window.addEventListener('scroll', () => {
     const h = document.documentElement;
-    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-    scrollBar.style.width = pct + '%';
-  });
+    const pct = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    scrollBar.style.transform = 'scaleX(' + pct + ')';
+  }, { passive: true });
 }
 
 const io = new IntersectionObserver((entries) => {
@@ -46,17 +46,6 @@ const counterIO = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40px' });
 document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
 
-// ============ MAGNETIC BUTTONS ============
-document.querySelectorAll('.magnetic').forEach(btn => {
-  btn.addEventListener('mousemove', (e) => {
-    const r = btn.getBoundingClientRect();
-    const x = e.clientX - r.left - r.width / 2;
-    const y = e.clientY - r.top - r.height / 2;
-    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.28}px)`;
-  });
-  btn.addEventListener('mouseleave', () => btn.style.transform = 'translate(0,0)');
-});
-
 // ============ TILT CARDS + SPOTLIGHT ============
 document.querySelectorAll('.tilt-card, .spotlight-follow').forEach(card => {
   const isTilt = card.classList.contains('tilt-card');
@@ -78,17 +67,6 @@ document.querySelectorAll('.tilt-card, .spotlight-follow').forEach(card => {
     card.style.setProperty('--my', '50%');
   });
 });
-
-// ============ CURSOR GLOW ============
-const cursorGlow = document.createElement('div');
-cursorGlow.className = 'cursor-glow';
-document.body.appendChild(cursorGlow);
-let glowOn = false;
-window.addEventListener('mousemove', (e) => {
-  cursorGlow.style.transform = `translate3d(${e.clientX - 190}px, ${e.clientY - 190}px, 0)`;
-  if (!glowOn) { cursorGlow.classList.add('on'); glowOn = true; }
-});
-window.addEventListener('mouseleave', () => cursorGlow.classList.remove('on'));
 
 // ============ HERO PARALLAX ============
 const heroBg = document.querySelector('[data-parallax-bg]');
@@ -172,3 +150,26 @@ document.querySelectorAll('form[data-fake]').forEach(form => {
 });
 
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+
+// ============ BEFORE / AFTER SLIDER ============
+document.querySelectorAll('.ba-slider').forEach(slider => {
+  const after = slider.querySelector('.ba-after');
+  const handle = slider.querySelector('.ba-handle');
+  if (!after || !handle) return;
+  const setPos = (clientX) => {
+    const r = slider.getBoundingClientRect();
+    const pct = Math.min(100, Math.max(0, ((clientX - r.left) / r.width) * 100));
+    after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.style.left = pct + '%';
+  };
+  let dragging = false;
+  const start = (x) => { dragging = true; setPos(x); };
+  slider.addEventListener('mousedown', e => start(e.clientX));
+  slider.addEventListener('touchstart', e => start(e.touches[0].clientX), { passive: true });
+  window.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
+  window.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('touchend', () => dragging = false);
+  // Hover-glide when not dragging (desktop nicety)
+  slider.addEventListener('mousemove', e => { if (!dragging && e.buttons === 0) setPos(e.clientX); });
+});
