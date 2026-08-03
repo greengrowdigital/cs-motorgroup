@@ -28,26 +28,26 @@
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
-  <div class="util-bar hidden md:block">
+  <div class="util-bar">
     <div class="util-inner">
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+      <div class="util-left">
+        <span class="util-open"><span class="dot dot-live"></span><span data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
         <span>520 Hicksville Rd, Massapequa, NY</span>
         <span data-en="Free pickup &amp; drop-off" data-es="Pickup y entrega gratis">Free pickup &amp; drop-off</span>
       </div>
-      <div class="flex items-center gap-5">
-        <a href="tel:+16316019865" class="font-semibold" style="color:var(--gold)">(631) 601-9865</a>
+      <div class="util-right">
+        <a href="tel:+16316019865" class="util-phone">(631) 601-9865</a>
         <a href="mailto:hello@csmotorgroup.com">hello@csmotorgroup.com</a>
-        <span class="lang-toggle flex items-center gap-1">
-          <button data-lang="en" class="px-1.5">EN</button><span style="color:var(--line)">|</span><button data-lang="es" class="px-1.5">ES</button>
+        <span class="lang-toggle">
+          <button data-lang="en">EN</button><span class="lang-sep">|</span><button data-lang="es">ES</button>
         </span>
       </div>
     </div>
   </div>
 
   <nav class="main-nav">
-    <a href="index.html" class="flex-shrink-0"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
-    <div class="nav-links hidden lg:flex">
+    <a href="index.html" aria-label="CS Motor Group home"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
+    <div class="nav-links">
       <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
       <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
@@ -55,14 +55,14 @@
       <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
-    <div class="flex items-center gap-3">
-      <a href="tel:+16316019865" class="btn-ghost hidden xl:inline-flex">(631) 601-9865</a>
-      <a href="booking.html" class="btn hidden sm:inline-flex" data-en="Book a Service" data-es="Reservar">Book a Service</a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <div class="nav-actions">
+      <a href="tel:+16316019865" class="btn-ghost nav-phone">(631) 601-9865</a>
+      <a href="booking.html" class="btn nav-cta" data-en="Book a Service" data-es="Reservar">Book a Service</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menuPanel"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
   </nav>
 
-  <div id="menuPanel" class="menu-panel hidden lg:hidden">
+  <div id="menuPanel" class="menu-panel" hidden>
     <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
     <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
@@ -74,49 +74,71 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="relative">
-  <div class="absolute inset-0">
-    <img src="assets/img/hero-rolls.jpg" alt="" class="w-full h-full object-cover hero-img" />
-    <div class="absolute inset-0" style="background:rgba(11,11,12,.72)"></div>
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/img/hero-rolls.jpg" alt="" />
   </div>
-  <div class="relative max-w-[1440px] mx-auto px-5 py-20 md:py-28 text-center">
-    <h1 class="font-[Syne] font-extrabold leading-[1.05]" style="font-size:clamp(2rem,5vw,3.6rem)">
-      <span data-en="Detailing, Rentals &amp; Used Cars" data-es="Detallado, Alquiler y Autos Usados">Detailing, Rentals &amp; Used Cars</span><br>
-      <span style="color:var(--gold)" data-en="in Massapequa, NY" data-es="en Massapequa, NY">in Massapequa, NY</span>
-    </h1>
-    <p class="mt-6 max-w-3xl mx-auto text-[.95rem] md:text-base leading-relaxed" style="color:var(--text-2)"
-       data-en="CS Motor Group is a full-service auto group at 520 Hicksville Rd. We detail, protect, repair and rent vehicles, and we sell hand-picked used cars that are inspected in our own shop. Open 24 hours, seven days a week, with free pickup and drop-off within 5 miles."
-       data-es="CS Motor Group es un auto group completo en 520 Hicksville Rd. Detallamos, protegemos, reparamos y alquilamos vehículos, y vendemos autos usados seleccionados e inspeccionados en nuestro propio taller. Abierto 24 horas, siete días a la semana, con pickup y entrega gratis hasta 5 millas.">
-      CS Motor Group is a full-service auto group at 520 Hicksville Rd. We detail, protect, repair and rent vehicles, and we sell hand-picked used cars that are inspected in our own shop. Open 24 hours, seven days a week, with free pickup and drop-off within 5 miles.
-    </p>
-    <div class="mt-9 flex flex-wrap justify-center gap-3">
-      <a href="sales.html" class="btn" data-en="View Inventory" data-es="Ver Inventario">View Inventory</a>
-      <span class="self-center text-sm" style="color:var(--text-3)" data-en="or" data-es="o">or</span>
-      <a href="booking.html" class="btn-ghost" data-en="Book a Service" data-es="Reservar Servicio">Book a Service</a>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="hero-stars">★★★★★</span>
+      <span class="hero-kicker" data-en="Auto Group · Detailing · Rentals · Sales" data-es="Auto Group · Detallado · Alquiler · Ventas">Auto Group · Detailing · Rentals · Sales</span>
     </div>
 
-    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
-      <a href="carwash.html" class="cat-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span class="t" data-en="Detailing" data-es="Detallado">Detailing</span>
-        <span class="d" data-en="Gold &amp; Platinum packages, ceramic coating" data-es="Paquetes Gold y Platinum, cerámico">Gold &amp; Platinum packages, ceramic coating</span>
-      </a>
-      <a href="rentals.html" class="cat-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14M6 17v2M18 17v2M4 13l1.5-5A2 2 0 0 1 7.4 6.5h9.2A2 2 0 0 1 18.5 8L20 13v4H4z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg>
-        <span class="t" data-en="Rentals" data-es="Alquiler">Rentals</span>
-        <span class="d" data-en="Economy to exotic, daily &amp; weekly rates" data-es="De economy a exóticos, diario y semanal">Economy to exotic, daily &amp; weekly rates</span>
-      </a>
-      <a href="sales.html" class="cat-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
-        <span class="t" data-en="Used Cars" data-es="Autos Usados">Used Cars</span>
-        <span class="d" data-en="Inspected in-house, financing available" data-es="Inspeccionados en casa, con financiamiento">Inspected in-house, financing available</span>
-      </a>
-      <a href="services.html" class="cat-card">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4z"/></svg>
-        <span class="t" data-en="Repairs" data-es="Reparaciones">Repairs</span>
-        <span class="d" data-en="Oil change, body work, mechanical" data-es="Aceite, carrocería, mecánica">Oil change, body work, mechanical</span>
-      </a>
+    <h1>
+      <span data-en="Where your car" data-es="Donde tu auto">Where your car</span>
+      <span class="gold" data-en="comes home." data-es="vuelve a casa.">comes home.</span>
+    </h1>
+
+    <p class="hero-lead"
+       data-en-html="One address on Hicksville Rd. <b>Black Label AutoSpa</b> detailing, <b>exotic &amp; luxury rentals</b>, hand-picked used cars, general repairs, body work and oil change. Open 24 hours with free pickup and drop-off within 5 miles."
+       data-es-html="Una sola dirección en Hicksville Rd. Detallado <b>Black Label AutoSpa</b>, <b>alquiler de lujo y exóticos</b>, autos usados seleccionados, reparaciones, carrocería y cambio de aceite. Abierto 24 horas con pickup y entrega gratis hasta 5 millas.">
+      One address on Hicksville Rd. <b>Black Label AutoSpa</b> detailing, <b>exotic &amp; luxury rentals</b>, hand-picked used cars, general repairs, body work and oil change. Open 24 hours with free pickup and drop-off within 5 miles.
+    </p>
+
+    <div class="hero-actions">
+      <a href="booking.html" class="btn" data-en="Book a Service" data-es="Reservar Servicio">Book a Service</a>
+      <a href="sales.html" class="btn-ghost" data-en="View Inventory" data-es="Ver Inventario">View Inventory</a>
     </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="v counter" data-counter data-to="27">27</div>
+        <div class="k" data-en="Years on the corner" data-es="Años en la esquina">Years on the corner</div>
+      </div>
+      <div>
+        <div class="v counter" data-counter data-to="4.8" data-decimals="1">4.8</div>
+        <div class="k" data-en="★ Google rating" data-es="★ Rating Google">★ Google rating</div>
+      </div>
+      <div>
+        <div class="v counter" data-counter data-to="24">24</div>
+        <div class="k" data-en="Hours open · 7 days" data-es="Horas abierto · 7 días">Hours open · 7 days</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-cats">
+    <a href="carwash.html" class="cat-card">
+      <svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span class="t" data-en="Detailing" data-es="Detallado">Detailing</span>
+      <span class="d" data-en="Gold &amp; Platinum packages, ceramic coating" data-es="Paquetes Gold y Platinum, cerámico">Gold &amp; Platinum packages, ceramic coating</span>
+    </a>
+    <a href="rentals.html" class="cat-card">
+      <svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14M6 17v2M18 17v2M4 13l1.5-5A2 2 0 0 1 7.4 6.5h9.2A2 2 0 0 1 18.5 8L20 13v4H4z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg>
+      <span class="t" data-en="Rentals" data-es="Alquiler">Rentals</span>
+      <span class="d" data-en="Economy to exotic, daily &amp; weekly rates" data-es="De economy a exóticos, diario y semanal">Economy to exotic, daily &amp; weekly rates</span>
+    </a>
+    <a href="sales.html" class="cat-card">
+      <svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+      <span class="t" data-en="Used Cars" data-es="Autos Usados">Used Cars</span>
+      <span class="d" data-en="Inspected in-house, financing available" data-es="Inspeccionados en casa, con financiamiento">Inspected in-house, financing available</span>
+    </a>
+    <a href="services.html" class="cat-card">
+      <svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4z"/></svg>
+      <span class="t" data-en="Repairs" data-es="Reparaciones">Repairs</span>
+      <span class="d" data-en="Oil change, body work, mechanical" data-es="Aceite, carrocería, mecánica">Oil change, body work, mechanical</span>
+    </a>
   </div>
 </section>
 

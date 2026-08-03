@@ -59,14 +59,14 @@ document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el))
 const menuBtn = document.getElementById('menuBtn');
 const menuPanel = document.getElementById('menuPanel');
 if (menuBtn && menuPanel) {
-  menuBtn.addEventListener('click', () => {
-    const open = menuPanel.classList.toggle('hidden') === false;
+  const setMenu = (open) => {
+    menuPanel.hidden = !open;
     menuBtn.setAttribute('aria-expanded', String(open));
-  });
-  menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    menuPanel.classList.add('hidden');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  }));
+  };
+  menuBtn.addEventListener('click', () => setMenu(menuPanel.hidden));
+  menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  // Close when the viewport grows back to the desktop nav
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); });
 }
 
 const I18N_KEY = 'gg-lang';

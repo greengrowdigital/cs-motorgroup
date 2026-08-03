@@ -19,26 +19,26 @@
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
-  <div class="util-bar hidden md:block">
+  <div class="util-bar">
     <div class="util-inner">
-      <div class="flex items-center gap-6">
-        <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+      <div class="util-left">
+        <span class="util-open"><span class="dot dot-live"></span><span data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
         <span>520 Hicksville Rd, Massapequa, NY</span>
         <span data-en="Free pickup &amp; drop-off" data-es="Pickup y entrega gratis">Free pickup &amp; drop-off</span>
       </div>
-      <div class="flex items-center gap-5">
-        <a href="tel:+16316019865" class="font-semibold" style="color:var(--gold)">(631) 601-9865</a>
+      <div class="util-right">
+        <a href="tel:+16316019865" class="util-phone">(631) 601-9865</a>
         <a href="mailto:hello@csmotorgroup.com">hello@csmotorgroup.com</a>
-        <span class="lang-toggle flex items-center gap-1">
-          <button data-lang="en" class="px-1.5">EN</button><span style="color:var(--line)">|</span><button data-lang="es" class="px-1.5">ES</button>
+        <span class="lang-toggle">
+          <button data-lang="en">EN</button><span class="lang-sep">|</span><button data-lang="es">ES</button>
         </span>
       </div>
     </div>
   </div>
 
   <nav class="main-nav">
-    <a href="index.html" class="flex-shrink-0"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
-    <div class="nav-links hidden lg:flex">
+    <a href="index.html" aria-label="CS Motor Group home"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
+    <div class="nav-links">
       <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
       <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
@@ -46,14 +46,14 @@
       <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
-    <div class="flex items-center gap-3">
-      <a href="tel:+16316019865" class="btn-ghost hidden xl:inline-flex">(631) 601-9865</a>
-      <a href="booking.html" class="btn hidden sm:inline-flex" data-en="Book a Service" data-es="Reservar">Book a Service</a>
-      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+    <div class="nav-actions">
+      <a href="tel:+16316019865" class="btn-ghost nav-phone">(631) 601-9865</a>
+      <a href="booking.html" class="btn nav-cta" data-en="Book a Service" data-es="Reservar">Book a Service</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menuPanel"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
   </nav>
 
-  <div id="menuPanel" class="menu-panel hidden lg:hidden">
+  <div id="menuPanel" class="menu-panel" hidden>
     <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
     <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
