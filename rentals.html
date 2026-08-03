@@ -10,66 +10,64 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<div class="scanlines"></div>
 <div class="scroll-progress"></div>
 
-<!-- Top utility -->
-<div class="hidden md:block border-b border-white/[.08]" style="background:rgba(0,0,0,.35)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2.5 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
-    <div class="flex items-center gap-7">
-      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" class="font-bold" data-en="ON · Open 24/7" data-es="ON · Abierto 24/7">ON · Open 24/7</span></span>
-      <span>520 Hicksville Rd · Massapequa, NY</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <a href="tel:+16316019865" class="hover:text-[var(--amber)]">(631) 601-9865</a>
-      <div class="lang-toggle flex items-center gap-1">
-        <button data-lang="en" class="px-2 py-1 hover:text-[var(--amber)]">EN</button><span class="text-white/20">/</span><button data-lang="es" class="px-2 py-1 hover:text-[var(--amber)]">ES</button>
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="util-bar hidden md:block">
+    <div class="util-inner">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+        <span>520 Hicksville Rd, Massapequa, NY</span>
+        <span data-en="Free pickup &amp; drop-off" data-es="Pickup y entrega gratis">Free pickup &amp; drop-off</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+16316019865" class="font-semibold" style="color:var(--gold)">(631) 601-9865</a>
+        <a href="mailto:hello@csmotorgroup.com">hello@csmotorgroup.com</a>
+        <span class="lang-toggle flex items-center gap-1">
+          <button data-lang="en" class="px-1.5">EN</button><span style="color:var(--line)">|</span><button data-lang="es" class="px-1.5">ES</button>
+        </span>
       </div>
     </div>
   </div>
-</div>
 
-<nav class="sticky top-0 z-40 backdrop-blur-md bg-[#050505]/85 border-b border-white/[.08]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-8 py-5 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3">
-      <img src="assets/brand/logo.png" alt="CS Motor Group" class="brand-img" />
-      
-    </a>
-    <div class="hidden md:flex items-center gap-9">
+  <nav class="main-nav">
+    <a href="index.html" class="flex-shrink-0"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
+    <div class="nav-links hidden lg:flex">
       <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
       <a href="rentals.html" class="nav-link active" data-en="Rentals" data-es="Alquiler">Rentals</a>
-      <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
-      <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
-
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="tel:+16316019865" class="hidden md:inline-flex btn btn-neon !py-3 !px-5 !text-[.66rem]">(631) 601-9865</a>
-      <button id="menuBtn" class="md:hidden text-white p-2" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+      <a href="tel:+16316019865" class="btn-ghost hidden xl:inline-flex">(631) 601-9865</a>
+      <a href="booking.html" class="btn hidden sm:inline-flex" data-en="Book a Service" data-es="Reservar">Book a Service</a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
-  </div>
-  <div id="menuPanel" class="hidden md:hidden border-t border-white/[.08] px-6 py-5 flex flex-col gap-4">
+  </nav>
+
+  <div id="menuPanel" class="menu-panel hidden lg:hidden">
     <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
     <a href="rentals.html" class="nav-link active" data-en="Rentals" data-es="Alquiler">Rentals</a>
-      <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
-      <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
-
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="booking.html" class="nav-link" data-en="Book a Service" data-es="Reservar">Book a Service</a>
     <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
+</header>
+
 </nav>
 
 <!-- HEADER -->
 <section class="relative pt-20 md:pt-32 pb-12 md:pb-20 overflow-hidden">
-  <div class="absolute inset-0 spotlight-orange"></div>
   <div class="relative z-10 max-w-[1500px] mx-auto px-6 md:px-8">
     <div class="reveal">
       <div class="flex flex-wrap items-center gap-3 mb-6">

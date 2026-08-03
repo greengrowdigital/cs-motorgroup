@@ -8,20 +8,29 @@ if (scrollBar) {
   }, { passive: true });
 }
 
+const revealTargets = document.querySelectorAll('.reveal,.reveal-stagger,.iv,.iv-stagger,.txt-rise');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   });
-}, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
-document.querySelectorAll('.reveal,.reveal-stagger,.iv,.iv-stagger,.txt-rise').forEach(el => io.observe(el));
+}, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+revealTargets.forEach(el => io.observe(el));
 
-// ============ NAV SCROLL STATE ============
-const navShell = document.querySelector('.nav-shell');
-if (navShell) {
-  const updateNav = () => navShell.classList.toggle('scrolled', window.scrollY > 30);
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-}
+// Safety net: fast scrolling can skip intersection frames, so anything that has
+// already passed the viewport bottom gets revealed outright.
+const sweepRevealed = () => {
+  revealTargets.forEach(el => {
+    if (el.classList.contains('in')) return;
+    if (el.getBoundingClientRect().top < window.innerHeight) {
+      el.classList.add('in');
+      io.unobserve(el);
+    }
+  });
+};
+window.addEventListener('scroll', sweepRevealed, { passive: true });
+window.addEventListener('load', sweepRevealed);
+
+// Header is CSS-sticky now — no scroll state class needed.
 
 // ============ COUNTERS ============
 const counterIO = new IntersectionObserver((entries) => {
@@ -46,48 +55,18 @@ const counterIO = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40px' });
 document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
 
-// ============ TILT CARDS + SPOTLIGHT ============
-document.querySelectorAll('.tilt-card, .spotlight-follow').forEach(card => {
-  const isTilt = card.classList.contains('tilt-card');
-  card.addEventListener('mousemove', (e) => {
-    const r = card.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width;
-    const y = (e.clientY - r.top) / r.height;
-    card.style.setProperty('--mx', (x * 100) + '%');
-    card.style.setProperty('--my', (y * 100) + '%');
-    if (isTilt) {
-      const rx = (0.5 - y) * 6;
-      const ry = (x - 0.5) * 6;
-      card.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
-    }
-  });
-  card.addEventListener('mouseleave', () => {
-    if (isTilt) card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-    card.style.setProperty('--mx', '50%');
-    card.style.setProperty('--my', '50%');
-  });
-});
-
-// ============ HERO PARALLAX ============
-const heroBg = document.querySelector('[data-parallax-bg]');
-const heroContent = document.querySelector('[data-parallax-content]');
-if (heroBg || heroContent) {
-  window.addEventListener('scroll', () => {
-    const h = window.innerHeight;
-    const p = Math.min(1, Math.max(0, window.scrollY / h));
-    if (heroBg) heroBg.style.transform = `translateY(${p * 18}%) scale(${1.05 + p * 0.06})`;
-    if (heroContent) {
-      heroContent.style.transform = `translateY(${p * -10}%)`;
-      heroContent.style.opacity = String(1 - p * 0.9);
-    }
-  }, { passive: true });
-}
-
+// ============ MOBILE MENU ============
 const menuBtn = document.getElementById('menuBtn');
 const menuPanel = document.getElementById('menuPanel');
 if (menuBtn && menuPanel) {
-  menuBtn.addEventListener('click', () => menuPanel.classList.toggle('hidden'));
-  menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menuPanel.classList.add('hidden')));
+  menuBtn.addEventListener('click', () => {
+    const open = menuPanel.classList.toggle('hidden') === false;
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  menuPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menuPanel.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
 }
 
 const I18N_KEY = 'gg-lang';

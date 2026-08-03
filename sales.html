@@ -4,398 +4,354 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>document.documentElement.classList.add('js')</script>
-<title>Used Car Sales · Inventory · CS Motor Group · Massapequa, NY</title>
-<meta name="description" content="Hand-picked used vehicles, inspected and detailed in our own shop before they hit the lot. Financing, trade-ins and delivery available. 520 Hicksville Rd, Massapequa NY." />
+<title>Used Cars for Sale in Massapequa NY | CS Motor Group Inventory</title>
+<meta name="description" content="Browse used cars for sale at CS Motor Group, 520 Hicksville Rd, Massapequa NY. Every vehicle inspected and detailed in our own shop. Financing and trade-ins available." />
 <link rel="canonical" href="https://csmotorgroup.com/sales">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CS Motor Group · Used Car Sales · Massapequa">
-<meta property="og:description" content="Every car inspected &amp; detailed in-house before listing. Financing &amp; trade-ins.">
+<meta property="og:title" content="Used Car Inventory · CS Motor Group · Massapequa NY">
+<meta property="og:description" content="Hand-picked used vehicles, inspected and detailed in-house.">
 <link rel="icon" type="image/png" href="assets/brand/logo.png" />
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 
 <style>
-  /* ---- Sales marketplace (page-scoped) ---- */
-  .inv-search{display:flex;align-items:center;gap:.9rem;background:rgba(20,20,20,.55);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem 1.25rem;transition:border-color .3s;}
-  .inv-search:focus-within{border-color:rgba(255,203,0,.55);}
-  .inv-search input{flex:1;background:transparent;border:0;outline:none;color:var(--paper);font-family:'Inter',sans-serif;font-size:1rem;}
+  /* ---- Inventory marketplace (page-scoped) ---- */
+  .inv-bar{background:var(--bg-alt);border-bottom:1px solid var(--line);}
+  .inv-search{display:flex;align-items:center;gap:.75rem;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:.8rem 1rem;transition:border-color .25s;}
+  .inv-search:focus-within{border-color:var(--gold);}
+  .inv-search input{flex:1;background:transparent;border:0;outline:none;color:var(--paper);font-family:'Inter',sans-serif;font-size:.95rem;min-width:0;}
   .inv-search input::placeholder{color:var(--text-3);}
-  .inv-chip{padding:.55rem 1.05rem;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:transparent;color:rgba(245,241,234,.65);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:border-color .3s,color .3s,background .3s;}
-  .inv-chip:hover{border-color:rgba(255,203,0,.45);color:var(--gold);}
-  .inv-chip.on{background:var(--gold);border-color:var(--gold);color:#0a0a0a;font-weight:700;}
-  .inv-sort{background:rgba(20,20,20,.55);border:1px solid rgba(255,255,255,.14);border-radius:999px;color:rgba(245,241,234,.75);font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 2.2rem .6rem 1.05rem;outline:none;appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23FFCB00' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;}
-  .inv-card{background:rgba(18,18,18,.6);border:1px solid rgba(255,255,255,.09);border-radius:18px;overflow:hidden;transition:transform .45s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .45s;}
-  .inv-card:hover{transform:translateY(-4px);border-color:rgba(255,203,0,.35);box-shadow:0 26px 50px -18px rgba(0,0,0,.6);}
-  .inv-card .ph{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d0d0d;}
-  .inv-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1);}
-  .inv-card:hover .ph img{transform:scale(1.05);}
-  .inv-spec{display:inline-flex;align-items:center;gap:.35rem;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,241,234,.5);}
-  .empty-shell{border:1px dashed rgba(255,203,0,.35);border-radius:22px;background:
-    radial-gradient(600px 300px at 50% 0%,rgba(255,203,0,.06),transparent 65%),rgba(14,14,14,.6);}
-  .skel{position:relative;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:18px;}
-  .skel::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.045) 50%,transparent 80%);transform:translateX(-100%);animation:skel-sweep 2.6s ease-in-out infinite;}
-  @keyframes skel-sweep{60%,100%{transform:translateX(100%)}}
-  .skel .bar{background:rgba(255,255,255,.06);border-radius:6px;}
+  .inv-chip{padding:.5rem .95rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--text-2);font-family:'Inter',sans-serif;font-size:.8rem;font-weight:500;cursor:pointer;transition:border-color .25s,color .25s,background .25s;white-space:nowrap;}
+  .inv-chip:hover{border-color:var(--gold);color:var(--gold);}
+  .inv-chip.on{background:var(--gold);border-color:var(--gold);color:#0b0b0c;font-weight:600;}
+  .inv-select{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;color:var(--paper);font-family:'Inter',sans-serif;font-size:.85rem;padding:.55rem 2.1rem .55rem 1rem;outline:none;appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23FFCB00' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;}
+
+  /* Sidebar filters */
+  .filter-box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;}
+  .filter-group + .filter-group{margin-top:22px;padding-top:22px;border-top:1px solid var(--line);}
+  .filter-title{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold);margin-bottom:12px;}
+  .filter-check{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 0;cursor:pointer;font-size:.88rem;color:var(--text-2);}
+  .filter-check:hover{color:var(--paper);}
+  .filter-check input{accent-color:var(--gold);width:15px;height:15px;cursor:pointer;}
+  .filter-check .n{font-size:.78rem;color:var(--text-3);}
+  .range-in{width:100%;accent-color:var(--gold);}
+
+  /* Vehicle card */
+  .inv-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s;}
+  .inv-card:hover{border-color:var(--gold);}
+  .inv-card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-2);}
+  .inv-card .ph img{width:100%;height:100%;object-fit:cover;}
+  .inv-card .body{padding:16px;display:flex;flex-direction:column;flex:1;}
+  .inv-badge{position:absolute;top:10px;left:10px;padding:.3rem .7rem;border-radius:6px;background:var(--gold);color:#0b0b0c;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+  .inv-photos{position:absolute;bottom:10px;right:10px;padding:.25rem .55rem;border-radius:6px;background:rgba(11,11,12,.85);color:var(--paper);font-size:.7rem;display:flex;align-items:center;gap:4px;}
+  .inv-spec{display:flex;align-items:center;gap:5px;font-size:.78rem;color:var(--text-2);}
+
+  /* Standby empty state */
+  .standby{border:1px dashed var(--line);border-radius:12px;background:var(--surface);}
+  .skel{background:var(--surface-2);border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative;}
+  .skel::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 25%,rgba(255,255,255,.035) 50%,transparent 75%);transform:translateX(-100%);animation:skel 2.4s ease-in-out infinite;}
+  @keyframes skel{60%,100%{transform:translateX(100%)}}
+  .skel .bar{background:var(--line);border-radius:4px;}
+
+  @media(max-width:1023px){ .filter-box{position:static;} }
 </style>
 </head>
 <body>
 
 <div class="scroll-progress"></div>
 
-<!-- TOP TICKER -->
-<div class="hidden md:block border-b border-white/[.06]" style="background:rgba(0,0,0,.55)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
-    <div class="flex items-center gap-7">
-      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span class="text-[#10b981] font-medium" data-en="Open · 24/7" data-es="Abierto · 24/7">Open · 24/7</span></span>
-      <span data-en="520 Hicksville Rd · Massapequa, NY" data-es="520 Hicksville Rd · Massapequa, NY">520 Hicksville Rd · Massapequa, NY</span>
-      <span class="text-white/30">★</span>
-      <span data-en="Financing · Trade-ins · Delivery" data-es="Financiamiento · Trade-ins · Entrega">Financing · Trade-ins · Delivery</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <a href="tel:+16316019865" class="hover:text-[var(--gold)] underline-sweep">(631) 601-9865</a>
-      <div class="lang-toggle flex items-center gap-1">
-        <button data-lang="en" class="px-2 py-1 hover:text-[var(--gold)]">EN</button>
-        <span class="text-white/20">/</span>
-        <button data-lang="es" class="px-2 py-1 hover:text-[var(--gold)]">ES</button>
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="util-bar hidden md:block">
+    <div class="util-inner">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+        <span>520 Hicksville Rd, Massapequa, NY</span>
+        <span data-en="Financing · Trade-ins · Delivery" data-es="Financiamiento · Trade-ins · Entrega">Financing · Trade-ins · Delivery</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+16316019865" class="font-semibold" style="color:var(--gold)">(631) 601-9865</a>
+        <a href="mailto:hello@csmotorgroup.com">hello@csmotorgroup.com</a>
+        <span class="lang-toggle flex items-center gap-1">
+          <button data-lang="en" class="px-1.5">EN</button><span style="color:var(--line)">|</span><button data-lang="es" class="px-1.5">ES</button>
+        </span>
       </div>
     </div>
   </div>
-</div>
 
-<!-- FLOATING NAV -->
-<div class="nav-shell" id="navShell">
-  <div class="nav-inner">
-    <a href="index.html" class="flex items-center gap-3 shine rounded-full pr-3">
-      <img src="assets/brand/logo.png" alt="CS Motor Group" class="brand-img" />
-    </a>
-    <div class="hidden lg:flex items-center gap-8">
+  <nav class="main-nav">
+    <a href="index.html" class="flex-shrink-0"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
+    <div class="nav-links hidden lg:flex">
       <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="sales.html" class="nav-link active" data-en="Inventory" data-es="Inventario">Inventory</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
       <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
-      <a href="sales.html" class="nav-link active" data-en="Sales" data-es="Ventas">Sales</a>
-      <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="tel:+16316019865" class="hidden md:inline-flex btn-ghost text-[.66rem]">(631) 601-9865</a>
-      <a href="#request" class="hidden md:inline-flex btn-premium shine">
-        <span data-en="Request a car" data-es="Buscar mi auto">Request a car</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+      <a href="tel:+16316019865" class="btn-ghost hidden xl:inline-flex">(631) 601-9865</a>
+      <a href="booking.html" class="btn hidden sm:inline-flex" data-en="Book a Service" data-es="Reservar">Book a Service</a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
-  </div>
-  <div id="menuPanel" class="hidden lg:hidden mt-3 mx-3 glass rounded-2xl border border-white/10 px-6 py-5 flex flex-col gap-4">
+  </nav>
+
+  <div id="menuPanel" class="menu-panel hidden lg:hidden">
     <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="sales.html" class="nav-link active" data-en="Inventory" data-es="Inventario">Inventory</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
     <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
-    <a href="sales.html" class="nav-link active" data-en="Sales" data-es="Ventas">Sales</a>
-    <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="booking.html" class="nav-link" data-en="Book a Service" data-es="Reservar">Book a Service</a>
     <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header class="relative overflow-hidden pt-40 md:pt-44 pb-12 md:pb-16" style="background:
-  radial-gradient(900px 480px at 78% 0%,rgba(255,203,0,.10),transparent 60%),#050505">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
-    <div class="iv">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ Sales · Used inventory" data-es="✦ Ventas · Inventario usado">✦ Sales · Used inventory</span>
-      <h1 class="font-[Syne] font-bold uppercase mt-5 leading-[.92] max-w-[16ch]" style="font-size:clamp(2.3rem,6vw,4.6rem);letter-spacing:-.025em">
-        <span data-en="Find your" data-es="Encuentra tu">Find your</span>
-        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.03em" data-en="next car." data-es="próximo auto.">next car.</span>
-      </h1>
-      <p class="mt-6 max-w-2xl text-white/70 leading-relaxed text-base md:text-lg font-light"
-         data-en="Every vehicle is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and off-site delivery available."
-         data-es="Cada vehículo se inspecciona y detalla en nuestro propio taller antes de entrar al lote. Financiamiento, trade-ins y entrega a domicilio disponibles.">
-        Every vehicle is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and off-site delivery available.
-      </p>
-    </div>
   </div>
 </header>
 
-<!-- MARKETPLACE -->
-<section class="pb-20 md:pb-28">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
+<!-- ============ PAGE TITLE ============ -->
+<section class="relative">
+  <div class="absolute inset-0">
+    <img src="assets/img/hero-rolls.jpg" alt="" class="w-full h-full object-cover" style="filter:brightness(.32) saturate(.85)" />
+    <div class="absolute inset-0" style="background:rgba(11,11,12,.7)"></div>
+  </div>
+  <div class="relative max-w-[1440px] mx-auto px-5 py-14 md:py-20">
+    <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[.78rem] mb-4" style="color:var(--text-3)">
+      <a href="index.html" class="hover:text-white" data-en="Home" data-es="Inicio">Home</a>
+      <span>›</span>
+      <span style="color:var(--paper)" data-en="Used Inventory" data-es="Inventario Usado">Used Inventory</span>
+    </nav>
+    <h1 class="font-[Syne] font-extrabold leading-[1.05]" style="font-size:clamp(1.9rem,4.5vw,3.2rem)"
+        data-en="Used Cars in Massapequa" data-es="Autos Usados en Massapequa">Used Cars in Massapequa</h1>
+    <span class="h-bar"></span>
+    <p class="mt-5 max-w-3xl text-[.92rem] md:text-base leading-relaxed" style="color:var(--text-2)"
+       data-en="Browse the vehicles on our lot right now. Every car is inspected in our own service bay and fully detailed before it is listed. Financing, trade-ins and off-site delivery are available on all inventory."
+       data-es="Explora los vehículos que tenemos en el lote ahora mismo. Cada auto se inspecciona en nuestra propia bahía de servicio y se detalla completo antes de publicarse. Financiamiento, trade-ins y entrega a domicilio disponibles en todo el inventario.">
+      Browse the vehicles on our lot right now. Every car is inspected in our own service bay and fully detailed before it is listed. Financing, trade-ins and off-site delivery are available on all inventory.
+    </p>
+  </div>
+</section>
 
-    <!-- Search + quick filters + sort -->
-    <div class="iv">
-      <div class="inv-search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--gold)] flex-shrink-0"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-        <input id="invQuery" type="text"
-               placeholder="Search by make, model, year, body style…"
-               data-en-placeholder="Search by make, model, year, body style…"
-               data-es-placeholder="Busca por marca, modelo, año, carrocería…" />
+<!-- ============ SEARCH BAR ============ -->
+<section class="inv-bar sticky top-0 z-40">
+  <div class="max-w-[1440px] mx-auto px-5 py-4">
+    <div class="inv-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" style="color:var(--gold)" class="flex-shrink-0"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="invQuery" type="text"
+             placeholder="Search by make, model, year or body style"
+             data-en-placeholder="Search by make, model, year or body style"
+             data-es-placeholder="Busca por marca, modelo, año o carrocería" />
+    </div>
+    <div class="mt-3 flex items-center gap-2.5 overflow-x-auto pb-1">
+      <span class="text-[.78rem] flex-shrink-0" style="color:var(--text-3)" data-en="Popular:" data-es="Popular:">Popular:</span>
+      <button class="inv-chip" data-filter="under25k" data-en="Under $25k" data-es="Menos de $25k">Under $25k</button>
+      <button class="inv-chip" data-filter="suv">SUVs</button>
+      <button class="inv-chip" data-filter="truck" data-en="Trucks" data-es="Camionetas">Trucks</button>
+      <button class="inv-chip" data-filter="awd">AWD / 4WD</button>
+      <button class="inv-chip" data-filter="under50k" data-en="Under 50k mi" data-es="Menos de 50k mi">Under 50k mi</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INVENTORY ============ -->
+<section class="py-8 md:py-10" style="background:var(--bg)">
+  <div class="max-w-[1440px] mx-auto px-5 grid lg:grid-cols-[260px_1fr] gap-6">
+
+    <!-- Sidebar filters -->
+    <aside>
+      <div class="filter-box lg:sticky lg:top-[132px]">
+        <div class="flex items-center justify-between mb-5">
+          <h2 class="font-[Syne] font-bold text-[1.05rem]" data-en="Refine" data-es="Filtrar">Refine</h2>
+          <button id="invClear" class="text-[.78rem]" style="color:var(--gold)" data-en="Reset" data-es="Limpiar">Reset</button>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title" data-en="Max price" data-es="Precio máximo">Max price</div>
+          <input id="fPrice" class="range-in" type="range" min="5000" max="80000" step="1000" value="80000" />
+          <div class="flex justify-between text-[.78rem] mt-1.5" style="color:var(--text-3)">
+            <span>$5,000</span><span id="fPriceVal" style="color:var(--paper)">$80,000+</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title" data-en="Max mileage" data-es="Millaje máximo">Max mileage</div>
+          <input id="fMiles" class="range-in" type="range" min="0" max="150000" step="5000" value="150000" />
+          <div class="flex justify-between text-[.78rem] mt-1.5" style="color:var(--text-3)">
+            <span>0 mi</span><span id="fMilesVal" style="color:var(--paper)">150k+ mi</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title" data-en="Body type" data-es="Carrocería">Body type</div>
+          <div id="fBody" class="flex flex-col">
+            <label class="filter-check"><span class="flex items-center gap-2.5"><input type="checkbox" value="sedan"><span data-en="Sedan" data-es="Sedán">Sedan</span></span><span class="n" data-count="sedan">0</span></label>
+            <label class="filter-check"><span class="flex items-center gap-2.5"><input type="checkbox" value="suv"><span>SUV</span></span><span class="n" data-count="suv">0</span></label>
+            <label class="filter-check"><span class="flex items-center gap-2.5"><input type="checkbox" value="truck"><span data-en="Truck" data-es="Camioneta">Truck</span></span><span class="n" data-count="truck">0</span></label>
+            <label class="filter-check"><span class="flex items-center gap-2.5"><input type="checkbox" value="coupe"><span data-en="Coupe" data-es="Coupé">Coupe</span></span><span class="n" data-count="coupe">0</span></label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title" data-en="Make" data-es="Marca">Make</div>
+          <div id="fMake" class="flex flex-col">
+            <p class="text-[.82rem]" style="color:var(--text-3)" data-en="Available once vehicles are listed." data-es="Disponible cuando haya vehículos publicados.">Available once vehicles are listed.</p>
+          </div>
+        </div>
       </div>
-      <div class="mt-4 flex flex-wrap items-center gap-2.5">
-        <span class="mono text-[.6rem] tracking-[.24em] uppercase text-white/40 mr-1" data-en="Popular:" data-es="Popular:">Popular:</span>
-        <button class="inv-chip" data-filter="under25k" data-en="Under $25k" data-es="Menos de $25k">Under $25k</button>
-        <button class="inv-chip" data-filter="suv">SUVs</button>
-        <button class="inv-chip" data-filter="truck">Trucks</button>
-        <button class="inv-chip" data-filter="awd">AWD / 4WD</button>
-        <button class="inv-chip" data-filter="under50k" data-en="Under 50k mi" data-es="Menos de 50k mi">Under 50k mi</button>
-        <div class="ml-auto flex items-center gap-3">
-          <span id="invCount" class="mono text-[.62rem] tracking-[.2em] uppercase text-white/45"></span>
-          <select id="invSort" class="inv-sort" aria-label="Sort inventory">
+    </aside>
+
+    <!-- Results -->
+    <div>
+      <div class="flex items-center justify-between gap-4 mb-5 flex-wrap">
+        <p id="invCount" class="text-[.9rem]" style="color:var(--text-2)"></p>
+        <div class="flex items-center gap-2">
+          <label for="invSort" class="text-[.82rem]" style="color:var(--text-3)" data-en="Sort:" data-es="Ordenar:">Sort:</label>
+          <select id="invSort" class="inv-select">
             <option value="just-in" data-en="Just in" data-es="Recién llegados">Just in</option>
-            <option value="price-asc" data-en="Price · low → high" data-es="Precio · menor → mayor">Price · low → high</option>
-            <option value="price-desc" data-en="Price · high → low" data-es="Precio · mayor → menor">Price · high → low</option>
-            <option value="miles-asc" data-en="Lowest miles" data-es="Menos millas">Lowest miles</option>
+            <option value="price-asc" data-en="Price: low to high" data-es="Precio: menor a mayor">Price: low to high</option>
+            <option value="price-desc" data-en="Price: high to low" data-es="Precio: mayor a menor">Price: high to low</option>
+            <option value="miles-asc" data-en="Lowest mileage" data-es="Menos millaje">Lowest mileage</option>
           </select>
         </div>
       </div>
-    </div>
 
-    <!-- Cards grid (rendered by JS when inventory exists) -->
-    <div id="invGrid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+      <div id="invGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4"></div>
 
-    <!-- No matches for current filters (hidden unless needed) -->
-    <div id="invNoMatch" class="hidden mt-8 text-center py-16 border border-white/10 rounded-2xl">
-      <p class="text-white/70" data-en="No vehicles match those filters." data-es="Ningún vehículo coincide con esos filtros.">No vehicles match those filters.</p>
-      <button id="invClear" class="btn-ghost mt-5 mx-auto" data-en="Clear filters" data-es="Limpiar filtros">Clear filters</button>
-    </div>
+      <!-- No matches -->
+      <div id="invNoMatch" class="hidden text-center py-16 px-6" style="border:1px solid var(--line);border-radius:12px">
+        <p class="text-[.95rem]" style="color:var(--text-2)" data-en="No vehicles match those filters." data-es="Ningún vehículo coincide con esos filtros.">No vehicles match those filters.</p>
+        <button id="invClear2" class="btn-ghost mt-5" data-en="Clear filters" data-es="Limpiar filtros">Clear filters</button>
+      </div>
 
-    <!-- STANDBY EMPTY STATE — first lot arriving -->
-    <div id="invEmpty" class="mt-8">
-      <div class="empty-shell px-6 md:px-14 py-14 md:py-18 grid lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-7 py-4">
-          <div class="flex items-center gap-3">
-            <span class="dot dot-live"></span>
-            <span class="mono text-[.62rem] tracking-[.28em] uppercase text-[var(--gold)]" data-en="First lot in preparation" data-es="Primer lote en preparación">First lot in preparation</span>
+      <!-- Standby: no inventory loaded yet -->
+      <div id="invEmpty" class="standby px-6 md:px-10 py-12 md:py-14">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-2.5">
+              <span class="dot dot-live"></span>
+              <span class="text-[.72rem] tracking-[.14em] uppercase font-semibold" style="color:var(--gold)" data-en="First lot in preparation" data-es="Primer lote en preparación">First lot in preparation</span>
+            </div>
+            <h2 class="font-[Syne] font-bold mt-4" style="font-size:clamp(1.4rem,2.6vw,2rem)" data-en="The cars are in the shop right now" data-es="Los autos están en el taller ahora mismo">The cars are in the shop right now</h2>
+            <p class="mt-4 text-[.92rem] leading-relaxed max-w-xl" style="color:var(--text-2)"
+               data-en="We are inspecting and detailing the first group of vehicles before they go on the lot. Call the shop and we will tell you exactly what is coming and when, or send you photos before anything is listed here."
+               data-es="Estamos inspeccionando y detallando el primer grupo de vehículos antes de que salgan al lote. Llama al taller y te decimos exactamente qué viene y cuándo, o te mandamos fotos antes de que se publique algo aquí.">
+              We are inspecting and detailing the first group of vehicles before they go on the lot. Call the shop and we will tell you exactly what is coming and when, or send you photos before anything is listed here.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="tel:+16316019865" class="btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span data-en="Call (631) 601-9865" data-es="Llama (631) 601-9865">Call (631) 601-9865</span>
+              </a>
+              <a href="contact.html" class="btn-ghost" data-en="Send us a message" data-es="Envíanos un mensaje">Send us a message</a>
+            </div>
           </div>
-          <h2 class="font-[Syne] uppercase mt-5 leading-[.95]" style="font-size:clamp(1.7rem,3.6vw,2.8rem);letter-spacing:-.02em">
-            <span data-en="The cars are in the shop." data-es="Los autos están en el taller.">The cars are in the shop.</span>
-            <br>
-            <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="The lot opens soon." data-es="El lote abre pronto.">The lot opens soon.</span>
-          </h2>
-          <p class="mt-5 text-white/65 leading-relaxed max-w-lg"
-             data-en="We're hand-picking and inspecting the first vehicles right now. Leave your number and you'll be the first to see the lot the day it goes live."
-             data-es="Estamos seleccionando e inspeccionando los primeros vehículos ahora mismo. Deja tu número y serás el primero en ver el lote el día que abra.">
-            We're hand-picking and inspecting the first vehicles right now. Leave your number and you'll be the first to see the lot the day it goes live.
-          </p>
-
-          <form data-fake class="mt-7 flex flex-col sm:flex-row gap-3 max-w-lg">
-            <input class="input flex-1" style="border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:.85rem 1.3rem;background:rgba(10,10,10,.6)" type="text" required
-                   placeholder="Phone or email"
-                   data-en-placeholder="Phone or email" data-es-placeholder="Teléfono o email" />
-            <button type="submit" class="btn-premium shine justify-center flex-shrink-0">
-              <span data-en="Notify me first" data-es="Avísame primero">Notify me first</span>
-            </button>
-            <p data-form-result class="hidden w-full text-[#10b981] text-sm pt-1"></p>
-          </form>
-
-          <p class="mt-6 text-white/45 text-sm">
-            <span data-en="Can't wait?" data-es="¿No puedes esperar?">Can't wait?</span>
-            <a href="#request" class="text-[var(--gold)] underline-sweep font-medium" data-en="Tell us what you're hunting ↓" data-es="Dinos qué estás buscando ↓">Tell us what you're hunting ↓</a>
-          </p>
-        </div>
-
-        <!-- Skeleton preview cards — the lot, taking shape -->
-        <div class="lg:col-span-5 grid grid-cols-2 gap-3" aria-hidden="true">
-          <div class="skel p-3">
-            <div class="bar" style="aspect-ratio:16/10"></div>
-            <div class="bar mt-3 h-3 w-3/4"></div>
-            <div class="bar mt-2 h-5 w-1/2"></div>
-          </div>
-          <div class="skel p-3" style="animation-delay:.4s">
-            <div class="bar" style="aspect-ratio:16/10"></div>
-            <div class="bar mt-3 h-3 w-2/3"></div>
-            <div class="bar mt-2 h-5 w-1/2"></div>
-          </div>
-          <div class="skel p-3 hidden sm:block">
-            <div class="bar" style="aspect-ratio:16/10"></div>
-            <div class="bar mt-3 h-3 w-3/4"></div>
-            <div class="bar mt-2 h-5 w-2/5"></div>
-          </div>
-          <div class="skel p-3 hidden sm:block">
-            <div class="bar" style="aspect-ratio:16/10"></div>
-            <div class="bar mt-3 h-3 w-1/2"></div>
-            <div class="bar mt-2 h-5 w-1/2"></div>
+          <div class="lg:col-span-5 grid grid-cols-2 gap-3" aria-hidden="true">
+            <div class="skel p-3"><div class="bar" style="aspect-ratio:4/3"></div><div class="bar mt-3 h-3 w-3/4"></div><div class="bar mt-2 h-4 w-1/2"></div></div>
+            <div class="skel p-3"><div class="bar" style="aspect-ratio:4/3"></div><div class="bar mt-3 h-3 w-2/3"></div><div class="bar mt-2 h-4 w-1/2"></div></div>
+            <div class="skel p-3"><div class="bar" style="aspect-ratio:4/3"></div><div class="bar mt-3 h-3 w-3/4"></div><div class="bar mt-2 h-4 w-2/5"></div></div>
+            <div class="skel p-3"><div class="bar" style="aspect-ratio:4/3"></div><div class="bar mt-3 h-3 w-1/2"></div><div class="bar mt-2 h-4 w-1/2"></div></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Trust strip -->
-    <div class="mt-14 grid md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden iv-stagger">
-      <div class="bg-[#0a0a0a] px-7 py-8">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)]"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-        <h3 class="font-[Syne] font-bold uppercase mt-4" data-en="Inspected in-house" data-es="Inspección propia">Inspected in-house</h3>
-        <p class="text-white/55 text-sm mt-2 leading-relaxed" data-en="Every car goes through our own shop — mechanical inspection, history check, road test — before it's listed." data-es="Cada auto pasa por nuestro taller — inspección mecánica, historial, prueba de manejo — antes de publicarse.">Every car goes through our own shop — mechanical inspection, history check, road test — before it's listed.</p>
-      </div>
-      <div class="bg-[#0a0a0a] px-7 py-8">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)]"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        <h3 class="font-[Syne] font-bold uppercase mt-4" data-en="Financing &amp; trade-ins" data-es="Financiamiento y trade-ins">Financing &amp; trade-ins</h3>
-        <p class="text-white/55 text-sm mt-2 leading-relaxed" data-en="Bring your current car and your budget — we structure the deal around you, not the other way." data-es="Trae tu auto actual y tu presupuesto — estructuramos el trato alrededor tuyo, no al revés.">Bring your current car and your budget — we structure the deal around you, not the other way.</p>
-      </div>
-      <div class="bg-[#0a0a0a] px-7 py-8">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)]"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3 class="font-[Syne] font-bold uppercase mt-4" data-en="Detailed before delivery" data-es="Detallado antes de entrega">Detailed before delivery</h3>
-        <p class="text-white/55 text-sm mt-2 leading-relaxed" data-en="Black Label AutoSpa treatment on every sale — you drive off in a car that looks the part." data-es="Tratamiento Black Label AutoSpa en cada venta — sales manejando un auto que se ve a la altura.">Black Label AutoSpa treatment on every sale — you drive off in a car that looks the part.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONCIERGE REQUEST — we source it (Car Guys sales pattern) -->
-<section id="request" class="relative py-20 md:py-28 border-t border-white/[.06] noise-bg">
-  <div class="max-w-[1100px] mx-auto px-6 md:px-12">
-    <div class="iv text-center mb-12">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ Search &amp; request" data-es="✦ Busca y solicita">✦ Search &amp; request</span>
-      <h2 class="font-[Syne] uppercase mt-5 leading-[.92]" style="font-size:clamp(1.9rem,4.5vw,3.2rem);letter-spacing:-.025em">
-        <span data-en="Tell us what you want." data-es="Dinos qué quieres.">Tell us what you want.</span>
-        <br>
-        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="We'll hunt it down." data-es="Lo cazamos por ti.">We'll hunt it down.</span>
-      </h2>
-      <p class="mt-5 text-white/60 max-w-xl mx-auto leading-relaxed"
-         data-en="Used, new or lease — our network goes far beyond the lot. Fill this out and we'll come back with options within one business day."
-         data-es="Usado, nuevo o lease — nuestra red va mucho más allá del lote. Llena esto y regresamos con opciones en un día hábil.">
-        Used, new or lease — our network goes far beyond the lot. Fill this out and we'll come back with options within one business day.
-      </p>
-    </div>
-
-    <form data-fake class="iv glass rounded-3xl border border-white/10 p-6 md:p-10">
-      <div class="grid sm:grid-cols-2 gap-6">
-        <div>
-          <label class="field-label" data-en="Make" data-es="Marca">Make</label>
-          <input class="input" type="text" placeholder="e.g. BMW, Lexus, Toyota" data-en-placeholder="e.g. BMW, Lexus, Toyota" data-es-placeholder="ej. BMW, Lexus, Toyota" />
-        </div>
-        <div>
-          <label class="field-label" data-en="Model" data-es="Modelo">Model</label>
-          <input class="input" type="text" placeholder="e.g. X5, RX 350, Tacoma" data-en-placeholder="e.g. X5, RX 350, Tacoma" data-es-placeholder="ej. X5, RX 350, Tacoma" />
-        </div>
-        <div>
-          <label class="field-label" data-en="Budget" data-es="Presupuesto">Budget</label>
-          <select class="input" style="color-scheme:dark">
-            <option data-en="Open / flexible" data-es="Abierto / flexible">Open / flexible</option>
-            <option data-en="Under $25k" data-es="Menos de $25k">Under $25k</option>
-            <option>$25k–$50k</option>
-            <option>$50k–$100k</option>
-            <option>$100k +</option>
-          </select>
-        </div>
-        <div>
-          <label class="field-label" data-en="Year" data-es="Año">Year</label>
-          <select class="input" style="color-scheme:dark">
-            <option data-en="Any" data-es="Cualquiera">Any</option>
-            <option data-en="2024 or newer" data-es="2024 o más nuevo">2024 or newer</option>
-            <option>2020–2023</option>
-            <option>2015–2019</option>
-            <option data-en="Older than 2015" data-es="Antes de 2015">Older than 2015</option>
-          </select>
-        </div>
-        <div>
-          <label class="field-label" data-en="Trade-in?" data-es="¿Trade-in?">Trade-in?</label>
-          <select class="input" style="color-scheme:dark">
-            <option data-en="No" data-es="No">No</option>
-            <option data-en="Yes — I have a car to trade" data-es="Sí — tengo un auto para intercambio">Yes — I have a car to trade</option>
-          </select>
-        </div>
-        <div>
-          <label class="field-label" data-en="Name" data-es="Nombre">Name</label>
-          <input class="input" type="text" required />
-        </div>
-        <div>
-          <label class="field-label" data-en="Phone" data-es="Teléfono">Phone</label>
-          <input class="input" type="tel" required />
-        </div>
-        <div>
-          <label class="field-label">Email</label>
-          <input class="input" type="email" />
-        </div>
-        <div class="sm:col-span-2">
-          <label class="field-label" data-en="Anything else (optional)" data-es="Algo más (opcional)">Anything else (optional)</label>
-          <textarea class="input" rows="3" placeholder="Color, features, timeline…" data-en-placeholder="Color, features, timeline…" data-es-placeholder="Color, extras, plazo…"></textarea>
-        </div>
+<!-- ============ TRUST STRIP ============ -->
+<section class="py-14 md:py-20" style="background:var(--bg-alt)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="grid md:grid-cols-3 gap-6 iv-stagger">
+      <div>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Inspected in our own shop" data-es="Inspeccionado en nuestro taller">Inspected in our own shop</h3>
+        <p class="mt-2 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="Mechanical inspection, vehicle history check and a road test before anything is listed. We service what we sell." data-es="Inspección mecánica, revisión de historial y prueba de manejo antes de publicar. Damos servicio a lo que vendemos.">Mechanical inspection, vehicle history check and a road test before anything is listed. We service what we sell.</p>
       </div>
-      <button type="submit" class="btn-premium shine w-full justify-center mt-8">
-        <span data-en="Submit request" data-es="Enviar solicitud">Submit request</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </button>
-      <p data-form-result class="hidden text-center text-[#10b981] text-sm mt-4"></p>
-      <p class="text-center mono text-[.6rem] tracking-[.2em] uppercase text-white/35 mt-5" data-en="Reply within one business day · No spam, ever" data-es="Respuesta en un día hábil · Sin spam, nunca">Reply within one business day · No spam, ever</p>
-    </form>
+      <div>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Financing and trade-ins" data-es="Financiamiento y trade-ins">Financing and trade-ins</h3>
+        <p class="mt-2 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="We work with lenders across the credit spectrum and appraise your current vehicle on the spot." data-es="Trabajamos con prestamistas en todo el espectro de crédito y tasamos tu vehículo actual en el momento.">We work with lenders across the credit spectrum and appraise your current vehicle on the spot.</p>
+      </div>
+      <div>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Detailed before delivery" data-es="Detallado antes de la entrega">Detailed before delivery</h3>
+        <p class="mt-2 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="Every sale leaves with a full Black Label AutoSpa detail, the same one our retail customers pay for." data-es="Cada venta sale con un detail completo de Black Label AutoSpa, el mismo que pagan nuestros clientes.">Every sale leaves with a full Black Label AutoSpa detail, the same one our retail customers pay for.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="border-t border-white/[.06] py-20" style="background:#050505">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
+<!-- ============ FOOTER ============ -->
+<footer style="background:var(--bg);border-top:1px solid var(--line)" class="pt-16 pb-10">
+  <div class="max-w-[1200px] mx-auto px-5">
     <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <img src="assets/brand/logo.png" alt="CS Motor Group" class="brand-img" style="height:60px" />
-        <p class="text-white/55 text-sm mt-6 max-w-sm leading-relaxed"
-           data-en="The corner that's always on. Detailing, rentals, repairs, sales — 520 Hicksville Rd, Massapequa NY."
-           data-es="La esquina que nunca cierra. Detallado, alquiler, reparaciones, ventas — 520 Hicksville Rd, Massapequa NY.">
-          The corner that's always on. Detailing, rentals, repairs, sales — 520 Hicksville Rd, Massapequa NY.
+      <div class="md:col-span-4">
+        <img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" style="height:44px" />
+        <p class="mt-5 text-[.88rem] leading-relaxed max-w-xs" style="color:var(--text-2)"
+           data-en="Detailing, rentals, repairs and used car sales at 520 Hicksville Rd, Massapequa NY. The corner that never closes."
+           data-es="Detallado, alquiler, reparaciones y venta de autos usados en 520 Hicksville Rd, Massapequa NY. La esquina que nunca cierra.">
+          Detailing, rentals, repairs and used car sales at 520 Hicksville Rd, Massapequa NY. The corner that never closes.
         </p>
       </div>
       <div class="md:col-span-2">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Explore" data-es="Explorar">Explore</div>
-        <div class="flex flex-col gap-3 text-sm text-white/70">
-          <a href="services.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Services" data-es="Servicios">Services</a>
-          <a href="carwash.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Detailing" data-es="Detallado">Detailing</a>
-          <a href="rentals.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Rentals" data-es="Alquiler">Rentals</a>
-          <a href="sales.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Sales" data-es="Ventas">Sales</a>
-          <a href="booking.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Book" data-es="Reservar">Book</a>
-          <a href="contact.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Contact" data-es="Contacto">Contact</a>
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Explore" data-es="Explorar">Explore</div>
+        <div class="flex flex-col gap-2.5 text-[.88rem]" style="color:var(--text-2)">
+          <a href="sales.html" class="hover:text-white" data-en="Inventory" data-es="Inventario">Inventory</a>
+          <a href="carwash.html" class="hover:text-white" data-en="Detailing" data-es="Detallado">Detailing</a>
+          <a href="rentals.html" class="hover:text-white" data-en="Rentals" data-es="Alquiler">Rentals</a>
+          <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
+          <a href="booking.html" class="hover:text-white" data-en="Book" data-es="Reservar">Book</a>
+          <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
         </div>
-      </div>
-      <div class="md:col-span-2">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Visit" data-es="Visítanos">Visit</div>
-        <div class="text-sm text-white/70 leading-relaxed">520 Hicksville Rd<br>Massapequa, NY 11758</div>
-        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="text-[.7rem] mono tracking-[.18em] uppercase text-white/55 hover:text-[var(--gold)] mt-3 inline-block underline-sweep">Map ↗</a>
       </div>
       <div class="md:col-span-3">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Get in touch" data-es="Contacto">Get in touch</div>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="tel:+16316019865" class="text-white font-bold hover:text-[var(--gold)] text-lg">(631) 601-9865</a>
-          <a href="mailto:hello@csmotorgroup.com" class="text-white/70 hover:text-white">hello@csmotorgroup.com</a>
-          <div class="text-white/55 mono text-[.7rem] tracking-[.18em] uppercase pt-2" data-en="Open 24/7 · 365 days/year" data-es="Abierto 24/7 · 365 días">Open 24/7 · 365 days/year</div>
-        </div>
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Visit Us" data-es="Visítanos">Visit Us</div>
+        <div class="text-[.88rem] leading-relaxed" style="color:var(--text-2)">520 Hicksville Rd<br>Massapequa, NY 11758</div>
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="inline-block mt-3 text-[.82rem]" style="color:var(--gold)" data-en="Get directions ↗" data-es="Cómo llegar ↗">Get directions ↗</a>
+      </div>
+      <div class="md:col-span-3">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Get in Touch" data-es="Contacto">Get in Touch</div>
+        <a href="tel:+16316019865" class="block font-[Syne] font-bold text-xl" style="color:var(--gold)">(631) 601-9865</a>
+        <a href="mailto:hello@csmotorgroup.com" class="block mt-2 text-[.88rem]" style="color:var(--text-2)">hello@csmotorgroup.com</a>
+        <p class="mt-3 text-[.82rem]" style="color:var(--text-3)" data-en="Open 24 hours · 365 days a year" data-es="Abierto 24 horas · 365 días al año">Open 24 hours · 365 days a year</p>
       </div>
     </div>
-    <div class="mt-14 pt-8 border-t border-white/[.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[.7rem] mono tracking-[.18em] uppercase text-white/40">
+    <div class="mt-12 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[.78rem]" style="border-top:1px solid var(--line);color:var(--text-3)">
       <div>© <span data-year></span> CS Motor Group · Black Label AutoSpa</div>
-      <div data-en="Every car inspected in our own shop" data-es="Cada auto inspeccionado en nuestro taller">Every car inspected in our own shop</div>
+      <div data-en="Every vehicle inspected in our own service bay" data-es="Cada vehículo inspeccionado en nuestra bahía de servicio">Every vehicle inspected in our own service bay</div>
     </div>
   </div>
 </footer>
 
-<!-- Mobile sticky CTA -->
 <div class="mobile-cta">
-  <a href="tel:+16316019865" class="btn-premium shine">Call</a>
-  <a href="#request" class="btn-ghost" data-en="Request a car" data-es="Buscar auto">Request a car</a>
+  <a href="tel:+16316019865" class="btn" data-en="Call" data-es="Llamar">Call</a>
+  <a href="contact.html" class="btn-ghost" data-en="Message" data-es="Mensaje">Message</a>
 </div>
 
 <script src="assets/app.js"></script>
 
 <script>
 /* ============================================================
-   INVENTORY — STANDBY MODE (Square-ready)
+   INVENTORY — STANDBY (Square-ready)
 
-   Hoy: INVENTORY está vacío → se muestra el empty state
-   "First lot in preparation" con captura de leads.
+   INVENTORY está vacío → se muestra el estado "first lot in
+   preparation". El grid, la búsqueda, los chips, los sliders y
+   el sort ya funcionan; solo falta la data.
 
-   Cuando llegue la cuenta Square:
-   1. Crear una serverless function en Vercel (/api/inventory)
-      que llame a Square Catalog API + Inventory API con el
-      access token en variable de entorno (nunca en el cliente).
-   2. Reemplazar el array por:
+   Para conectar Square:
+   1. Crear serverless function en Vercel `/api/inventory` que
+      llame a Square Catalog API + Inventory API con el access
+      token en variable de entorno (NUNCA en el cliente) y
+      filtre los items con stock 0.
+   2. Envolver la IIFE en async y reemplazar el array por:
         const INVENTORY = await (await fetch('/api/inventory')).json();
-      (envolver init() en async). Los items con stock 0 se
-      filtran en el serverless.
-   3. El shape de cada item ya está soportado por renderCards():
+   3. Shape de cada item (ya soportado por renderCard):
       { id:'V-001', title:'2021 Audi Q5', trim:'Premium Plus 45 TFSI',
-        price:34500, miles:36420, drivetrain:'AWD', trans:'Auto',
-        body:'suv'|'truck'|'sedan'|'coupe', img:'https://…',
-        photos:6, lot:'049', badge:null|'pending' }
+        price:34500, miles:36420, drivetrain:'AWD', trans:'Automatic',
+        body:'suv'|'truck'|'sedan'|'coupe', make:'Audi',
+        img:'https://…', photos:6, lot:'049', badge:null|'pending' }
    ============================================================ */
 const INVENTORY = [];
 
@@ -406,13 +362,18 @@ const INVENTORY = [];
   const countEl = document.getElementById('invCount');
   const queryEl = document.getElementById('invQuery');
   const sortEl  = document.getElementById('invSort');
+  const priceEl = document.getElementById('fPrice');
+  const milesEl = document.getElementById('fMiles');
   const chips   = document.querySelectorAll('.inv-chip');
-  const active  = new Set();
+  const bodyBox = document.getElementById('fBody');
+  const makeBox = document.getElementById('fMake');
+  const activeChips = new Set();
 
   const fmtPrice = n => '$' + n.toLocaleString('en-US');
   const fmtMiles = n => n.toLocaleString('en-US') + ' mi';
+  const isEs = () => (document.documentElement.lang || 'en') === 'es';
 
-  const FILTERS = {
+  const CHIP_FILTERS = {
     under25k: c => c.price < 25000,
     suv:      c => c.body === 'suv',
     truck:    c => c.body === 'truck',
@@ -426,82 +387,118 @@ const INVENTORY = [];
     'miles-asc':  (a, b) => a.miles - b.miles
   };
 
-  function filtered() {
-    const q = (queryEl.value || '').trim().toLowerCase();
-    let list = INVENTORY.filter(c => {
-      if (q && !(`${c.title} ${c.trim} ${c.body}`.toLowerCase().includes(q))) return false;
-      for (const f of active) if (!FILTERS[f](c)) return false;
-      return true;
-    });
-    return list.sort(SORTS[sortEl.value] || SORTS['just-in']);
+  function checkedValues(box){
+    return [...box.querySelectorAll('input[type=checkbox]:checked')].map(i => i.value);
   }
 
-  function card(c) {
+  function filtered(){
+    const q = (queryEl.value || '').trim().toLowerCase();
+    const maxPrice = Number(priceEl.value);
+    const maxMiles = Number(milesEl.value);
+    const bodies = checkedValues(bodyBox);
+    const makes  = checkedValues(makeBox);
+    return INVENTORY.filter(c => {
+      if (q && !(`${c.title} ${c.trim || ''} ${c.body || ''} ${c.make || ''}`.toLowerCase().includes(q))) return false;
+      if (maxPrice < 80000 && c.price > maxPrice) return false;
+      if (maxMiles < 150000 && c.miles > maxMiles) return false;
+      if (bodies.length && !bodies.includes(c.body)) return false;
+      if (makes.length && !makes.includes(c.make)) return false;
+      for (const f of activeChips) if (!CHIP_FILTERS[f](c)) return false;
+      return true;
+    }).sort(SORTS[sortEl.value] || SORTS['just-in']);
+  }
+
+  function renderCard(c){
     const badge = c.badge === 'pending'
-      ? `<span class="absolute top-3 left-3 px-3 py-1 rounded-full mono text-[.55rem] tracking-[.2em] uppercase font-bold" style="background:var(--gold);color:#0a0a0a">Sale pending</span>` : '';
+      ? `<span class="inv-badge">${isEs() ? 'Venta pendiente' : 'Sale pending'}</span>` : '';
     const photos = c.photos
-      ? `<span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-full glass mono text-[.58rem] text-white/80">📷 ${c.photos}</span>` : '';
+      ? `<span class="inv-photos"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3"/></svg>${c.photos}</span>` : '';
     return `<article class="inv-card">
-      <div class="ph">
-        <img src="${c.img}" alt="${c.title}" loading="lazy" />
-        ${badge}${photos}
-      </div>
-      <div class="p-5">
-        <h3 class="font-[Syne] font-bold text-lg leading-tight">${c.title}</h3>
-        <p class="mono text-[.62rem] tracking-[.14em] uppercase text-white/45 mt-1">${c.trim || ''}</p>
-        <div class="font-[Syne] text-2xl font-bold gradient-text-gold mt-3">${fmtPrice(c.price)}</div>
-        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-3 pt-3 border-t border-white/10">
+      <div class="ph"><img src="${c.img}" alt="${c.title}" loading="lazy" />${badge}${photos}</div>
+      <div class="body">
+        <h3 class="font-semibold text-[1rem] leading-snug">${c.title}</h3>
+        <p class="text-[.82rem] mt-0.5" style="color:var(--text-3)">${c.trim || ''}</p>
+        <div class="font-[Syne] font-extrabold text-2xl mt-3">${fmtPrice(c.price)}</div>
+        <div class="flex flex-wrap gap-x-4 gap-y-1.5 mt-3 pt-3" style="border-top:1px solid var(--line)">
           <span class="inv-spec">${fmtMiles(c.miles)}</span>
           <span class="inv-spec">${c.drivetrain || ''}</span>
           <span class="inv-spec">${c.trans || ''}</span>
         </div>
-        <p class="mono text-[.58rem] tracking-[.14em] uppercase text-white/35 mt-3">Massapequa · Lot ${c.lot || '—'}</p>
+        <p class="text-[.76rem] mt-3" style="color:var(--text-3)">Massapequa · ${isEs() ? 'Lote' : 'Lot'} ${c.lot || '—'}</p>
+        <a href="tel:+16316019865" class="btn mt-4 w-full">${isEs() ? 'Preguntar por este auto' : 'Ask about this car'}</a>
       </div>
     </article>`;
   }
 
-  function render() {
-    const list = filtered();
-    const lang = document.documentElement.lang || 'en';
+  function syncCounts(){
+    bodyBox.querySelectorAll('[data-count]').forEach(el => {
+      el.textContent = INVENTORY.filter(c => c.body === el.dataset.count).length;
+    });
+    const makes = [...new Set(INVENTORY.map(c => c.make).filter(Boolean))].sort();
+    if (makes.length) {
+      makeBox.innerHTML = makes.map(m => {
+        const n = INVENTORY.filter(c => c.make === m).length;
+        return `<label class="filter-check"><span class="flex items-center gap-2.5"><input type="checkbox" value="${m}"><span>${m}</span></span><span class="n">${n}</span></label>`;
+      }).join('');
+      makeBox.querySelectorAll('input').forEach(i => i.addEventListener('change', render));
+    }
+  }
+
+  function render(){
+    priceEl.nextElementSibling.querySelector('#fPriceVal').textContent =
+      Number(priceEl.value) >= 80000 ? '$80,000+' : fmtPrice(Number(priceEl.value));
+    milesEl.nextElementSibling.querySelector('#fMilesVal').textContent =
+      Number(milesEl.value) >= 150000 ? '150k+ mi' : fmtMiles(Number(milesEl.value));
 
     if (!INVENTORY.length) {
-      // Standby: no inventory yet → keep the "arriving" empty state front and center
       grid.innerHTML = '';
       empty.classList.remove('hidden');
       noMatch.classList.add('hidden');
-      countEl.textContent = '';
+      countEl.textContent = isEs() ? 'Inventario en preparación' : 'Inventory in preparation';
       return;
     }
     empty.classList.add('hidden');
 
+    const list = filtered();
     if (!list.length) {
       grid.innerHTML = '';
       noMatch.classList.remove('hidden');
-      countEl.textContent = '0 / ' + INVENTORY.length;
+      countEl.textContent = isEs() ? `0 de ${INVENTORY.length} vehículos` : `0 of ${INVENTORY.length} vehicles`;
       return;
     }
     noMatch.classList.add('hidden');
-    grid.innerHTML = list.map(card).join('');
-    countEl.textContent = lang === 'es'
-      ? `${list.length} de ${INVENTORY.length} resultados`
-      : `${list.length} of ${INVENTORY.length} results`;
+    grid.innerHTML = list.map(renderCard).join('');
+    countEl.textContent = isEs()
+      ? `${list.length} de ${INVENTORY.length} vehículos`
+      : `${list.length} of ${INVENTORY.length} vehicles`;
+  }
+
+  function clearAll(){
+    activeChips.clear();
+    chips.forEach(ch => ch.classList.remove('on'));
+    queryEl.value = '';
+    priceEl.value = 80000;
+    milesEl.value = 150000;
+    document.querySelectorAll('.filter-check input:checked').forEach(i => i.checked = false);
+    render();
   }
 
   chips.forEach(ch => ch.addEventListener('click', () => {
     const key = ch.dataset.filter;
-    if (active.has(key)) { active.delete(key); ch.classList.remove('on'); }
-    else { active.add(key); ch.classList.add('on'); }
+    if (activeChips.has(key)) { activeChips.delete(key); ch.classList.remove('on'); }
+    else { activeChips.add(key); ch.classList.add('on'); }
     render();
   }));
   queryEl.addEventListener('input', render);
   sortEl.addEventListener('change', render);
-  document.getElementById('invClear').addEventListener('click', () => {
-    active.clear();
-    chips.forEach(ch => ch.classList.remove('on'));
-    queryEl.value = '';
-    render();
-  });
+  priceEl.addEventListener('input', render);
+  milesEl.addEventListener('input', render);
+  bodyBox.querySelectorAll('input').forEach(i => i.addEventListener('change', render));
+  document.getElementById('invClear').addEventListener('click', clearAll);
+  document.getElementById('invClear2').addEventListener('click', clearAll);
+  document.querySelectorAll('.lang-toggle [data-lang]').forEach(b => b.addEventListener('click', () => setTimeout(render, 30)));
 
+  syncCounts();
   render();
 })();
 </script>

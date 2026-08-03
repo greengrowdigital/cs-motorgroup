@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>document.documentElement.classList.add('js')</script>
-<title>CS Motor Group · Auto Detailing · Rentals · Repairs · Massapequa, NY</title>
-<meta name="description" content="One stop on Hicksville Rd: Black Label AutoSpa detailing, exotic & luxury rentals, general repairs, oil change, body work, and 24-hour fueling. Pickup & drop-off available." />
+<title>Auto Detailing, Rentals &amp; Used Cars in Massapequa | CS Motor Group</title>
+<meta name="description" content="CS Motor Group on Hicksville Rd: Black Label AutoSpa detailing, exotic & luxury rentals, used car sales, general repairs and oil change. Open 24/7. Free pickup & drop-off." />
 <link rel="canonical" href="https://csmotorgroup.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CS Motor Group · Detailing · Rentals · Hicksville Rd">
-<meta property="og:description" content="Black Label AutoSpa · Exotic Rentals · Repairs · Open 24/7.">
+<meta property="og:title" content="CS Motor Group · Detailing · Rentals · Sales · Massapequa NY">
+<meta property="og:description" content="Detailing, rentals, used cars and repairs under one roof. Open 24/7.">
 <link rel="icon" type="image/png" href="assets/brand/logo.png" />
 
 <script type="application/ld+json">
@@ -19,130 +19,145 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..700,30..150,0..1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
 <div class="scroll-progress"></div>
 
-<!-- TOP TICKER -->
-<div class="hidden md:block border-b border-white/[.06]" style="background:rgba(0,0,0,.55)">
-  <div class="max-w-[1500px] mx-auto px-8 py-2 flex items-center justify-between font-[JetBrains_Mono] text-[.66rem] tracking-[.22em] uppercase text-white/55">
-    <div class="flex items-center gap-7">
-      <span class="flex items-center gap-2"><span class="dot dot-live"></span><span class="text-[#10b981] font-medium" data-en="Open · 24/7" data-es="Abierto · 24/7">Open · 24/7</span></span>
-      <span data-en="520 Hicksville Rd · Massapequa, NY" data-es="520 Hicksville Rd · Massapequa, NY">520 Hicksville Rd · Massapequa, NY</span>
-      <span class="text-white/30">★</span>
-      <span data-en="Pickup &amp; drop-off available" data-es="Pickup &amp; drop-off disponible">Pickup &amp; drop-off available</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <a href="tel:+16316019865" class="hover:text-[var(--gold)] underline-sweep">(631) 601-9865</a>
-      <div class="lang-toggle flex items-center gap-1">
-        <button data-lang="en" class="px-2 py-1 hover:text-[var(--gold)]">EN</button>
-        <span class="text-white/20">/</span>
-        <button data-lang="es" class="px-2 py-1 hover:text-[var(--gold)]">ES</button>
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="util-bar hidden md:block">
+    <div class="util-inner">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><span class="dot dot-live"></span><span style="color:var(--green)" data-en="Open 24/7" data-es="Abierto 24/7">Open 24/7</span></span>
+        <span>520 Hicksville Rd, Massapequa, NY</span>
+        <span data-en="Free pickup &amp; drop-off" data-es="Pickup y entrega gratis">Free pickup &amp; drop-off</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+16316019865" class="font-semibold" style="color:var(--gold)">(631) 601-9865</a>
+        <a href="mailto:hello@csmotorgroup.com">hello@csmotorgroup.com</a>
+        <span class="lang-toggle flex items-center gap-1">
+          <button data-lang="en" class="px-1.5">EN</button><span style="color:var(--line)">|</span><button data-lang="es" class="px-1.5">ES</button>
+        </span>
       </div>
     </div>
   </div>
-</div>
 
-<!-- FLOATING NAV -->
-<div class="nav-shell" id="navShell">
-  <div class="nav-inner">
-    <a href="index.html" class="flex items-center gap-3 shine rounded-full pr-3">
-      <img src="assets/brand/logo.png" alt="CS Motor Group" class="brand-img" />
-    </a>
-    <div class="hidden lg:flex items-center gap-8">
+  <nav class="main-nav">
+    <a href="index.html" class="flex-shrink-0"><img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" /></a>
+    <div class="nav-links hidden lg:flex">
       <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
-      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+      <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
       <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
       <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
-      <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
-      <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
+      <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
       <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="tel:+16316019865" class="hidden md:inline-flex btn-ghost text-[.66rem]">(631) 601-9865</a>
-      <a href="booking.html" class="hidden md:inline-flex btn-premium shine">
-        <span data-en="Book Now" data-es="Reservar">Book Now</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <button id="menuBtn" class="lg:hidden text-white p-2" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
+      <a href="tel:+16316019865" class="btn-ghost hidden xl:inline-flex">(631) 601-9865</a>
+      <a href="booking.html" class="btn hidden sm:inline-flex" data-en="Book a Service" data-es="Reservar">Book a Service</a>
+      <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg></button>
     </div>
-  </div>
-  <div id="menuPanel" class="hidden lg:hidden mt-3 mx-3 glass rounded-2xl border border-white/10 px-6 py-5 flex flex-col gap-4">
-    <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
-    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+  </nav>
+
+  <div id="menuPanel" class="menu-panel hidden lg:hidden">
+    <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
+    <a href="sales.html" class="nav-link" data-en="Inventory" data-es="Inventario">Inventory</a>
     <a href="carwash.html" class="nav-link" data-en="Detailing" data-es="Detallado">Detailing</a>
     <a href="rentals.html" class="nav-link" data-en="Rentals" data-es="Alquiler">Rentals</a>
-    <a href="sales.html" class="nav-link" data-en="Sales" data-es="Ventas">Sales</a>
-    <a href="booking.html" class="nav-link" data-en="Book" data-es="Reservar">Book</a>
+    <a href="services.html" class="nav-link" data-en="Services" data-es="Servicios">Services</a>
+    <a href="booking.html" class="nav-link" data-en="Book a Service" data-es="Reservar">Book a Service</a>
     <a href="contact.html" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
   </div>
-</div>
+</header>
 
-<!-- HERO — parallax + slow-zoom + mask-reveal -->
-<section class="relative overflow-hidden" style="background:#050505;min-height:100svh">
-  <div class="absolute inset-0 hero-parallax" data-parallax-bg>
-    <img src="assets/img/hero-rolls.jpg" alt="" class="absolute inset-0 w-full h-full object-cover animate-slow-zoom" style="filter:brightness(.42) contrast(1.08) saturate(.85)" />
+<!-- ============ HERO ============ -->
+<section class="relative">
+  <div class="absolute inset-0">
+    <img src="assets/img/hero-rolls.jpg" alt="" class="w-full h-full object-cover hero-img" />
+    <div class="absolute inset-0" style="background:rgba(11,11,12,.72)"></div>
   </div>
-  <div class="absolute inset-0 pointer-events-none" style="background:
-    radial-gradient(900px 500px at 70% 30%, rgba(255,203,0,.16), transparent 60%);"></div>
-  <div class="absolute left-0 right-0 bottom-0 h-1/2 pointer-events-none" style="background:linear-gradient(180deg,transparent 0%,rgba(5,5,5,.85) 80%,#050505 100%)"></div>
+  <div class="relative max-w-[1440px] mx-auto px-5 py-20 md:py-28 text-center">
+    <h1 class="font-[Syne] font-extrabold leading-[1.05]" style="font-size:clamp(2rem,5vw,3.6rem)">
+      <span data-en="Detailing, Rentals &amp; Used Cars" data-es="Detallado, Alquiler y Autos Usados">Detailing, Rentals &amp; Used Cars</span><br>
+      <span style="color:var(--gold)" data-en="in Massapequa, NY" data-es="en Massapequa, NY">in Massapequa, NY</span>
+    </h1>
+    <p class="mt-6 max-w-3xl mx-auto text-[.95rem] md:text-base leading-relaxed" style="color:var(--text-2)"
+       data-en="CS Motor Group is a full-service auto group at 520 Hicksville Rd. We detail, protect, repair and rent vehicles, and we sell hand-picked used cars that are inspected in our own shop. Open 24 hours, seven days a week, with free pickup and drop-off within 5 miles."
+       data-es="CS Motor Group es un auto group completo en 520 Hicksville Rd. Detallamos, protegemos, reparamos y alquilamos vehículos, y vendemos autos usados seleccionados e inspeccionados en nuestro propio taller. Abierto 24 horas, siete días a la semana, con pickup y entrega gratis hasta 5 millas.">
+      CS Motor Group is a full-service auto group at 520 Hicksville Rd. We detail, protect, repair and rent vehicles, and we sell hand-picked used cars that are inspected in our own shop. Open 24 hours, seven days a week, with free pickup and drop-off within 5 miles.
+    </p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3">
+      <a href="sales.html" class="btn" data-en="View Inventory" data-es="Ver Inventario">View Inventory</a>
+      <span class="self-center text-sm" style="color:var(--text-3)" data-en="or" data-es="o">or</span>
+      <a href="booking.html" class="btn-ghost" data-en="Book a Service" data-es="Reservar Servicio">Book a Service</a>
+    </div>
 
-  <div class="relative z-20 max-w-[1500px] mx-auto px-6 md:px-12 lg:px-20 pt-40 md:pt-44 pb-24 md:pb-36 min-h-[100svh] flex flex-col justify-end" data-parallax-content>
-    <div class="iv-stagger">
-      <div class="flex items-center gap-3 mb-8">
-        <span class="text-[var(--gold)] tracking-[.4em] text-xs">★★★★★</span>
-        <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="Auto Group · Detailing · Rentals" data-es="Auto Group · Detallado · Alquiler">Auto Group · Detailing · Rentals</span>
+    <div class="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl mx-auto">
+      <a href="carwash.html" class="cat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="t" data-en="Detailing" data-es="Detallado">Detailing</span>
+        <span class="d" data-en="Gold &amp; Platinum packages, ceramic coating" data-es="Paquetes Gold y Platinum, cerámico">Gold &amp; Platinum packages, ceramic coating</span>
+      </a>
+      <a href="rentals.html" class="cat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14M6 17v2M18 17v2M4 13l1.5-5A2 2 0 0 1 7.4 6.5h9.2A2 2 0 0 1 18.5 8L20 13v4H4z"/><circle cx="7.5" cy="14.5" r="1"/><circle cx="16.5" cy="14.5" r="1"/></svg>
+        <span class="t" data-en="Rentals" data-es="Alquiler">Rentals</span>
+        <span class="d" data-en="Economy to exotic, daily &amp; weekly rates" data-es="De economy a exóticos, diario y semanal">Economy to exotic, daily &amp; weekly rates</span>
+      </a>
+      <a href="sales.html" class="cat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+        <span class="t" data-en="Used Cars" data-es="Autos Usados">Used Cars</span>
+        <span class="d" data-en="Inspected in-house, financing available" data-es="Inspeccionados en casa, con financiamiento">Inspected in-house, financing available</span>
+      </a>
+      <a href="services.html" class="cat-card">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-2.4z"/></svg>
+        <span class="t" data-en="Repairs" data-es="Reparaciones">Repairs</span>
+        <span class="d" data-en="Oil change, body work, mechanical" data-es="Aceite, carrocería, mecánica">Oil change, body work, mechanical</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="Why Choose CS Motor Group?" data-es="¿Por qué CS Motor Group?">Why Choose CS Motor Group?</h2>
+      <span class="h-bar h-bar-center"></span>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 iv-stagger">
+      <div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M5 17h14M6 17v2M18 17v2M4 13l1.5-5A2 2 0 0 1 7.4 6.5h9.2A2 2 0 0 1 18.5 8L20 13v4H4z"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Everything Under One Roof" data-es="Todo Bajo Un Techo">Everything Under One Roof</h3>
+        <p class="mt-2.5 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="Detailing, paint correction, rentals, mechanical repairs, body work and used car sales at a single address. One shop, one phone number, one team that already knows your vehicle." data-es="Detallado, corrección de pintura, alquiler, reparaciones mecánicas, carrocería y venta de autos usados en una sola dirección. Un taller, un teléfono, un equipo que ya conoce tu vehículo.">Detailing, paint correction, rentals, mechanical repairs, body work and used car sales at a single address. One shop, one phone number, one team that already knows your vehicle.</p>
       </div>
-
-      <h1 class="font-[Syne] font-bold uppercase max-w-[18ch]" style="font-size:clamp(2.4rem,7vw,5.6rem);line-height:.92;letter-spacing:-.025em">
-        <span class="block txt-rise d1"><span data-en="Where your car" data-es="Donde tu auto">Where your car</span></span>
-        <span class="block txt-rise d2"><span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.03em" data-en="comes home." data-es="vuelve a casa.">comes home.</span></span>
-      </h1>
-
-      <p class="mt-8 max-w-xl text-white/75 text-base md:text-lg leading-relaxed font-light"
-         data-en-html="One address on Hicksville Rd. <b class='text-white font-medium'>Black Label AutoSpa</b> detailing, <b class='text-white font-medium'>exotic &amp; luxury rentals</b>, general repairs, body work, oil change, and 24-hour fueling. Pickup &amp; drop-off included."
-         data-es-html="Una sola dirección en Hicksville Rd. Detallado <b class='text-white font-medium'>Black Label AutoSpa</b>, <b class='text-white font-medium'>alquiler de lujo y exóticos</b>, reparaciones, body work, cambio de aceite, y combustible 24 horas. Pickup y drop-off incluidos.">
-        One address on Hicksville Rd. <b class="text-white font-medium">Black Label AutoSpa</b> detailing, <b class="text-white font-medium">exotic &amp; luxury rentals</b>, general repairs, body work, oil change, and 24-hour fueling. Pickup &amp; drop-off included.
-      </p>
-
-      <div class="mt-10 flex flex-wrap gap-3">
-        <a href="booking.html" class="btn-premium shine">
-          <span data-en="Book a service" data-es="Reservar servicio">Book a service</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-        </a>
-        <a href="carwash.html" class="btn-ghost">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <span data-en="Detail packages" data-es="Paquetes detail">Detail packages</span>
-        </a>
+      <div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Inspected Before It Is Listed" data-es="Inspeccionado Antes de Publicarse">Inspected Before It Is Listed</h3>
+        <p class="mt-2.5 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="Every used vehicle goes through our own service bay first: mechanical inspection, history check and a road test. If we would not put our name on it, it does not reach the lot." data-es="Cada vehículo usado pasa primero por nuestra bahía de servicio: inspección mecánica, revisión de historial y prueba de manejo. Si no le pondríamos nuestro nombre, no llega al lote.">Every used vehicle goes through our own service bay first: mechanical inspection, history check and a road test. If we would not put our name on it, it does not reach the lot.</p>
       </div>
-
-      <div class="mt-16 md:mt-20 grid grid-cols-3 max-w-2xl border-t border-white/10 pt-6">
-        <div>
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="27">27</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Years on the corner" data-es="Años en la esquina">Years on the corner</div>
-        </div>
-        <div class="border-l border-white/10 pl-6">
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="4.8" data-decimals="1">4.8</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="★ Google rating" data-es="★ Rating Google">★ Google rating</div>
-        </div>
-        <div class="border-l border-white/10 pl-6">
-          <div class="font-[Syne] text-2xl md:text-3xl font-semibold gradient-text-gold counter" data-counter data-to="24">24</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/40 mt-1" data-en="Hours open · 7 days" data-es="Horas · 7 días">Hours open · 7 days</div>
-        </div>
+      <div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Open 24 Hours, 7 Days" data-es="Abierto 24 Horas, 7 Días">Open 24 Hours, 7 Days</h3>
+        <p class="mt-2.5 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="Drop the keys before your shift, pick the car up after midnight. We are the corner on Hicksville Rd that never closes, and we confirm every booking by text within 30 minutes." data-es="Deja las llaves antes de tu turno, recoge el auto después de medianoche. Somos la esquina de Hicksville Rd que nunca cierra, y confirmamos cada reserva por SMS en 30 minutos.">Drop the keys before your shift, pick the car up after midnight. We are the corner on Hicksville Rd that never closes, and we confirm every booking by text within 30 minutes.</p>
+      </div>
+      <div>
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Free Pickup &amp; Drop-Off" data-es="Pickup y Entrega Gratis">Free Pickup &amp; Drop-Off</h3>
+        <p class="mt-2.5 text-[.88rem] leading-relaxed" style="color:var(--text-2)" data-en="We collect the car from your driveway and return it washed, within 5 miles of the shop at no charge. Most customers never have to rearrange their day around a service appointment." data-es="Recogemos el auto en tu casa y lo devolvemos lavado, hasta 5 millas del taller sin costo. La mayoría de clientes nunca tiene que reorganizar su día por una cita de servicio.">We collect the car from your driveway and return it washed, within 5 miles of the shop at no charge. Most customers never have to rearrange their day around a service appointment.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MARQUES WE SERVICE — authority wall (Blackout / Topaz pattern) -->
+<!-- ============ BRANDS ============ -->
 <div class="brand-marquee-wrap">
   <div class="brand-marquee-label">
-    <span class="mono text-[.6rem] tracking-[.34em] uppercase text-white/35" data-en="Trusted with the marques we service daily" data-es="Las marcas que atendemos a diario">Trusted with the marques we service daily</span>
+    <span class="text-[.72rem] tracking-[.16em] uppercase font-semibold" style="color:var(--text-3)" data-en="The marques we service every day" data-es="Las marcas que atendemos a diario">The marques we service every day</span>
   </div>
-  <div class="brand-marquee-track mt-4">
+  <div class="brand-marquee-track">
     <span class="item">Rolls-Royce</span> <span class="item"><i>✦</i></span>
     <span class="item">Bentley</span> <span class="item"><i>✦</i></span>
     <span class="item">Mercedes-AMG</span> <span class="item"><i>✦</i></span>
@@ -166,146 +181,57 @@
   </div>
 </div>
 
-<!-- METRICS hairline grid -->
-<section class="py-24 md:py-32 noise-bg">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
-    <div class="iv mb-16">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ The shop, by the numbers" data-es="✦ El taller, en números">✦ The shop, by the numbers</span>
-      <h2 class="font-[Syne] uppercase mt-4 leading-[.95] max-w-3xl" style="font-size:clamp(2rem,4.5vw,3.8rem);letter-spacing:-.025em">
-        <span data-en="Over two decades on" data-es="Más de dos décadas en">Over two decades on</span>
-        <br>
-        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="the same corner." data-es="la misma esquina.">the same corner.</span>
-      </h2>
+<!-- ============ PROMISE + CHECKLIST ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg-alt)">
+  <div class="max-w-[1200px] mx-auto px-5 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.5rem,2.8vw,2.2rem)" data-en="Twenty-seven years on the same corner" data-es="Veintisiete años en la misma esquina">Twenty-seven years on the same corner</h2>
+      <span class="h-bar"></span>
+      <p class="mt-6 text-[.92rem] leading-relaxed" style="color:var(--text-2)"
+         data-en="CS Motor Group has served Massapequa, Wantagh, Hicksville and the rest of Long Island since 1998. In that time we have detailed more than twelve thousand cars, from daily-driven Civics to the Rolls-Royce parked out front. The business grew by word of mouth, which is why we still treat a fifteen-year-old commuter with the same care as a supercar."
+         data-es="CS Motor Group ha servido a Massapequa, Wantagh, Hicksville y el resto de Long Island desde 1998. En ese tiempo hemos detallado más de doce mil autos, desde Civics de uso diario hasta el Rolls-Royce estacionado al frente. El negocio creció de boca en boca, y por eso seguimos tratando a un carro de quince años con el mismo cuidado que a un superdeportivo.">
+        CS Motor Group has served Massapequa, Wantagh, Hicksville and the rest of Long Island since 1998. In that time we have detailed more than twelve thousand cars, from daily-driven Civics to the Rolls-Royce parked out front. The business grew by word of mouth, which is why we still treat a fifteen-year-old commuter with the same care as a supercar.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="services.html" class="btn" data-en="See All Services" data-es="Ver Servicios">See All Services</a>
+        <a href="contact.html" class="btn-ghost" data-en="Visit the Shop" data-es="Visita el Taller">Visit the Shop</a>
+      </div>
     </div>
-
-    <div class="stats-grid grid-cols-2 md:grid-cols-4 iv-stagger">
-      <div>
-        <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">01</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="27">27</div>
-        <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
-        <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Years open" data-es="Años abiertos">Years open</span>
-      </div>
-      <div>
-        <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">02</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="12000" data-dur="2400">12,000</div>
-        <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
-        <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Cars detailed" data-es="Autos detallados">Cars detailed</span>
-      </div>
-      <div>
-        <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">03</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="48">48</div>
-        <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
-        <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Rental units" data-es="Unidades alquiler">Rental units</span>
-      </div>
-      <div>
-        <span class="mono text-[.62rem] tracking-[.32em] text-[var(--gold)]">04</span>
-        <div class="font-[Syne] font-bold gradient-text-gold counter mt-3" style="font-size:clamp(2.4rem,4.2vw,3.6rem);letter-spacing:-.04em;line-height:.95" data-counter data-to="4.8" data-decimals="1">4.8</div>
-        <span class="block mt-2 w-10 h-px bg-[var(--gold)]"></span>
-        <span class="mono text-[.62rem] tracking-[.22em] uppercase text-white/55 mt-3 block" data-en="Google rating" data-es="Rating Google">Google rating</span>
-      </div>
+    <div class="flex flex-col gap-3 iv-stagger">
+      <div class="check-row"><span class="ck">✓</span><div>
+        <div class="font-semibold text-[.95rem]" data-en="Lifetime warranty on every detail package" data-es="Garantía de por vida en cada paquete de detail">Lifetime warranty on every detail package</div>
+        <p class="mt-1 text-[.85rem]" style="color:var(--text-2)" data-en="Come back any time if the finish is not right and we redo it." data-es="Vuelve cuando quieras si el acabado no está bien y lo rehacemos.">Come back any time if the finish is not right and we redo it.</p>
+      </div></div>
+      <div class="check-row"><span class="ck">✓</span><div>
+        <div class="font-semibold text-[.95rem]" data-en="Flat-rate pricing, quoted before we start" data-es="Precios fijos, cotizados antes de empezar">Flat-rate pricing, quoted before we start</div>
+        <p class="mt-1 text-[.85rem]" style="color:var(--text-2)" data-en="No surprise line items when you pick the car up." data-es="Sin cargos sorpresa cuando recoges el auto.">No surprise line items when you pick the car up.</p>
+      </div></div>
+      <div class="check-row"><span class="ck">✓</span><div>
+        <div class="font-semibold text-[.95rem]" data-en="Complimentary wash with every service booking" data-es="Lavado de cortesía en cada servicio">Complimentary wash with every service booking</div>
+        <p class="mt-1 text-[.85rem]" style="color:var(--text-2)" data-en="Oil change, brake job or body work — it leaves clean." data-es="Cambio de aceite, frenos o carrocería, sale limpio.">Oil change, brake job or body work — it leaves clean.</p>
+      </div></div>
+      <div class="check-row"><span class="ck">✓</span><div>
+        <div class="font-semibold text-[.95rem]" data-en="Financing and trade-ins on used vehicles" data-es="Financiamiento y trade-ins en usados">Financing and trade-ins on used vehicles</div>
+        <p class="mt-1 text-[.85rem]" style="color:var(--text-2)" data-en="Bring your current car and we structure the deal around it." data-es="Trae tu auto actual y armamos el trato alrededor.">Bring your current car and we structure the deal around it.</p>
+      </div></div>
     </div>
   </div>
 </section>
 
-<!-- BLACK LABEL feature -->
-<section class="relative py-24 md:py-36 overflow-hidden border-t border-white/[.06]">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16 items-stretch">
-    <div class="lg:col-span-7 iv relative">
-      <div class="absolute -top-6 -left-6 font-[Syne] font-bold text-white/[.04] leading-none select-none pointer-events-none" style="font-size:clamp(8rem,18vw,15rem);letter-spacing:-.06em">01</div>
-      <div class="relative tilt-card spotlight-follow overflow-hidden rounded-3xl border border-white/10 aspect-[4/5] md:aspect-[5/4]">
-        <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1400&q=85" alt="Black Label AutoSpa" class="absolute inset-0 w-full h-full object-cover" style="filter:saturate(1.1) contrast(1.08)" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 30%,rgba(5,5,5,.75) 100%)"></div>
-        <div class="absolute top-6 left-6 px-4 py-2 glass rounded-full">
-          <span class="mono text-[.62rem] tracking-[.28em] uppercase text-[var(--gold)]">Black Label AutoSpa</span>
-        </div>
-        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end gap-4">
-          <div>
-            <div class="mono text-[.62rem] tracking-[.28em] uppercase text-white/50" data-en="Packages from" data-es="Paquetes desde">Packages from</div>
-            <div class="font-[Syne] text-4xl md:text-5xl font-bold gradient-text-gold mt-1">$150</div>
-          </div>
-          <a href="carwash.html" class="btn-ghost text-[.62rem]"><span data-en="See menu" data-es="Ver menú">See menu</span> →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="lg:col-span-5 flex flex-col justify-center iv">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ Featured · Detailing" data-es="✦ Destacado · Detallado">✦ Featured · Detailing</span>
-      <h2 class="font-[Syne] uppercase mt-5 leading-[.92]" style="font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.025em">
-        <span data-en="From hand wash" data-es="De lavado a mano">From hand wash</span>
-        <br>
-        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="to 9H ceramic." data-es="a 9H cerámico.">to 9H ceramic.</span>
-      </h2>
-      <p class="mt-6 text-white/70 leading-relaxed"
-         data-en="Two flat-rate packages — Gold and Platinum — plus stage-1 and stage-2 paint correction, ceramic coat, leather repair and headlight restoration. Drop the keys, walk out gleaming."
-         data-es="Dos paquetes a precio fijo — Gold y Platinum — más corrección de pintura stage-1 y stage-2, coating cerámico, reparación de cuero y restauración de faros. Deja las llaves, sales brillando.">
-        Two flat-rate packages — Gold and Platinum — plus stage-1 and stage-2 paint correction, ceramic coat, leather repair and headlight restoration. Drop the keys, walk out gleaming.
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg)">
+  <div class="max-w-[1200px] mx-auto px-5 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="lg:col-span-5 iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.5rem,2.8vw,2.2rem)" data-en="Drag the line. See the work." data-es="Arrastra la línea. Mira el trabajo.">Drag the line. See the work.</h2>
+      <span class="h-bar"></span>
+      <p class="mt-6 text-[.92rem] leading-relaxed" style="color:var(--text-2)"
+         data-en="Stage-2 paint correction plus a five-year ceramic coat on a daily-driven AMG coupe. Same shot, same light. The only variable is our process: decontamination wash, clay, two-stage machine polish, panel wipe, then coating."
+         data-es="Corrección de pintura stage-2 más coating cerámico de cinco años en un coupé AMG de uso diario. Misma toma, misma luz. La única variable es nuestro proceso: lavado de descontaminación, clay, pulido de dos etapas, panel wipe y luego el coating.">
+        Stage-2 paint correction plus a five-year ceramic coat on a daily-driven AMG coupe. Same shot, same light. The only variable is our process: decontamination wash, clay, two-stage machine polish, panel wipe, then coating.
       </p>
-
-      <div class="mt-8 flex flex-col gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden">
-        <div class="bg-[#0a0a0a] flex justify-between items-center px-5 py-4 gap-4">
-          <div class="flex items-center gap-3">
-            <span class="w-1 h-1 rounded-full bg-[var(--gold)]"></span>
-            <span class="font-[Inter] font-semibold text-white" data-en="Gold Package" data-es="Paquete Gold">Gold Package</span>
-            <span class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45">Sedan · SUV</span>
-          </div>
-          <span class="mono text-[.78rem] tracking-[.16em] text-[var(--gold)] font-semibold">$150 / $190</span>
-        </div>
-        <div class="bg-[#0a0a0a] flex justify-between items-center px-5 py-4 gap-4">
-          <div class="flex items-center gap-3">
-            <span class="w-1 h-1 rounded-full bg-[var(--gold)]"></span>
-            <span class="font-[Inter] font-semibold text-white" data-en="Platinum Package" data-es="Paquete Platinum">Platinum Package</span>
-            <span class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45" data-en="incl. ceramic spray" data-es="incl. cerámico spray">incl. ceramic spray</span>
-          </div>
-          <span class="mono text-[.78rem] tracking-[.16em] text-[var(--gold)] font-semibold">$250 / $300</span>
-        </div>
-        <div class="bg-[#0a0a0a] flex justify-between items-center px-5 py-4 gap-4">
-          <div class="flex items-center gap-3">
-            <span class="w-1 h-1 rounded-full bg-[var(--gold)]"></span>
-            <span class="font-[Inter] font-semibold text-white" data-en="5-Year Ceramic Coat" data-es="Cerámico 5 años">5-Year Ceramic Coat</span>
-            <span class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45" data-en="9H protection" data-es="protección 9H">9H protection</span>
-          </div>
-          <span class="mono text-[.78rem] tracking-[.16em] text-[var(--gold)] font-semibold">$400</span>
-        </div>
-        <div class="bg-[#0a0a0a] flex justify-between items-center px-5 py-4 gap-4">
-          <div class="flex items-center gap-3">
-            <span class="w-1 h-1 rounded-full bg-[var(--gold)]"></span>
-            <span class="font-[Inter] font-semibold text-white" data-en="Paint Correction" data-es="Corrección Pintura">Paint Correction</span>
-            <span class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45">Stage 1 / 2</span>
-          </div>
-          <span class="mono text-[.78rem] tracking-[.16em] text-[var(--gold)] font-semibold">$150 / $250</span>
-        </div>
-      </div>
-
-      <div class="mt-8 flex gap-3">
-        <a href="booking.html?service=detail" class="btn-premium shine">
-          <span data-en="Reserve detail" data-es="Reservar detail">Reserve detail</span> →
-        </a>
-        <a href="carwash.html" class="btn-ghost"><span data-en="Full menu" data-es="Menú completo">Full menu</span></a>
-      </div>
+      <div class="mt-8"><a href="carwash.html" class="btn" data-en="Detail Packages" data-es="Paquetes de Detail">Detail Packages</a></div>
     </div>
-  </div>
-</section>
-
-<!-- BEFORE / AFTER — proof of work (Blackout pattern) -->
-<section class="relative py-24 md:py-32 border-t border-white/[.06]" style="background:#070707">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-    <div class="lg:col-span-4 iv">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ The proof" data-es="✦ La prueba">✦ The proof</span>
-      <h2 class="font-[Syne] uppercase mt-5 leading-[.92]" style="font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.025em">
-        <span data-en="Drag the line." data-es="Arrastra la línea.">Drag the line.</span>
-        <br>
-        <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="See the work." data-es="Mira el trabajo.">See the work.</span>
-      </h2>
-      <p class="mt-6 text-white/65 leading-relaxed text-sm md:text-base"
-         data-en="Stage-2 paint correction plus ceramic coat on a daily-driven AMG coupe. Same shot, same light — the only difference is our process."
-         data-es="Corrección de pintura stage-2 más coating cerámico en un coupé AMG de uso diario. Misma toma, misma luz — la única diferencia es nuestro proceso.">
-        Stage-2 paint correction plus ceramic coat on a daily-driven AMG coupe. Same shot, same light — the only difference is our process.
-      </p>
-      <div class="mt-8">
-        <a href="carwash.html" class="btn-ghost"><span data-en="Detail packages" data-es="Paquetes detail">Detail packages</span> →</a>
-      </div>
-    </div>
-    <div class="lg:col-span-8 iv">
+    <div class="lg:col-span-7 iv">
       <div class="ba-slider">
         <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=85" alt="Before detailing" class="ba-before" />
         <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=85" alt="After detailing" class="ba-after" />
@@ -317,394 +243,287 @@
   </div>
 </section>
 
-<!-- RENTALS fleet -->
-<section class="relative py-24 md:py-32 overflow-hidden border-t border-white/[.06]" style="background:#070707">
-  <div class="absolute inset-0 noise-bg opacity-60 pointer-events-none"></div>
-  <div class="relative max-w-[1500px] mx-auto px-6 md:px-12">
-    <div class="grid lg:grid-cols-12 gap-8 mb-16 items-end iv">
-      <div class="lg:col-span-7">
-        <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ Featured · Rentals" data-es="✦ Destacado · Alquiler">✦ Featured · Rentals</span>
-        <h2 class="font-[Syne] uppercase mt-5 leading-[.92]" style="font-size:clamp(2.2rem,5.5vw,5rem);letter-spacing:-.025em">
-          <span data-en="Pick the tier." data-es="Elige el tier.">Pick the tier.</span>
-          <br>
-          <span class="gradient-text-gold" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="Drive it home." data-es="Maneja a casa.">Drive it home.</span>
-        </h2>
+<!-- ============ SERVICES / PRICING ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg-alt)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="Detail Packages &amp; Protection" data-es="Paquetes de Detail y Protección">Detail Packages &amp; Protection</h2>
+      <span class="h-bar h-bar-center"></span>
+      <p class="mt-6 max-w-2xl mx-auto text-[.92rem] leading-relaxed" style="color:var(--text-2)" data-en="Flat rates for sedans and SUVs. Drop the keys and walk out gleaming." data-es="Precios fijos para sedanes y SUVs. Deja las llaves y sales brillando.">Flat rates for sedans and SUVs. Drop the keys and walk out gleaming.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-4 iv-stagger">
+      <div class="card p-6">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold" style="color:var(--gold)">Gold</div>
+        <div class="font-[Syne] font-extrabold text-3xl mt-3">$150<span class="text-base font-medium" style="color:var(--text-3)"> / $190</span></div>
+        <p class="mt-1 text-[.8rem]" style="color:var(--text-3)" data-en="Sedan / SUV" data-es="Sedán / SUV">Sedan / SUV</p>
+        <p class="mt-4 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Hand wash, wheels and tires, full interior vacuum, windows, dressing and scent." data-es="Lavado a mano, ruedas y llantas, aspirado interior completo, vidrios, dressing y aroma.">Hand wash, wheels and tires, full interior vacuum, windows, dressing and scent.</p>
       </div>
-      <p class="lg:col-span-5 text-white/65 leading-relaxed text-base"
-         data-en="From the Corolla you need for the airport run to the Huracán you reserved for the anniversary. Daily and weekly rates, free pickup &amp; drop-off within 5 miles, 25+ with valid license."
-         data-es="Desde el Corolla que necesitas para el aeropuerto hasta el Huracán que reservaste para el aniversario. Tarifas diarias y semanales, pickup y drop-off gratis hasta 5 millas, 25+ con licencia válida.">
-        From the Corolla you need for the airport run to the Huracán you reserved for the anniversary. Daily and weekly rates, free pickup &amp; drop-off within 5 miles, 25+ with valid license.
+      <div class="card p-6" style="border-color:var(--gold)">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold" style="color:var(--gold)">Platinum</div>
+        <div class="font-[Syne] font-extrabold text-3xl mt-3">$250<span class="text-base font-medium" style="color:var(--text-3)"> / $300</span></div>
+        <p class="mt-1 text-[.8rem]" style="color:var(--text-3)" data-en="Includes ceramic spray" data-es="Incluye cerámico en spray">Includes ceramic spray</p>
+        <p class="mt-4 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Everything in Gold plus iron decontamination, clay bar, sealant and mats scrubbed." data-es="Todo lo de Gold más descontaminación de hierro, clay bar, sellador y tapetes lavados.">Everything in Gold plus iron decontamination, clay bar, sealant and mats scrubbed.</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold" style="color:var(--gold)" data-en="Ceramic Coat" data-es="Cerámico">Ceramic Coat</div>
+        <div class="font-[Syne] font-extrabold text-3xl mt-3">$400</div>
+        <p class="mt-1 text-[.8rem]" style="color:var(--text-3)" data-en="9H · 5-year protection" data-es="9H · 5 años de protección">9H · 5-year protection</p>
+        <p class="mt-4 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="True 9H coating over corrected paint. Hydrophobic, UV stable, easy to maintain." data-es="Coating 9H real sobre pintura corregida. Hidrofóbico, estable a UV, fácil de mantener.">True 9H coating over corrected paint. Hydrophobic, UV stable, easy to maintain.</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold" style="color:var(--gold)" data-en="Paint Correction" data-es="Corrección de Pintura">Paint Correction</div>
+        <div class="font-[Syne] font-extrabold text-3xl mt-3">$150<span class="text-base font-medium" style="color:var(--text-3)"> / $250</span></div>
+        <p class="mt-1 text-[.8rem]" style="color:var(--text-3)">Stage 1 / Stage 2</p>
+        <p class="mt-4 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Machine polishing that removes swirls, oxidation and light scratches." data-es="Pulido a máquina que elimina swirls, oxidación y rayones ligeros.">Machine polishing that removes swirls, oxidation and light scratches.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3 iv">
+      <a href="booking.html?service=detail" class="btn" data-en="Reserve a Detail" data-es="Reservar Detail">Reserve a Detail</a>
+      <a href="services.html" class="btn-ghost" data-en="Full Service Menu" data-es="Menú Completo">Full Service Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RENTALS ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="Rent by the Day or the Week" data-es="Alquila por Día o Semana">Rent by the Day or the Week</h2>
+      <span class="h-bar h-bar-center"></span>
+      <p class="mt-6 max-w-2xl mx-auto text-[.92rem] leading-relaxed" style="color:var(--text-2)" data-en="Four tiers, from the airport commuter to the anniversary supercar. Drivers 25 and over with a valid license and insurance." data-es="Cuatro tiers, del auto para el aeropuerto al superdeportivo de aniversario. Conductores de 25 años en adelante con licencia y seguro válidos.">Four tiers, from the airport commuter to the anniversary supercar. Drivers 25 and over with a valid license and insurance.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 iv-stagger">
+      <a href="rentals.html#economy" class="card overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Economy" class="w-full aspect-[4/3] object-cover" style="filter:brightness(.8)" />
+        <div class="p-5">
+          <div class="font-[Syne] font-bold text-lg" data-en="Economy" data-es="Economy">Economy</div>
+          <p class="text-[.8rem] mt-1" style="color:var(--text-3)">Corolla · Civic · Versa</p>
+          <div class="mt-4 pt-4 flex items-baseline justify-between" style="border-top:1px solid var(--line)">
+            <span class="font-[Syne] font-extrabold text-2xl" style="color:var(--gold)">$45</span>
+            <span class="text-[.78rem]" style="color:var(--text-3)" data-en="per day" data-es="por día">per day</span>
+          </div>
+        </div>
+      </a>
+      <a href="rentals.html#luxury" class="card overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Luxury" class="w-full aspect-[4/3] object-cover" style="filter:brightness(.8)" />
+        <div class="p-5">
+          <div class="font-[Syne] font-bold text-lg" data-en="Luxury" data-es="Lujo">Luxury</div>
+          <p class="text-[.8rem] mt-1" style="color:var(--text-3)">BMW 5 · E-Class · A7</p>
+          <div class="mt-4 pt-4 flex items-baseline justify-between" style="border-top:1px solid var(--line)">
+            <span class="font-[Syne] font-extrabold text-2xl" style="color:var(--gold)">$149</span>
+            <span class="text-[.78rem]" style="color:var(--text-3)" data-en="per day" data-es="por día">per day</span>
+          </div>
+        </div>
+      </a>
+      <a href="rentals.html#suv" class="card overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=800&q=80" alt="Large SUV" class="w-full aspect-[4/3] object-cover" style="filter:brightness(.8)" />
+        <div class="p-5">
+          <div class="font-[Syne] font-bold text-lg" data-en="Large SUV" data-es="SUV Grande">Large SUV</div>
+          <p class="text-[.8rem] mt-1" style="color:var(--text-3)">Suburban · Escalade · Navigator</p>
+          <div class="mt-4 pt-4 flex items-baseline justify-between" style="border-top:1px solid var(--line)">
+            <span class="font-[Syne] font-extrabold text-2xl" style="color:var(--gold)">$179</span>
+            <span class="text-[.78rem]" style="color:var(--text-3)" data-en="per day" data-es="por día">per day</span>
+          </div>
+        </div>
+      </a>
+      <a href="rentals.html#exotic" class="card overflow-hidden" style="border-color:var(--gold)">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80" alt="Exotic" class="w-full aspect-[4/3] object-cover" style="filter:brightness(.8)" />
+        <div class="p-5">
+          <div class="font-[Syne] font-bold text-lg" data-en="Exotic" data-es="Exóticos">Exotic</div>
+          <p class="text-[.8rem] mt-1" style="color:var(--text-3)">Huracán · Roma · 720S</p>
+          <div class="mt-4 pt-4 flex items-baseline justify-between" style="border-top:1px solid var(--line)">
+            <span class="font-[Syne] font-extrabold text-2xl" style="color:var(--gold)">$899</span>
+            <span class="text-[.78rem]" style="color:var(--text-3)" data-en="per day" data-es="por día">per day</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3 iv">
+      <a href="rentals.html" class="btn" data-en="See the Full Fleet" data-es="Ver la Flota Completa">See the Full Fleet</a>
+      <a href="booking.html?service=rental" class="btn-ghost" data-en="Reserve a Vehicle" data-es="Reservar Vehículo">Reserve a Vehicle</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg-alt)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="Four Steps to Keys in Hand" data-es="Cuatro Pasos a las Llaves">Four Steps to Keys in Hand</h2>
+      <span class="h-bar h-bar-center"></span>
+    </div>
+    <div class="mt-12 steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 iv-stagger">
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Pick a service" data-es="Elige un servicio">Pick a service</h3>
+        <p class="mt-2 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Detail package, oil change, body work or a rental tier, straight from the booking screen." data-es="Paquete de detail, cambio de aceite, carrocería o un tier de alquiler, desde la pantalla de reserva.">Detail package, oil change, body work or a rental tier, straight from the booking screen.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Pick the slot" data-es="Elige el horario">Pick the slot</h3>
+        <p class="mt-2 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Same-day windows are usually open. We confirm by text within 30 minutes during business hours." data-es="Normalmente hay cupos el mismo día. Confirmamos por SMS en 30 minutos en horario laboral.">Same-day windows are usually open. We confirm by text within 30 minutes during business hours.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Drop off or we collect" data-es="Entrega o lo recogemos">Drop off or we collect</h3>
+        <p class="mt-2 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="Bring the car to Hicksville Rd, or we grab it from your driveway free within 5 miles." data-es="Trae el auto a Hicksville Rd, o lo recogemos en tu casa gratis hasta 5 millas.">Bring the car to Hicksville Rd, or we grab it from your driveway free within 5 miles.</p>
+      </div>
+      <div>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--gold)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        <h3 class="font-[Syne] font-bold mt-4 text-[1.05rem]" data-en="Drive away" data-es="Maneja">Drive away</h3>
+        <p class="mt-2 text-[.86rem] leading-relaxed" style="color:var(--text-2)" data-en="We text the moment it is ready, and every service booking leaves with a complimentary wash." data-es="Te avisamos apenas está listo, y cada servicio sale con lavado de cortesía.">We text the moment it is ready, and every service booking leaves with a complimentary wash.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg)">
+  <div class="max-w-[1200px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="What Our Customers Say" data-es="Lo Que Dicen Nuestros Clientes">What Our Customers Say</h2>
+      <span class="h-bar h-bar-center"></span>
+      <a href="https://www.google.com/maps/search/CS+Motor+Group+520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-6 text-[.85rem]" style="color:var(--text-2)">
+        <span style="color:var(--gold);letter-spacing:.15em">★★★★★</span>
+        <span data-en="4.8 average on Google · Read all reviews ↗" data-es="4.8 promedio en Google · Leer todas ↗">4.8 average on Google · Read all reviews ↗</span>
+      </a>
+    </div>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 iv-stagger">
+      <div class="review-card">
+        <div class="who"><span class="av">D</span><div><div class="font-semibold text-[.9rem]">Daniel K.</div><div class="text-[.72rem]" style="color:var(--text-3)">Massapequa</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p data-en="They detailed my G-Wagon Saturday morning and dropped it back at the office that afternoon. The same crew handed me the keys to a Range Rover for the weekend. One stop, no friction." data-es="Detallaron mi G-Wagon el sábado en la mañana y me lo dejaron en la oficina por la tarde. El mismo equipo me entregó las llaves de un Range Rover para el fin de semana. Una parada, sin fricción.">They detailed my G-Wagon Saturday morning and dropped it back at the office that afternoon. The same crew handed me the keys to a Range Rover for the weekend. One stop, no friction.</p>
+      </div>
+      <div class="review-card">
+        <div class="who"><span class="av">M</span><div><div class="font-semibold text-[.9rem]">Marcus L.</div><div class="text-[.72rem]" style="color:var(--text-3)">Wantagh</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p data-en="Platinum detail on a black F-Pace I thought was a lost cause. It came out looking like the day I drove it off the lot, and the ceramic add-on was worth every dollar." data-es="Detail Platinum en un F-Pace negro que pensé era caso perdido. Salió como el día que lo manejé del concesionario, y el cerámico valió cada dólar.">Platinum detail on a black F-Pace I thought was a lost cause. It came out looking like the day I drove it off the lot, and the ceramic add-on was worth every dollar.</p>
+      </div>
+      <div class="review-card">
+        <div class="who"><span class="av">J</span><div><div class="font-semibold text-[.9rem]">Jonathan R.</div><div class="text-[.72rem]" style="color:var(--text-3)">Hicksville</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p data-en="Rented the Huracán for my brother's wedding. Picked it up shining at nine sharp and dropped it back at midnight. Easiest exotic rental on Long Island." data-es="Alquilé el Huracán para la boda de mi hermano. Lo recogí brillando a las nueve en punto y lo devolví a medianoche. El alquiler exótico más fácil de Long Island.">Rented the Huracán for my brother's wedding. Picked it up shining at nine sharp and dropped it back at midnight. Easiest exotic rental on Long Island.</p>
+      </div>
+      <div class="review-card">
+        <div class="who"><span class="av">A</span><div><div class="font-semibold text-[.9rem]">Andrea P.</div><div class="text-[.72rem]" style="color:var(--text-3)">Massapequa</div></div></div>
+        <div class="stars">★★★★★</div>
+        <p data-en="They picked the car up from my driveway, did the oil change and a body touch-up, and dropped it back washed before lunch. I never had to leave work." data-es="Recogieron el auto en mi casa, hicieron el cambio de aceite y un retoque de carrocería, y me lo dejaron lavado antes del almuerzo. Nunca tuve que salir del trabajo.">They picked the car up from my driveway, did the oil change and a body touch-up, and dropped it back washed before lunch. I never had to leave work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg-alt)">
+  <div class="max-w-[1200px] mx-auto px-5 grid lg:grid-cols-2 gap-12 items-start">
+    <div class="iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.5rem,2.8vw,2.2rem)" data-en="Find Us on Hicksville Road" data-es="Encuéntranos en Hicksville Road">Find Us on Hicksville Road</h2>
+      <span class="h-bar"></span>
+      <p class="mt-6 text-[.92rem] leading-relaxed" style="color:var(--text-2)"
+         data-en="We are on Hicksville Rd just north of Sunrise Highway, minutes from Massapequa Park, Wantagh, Seaford and Farmingdale. Parking is on site and the service bays run around the clock."
+         data-es="Estamos en Hicksville Rd justo al norte de Sunrise Highway, a minutos de Massapequa Park, Wantagh, Seaford y Farmingdale. Hay estacionamiento en el sitio y las bahías operan las 24 horas.">
+        We are on Hicksville Rd just north of Sunrise Highway, minutes from Massapequa Park, Wantagh, Seaford and Farmingdale. Parking is on site and the service bays run around the clock.
       </p>
+      <div class="mt-8 flex flex-col gap-4 text-[.92rem]">
+        <div><div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-1" style="color:var(--gold)" data-en="Address" data-es="Dirección">Address</div>520 Hicksville Rd, Massapequa, NY 11758</div>
+        <div><div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-1" style="color:var(--gold)" data-en="Phone" data-es="Teléfono">Phone</div><a href="tel:+16316019865" style="color:var(--gold)" class="font-semibold text-lg">(631) 601-9865</a></div>
+        <div><div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-1" style="color:var(--gold)" data-en="Hours" data-es="Horario">Hours</div><span data-en="Open 24 hours, 7 days a week, 365 days a year" data-es="Abierto 24 horas, 7 días a la semana, 365 días al año">Open 24 hours, 7 days a week, 365 days a year</span></div>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="btn" data-en="Get Directions" data-es="Cómo Llegar">Get Directions</a>
+        <a href="contact.html" class="btn-ghost" data-en="Contact Us" data-es="Contáctanos">Contact Us</a>
+      </div>
     </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 iv-stagger">
-      <a href="rentals.html#economy" class="tilt-card spotlight-follow relative overflow-hidden rounded-2xl border border-white/10 card-hover group" style="aspect-ratio:3/4">
-        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=900&q=85" alt="Economy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(.55) saturate(.9)" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(5,5,5,.92) 100%)"></div>
-        <div class="absolute top-5 left-5 right-5 flex justify-between items-start">
-          <span class="mono text-[.6rem] tracking-[.28em] uppercase text-[var(--gold)]">01 / 04</span>
-          <span class="px-3 py-1 glass rounded-full mono text-[.55rem] tracking-[.22em] uppercase text-white/70" data-en="For Rent" data-es="Disponible">For Rent</span>
-        </div>
-        <div class="absolute left-5 right-5 bottom-5">
-          <div class="font-[Syne] font-bold text-2xl uppercase tracking-tight">Economy</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/55 mt-1">Corolla · Civic · Versa</div>
-          <div class="flex items-baseline justify-between mt-4 pt-4 border-t border-white/15">
-            <span class="font-[Syne] text-2xl font-bold gradient-text-gold">$45</span>
-            <span class="mono text-[.55rem] tracking-[.22em] uppercase text-white/45" data-en="/ day" data-es="/ día">/ day</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="rentals.html#luxury" class="tilt-card spotlight-follow relative overflow-hidden rounded-2xl border border-white/10 card-hover group" style="aspect-ratio:3/4">
-        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=900&q=85" alt="Luxury" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(.55) saturate(.95)" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(5,5,5,.92) 100%)"></div>
-        <div class="absolute top-5 left-5 right-5 flex justify-between items-start">
-          <span class="mono text-[.6rem] tracking-[.28em] uppercase text-[var(--gold)]">02 / 04</span>
-          <span class="px-3 py-1 glass rounded-full mono text-[.55rem] tracking-[.22em] uppercase text-white/70" data-en="For Rent" data-es="Disponible">For Rent</span>
-        </div>
-        <div class="absolute left-5 right-5 bottom-5">
-          <div class="font-[Syne] font-bold text-2xl uppercase tracking-tight" data-en="Luxury" data-es="Lujo">Luxury</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/55 mt-1">BMW 5 · E-Class · A7</div>
-          <div class="flex items-baseline justify-between mt-4 pt-4 border-t border-white/15">
-            <span class="font-[Syne] text-2xl font-bold gradient-text-gold">$149</span>
-            <span class="mono text-[.55rem] tracking-[.22em] uppercase text-white/45" data-en="/ day" data-es="/ día">/ day</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="rentals.html#suv" class="tilt-card spotlight-follow relative overflow-hidden rounded-2xl border border-white/10 card-hover group" style="aspect-ratio:3/4">
-        <img src="https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=900&q=85" alt="SUV" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(.55) saturate(.9)" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(5,5,5,.92) 100%)"></div>
-        <div class="absolute top-5 left-5 right-5 flex justify-between items-start">
-          <span class="mono text-[.6rem] tracking-[.28em] uppercase text-[var(--gold)]">03 / 04</span>
-          <span class="px-3 py-1 glass rounded-full mono text-[.55rem] tracking-[.22em] uppercase text-white/70" data-en="For Rent" data-es="Disponible">For Rent</span>
-        </div>
-        <div class="absolute left-5 right-5 bottom-5">
-          <div class="font-[Syne] font-bold text-2xl uppercase tracking-tight" data-en="Large SUV" data-es="SUV Grande">Large SUV</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/55 mt-1">Suburban · Escalade · Navigator</div>
-          <div class="flex items-baseline justify-between mt-4 pt-4 border-t border-white/15">
-            <span class="font-[Syne] text-2xl font-bold gradient-text-gold">$179</span>
-            <span class="mono text-[.55rem] tracking-[.22em] uppercase text-white/45" data-en="/ day" data-es="/ día">/ day</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="rentals.html#exotic" class="tilt-card spotlight-follow relative overflow-hidden rounded-2xl border-2 group" style="aspect-ratio:3/4;border-color:rgba(255,203,0,.45);box-shadow:0 0 40px rgba(255,203,0,.18)">
-        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=900&q=85" alt="Exotic" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" style="filter:brightness(.6) saturate(1.05)" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 40%,rgba(5,5,5,.92) 100%)"></div>
-        <div class="absolute top-5 left-5 right-5 flex justify-between items-start">
-          <span class="mono text-[.6rem] tracking-[.28em] uppercase gradient-text-gold font-bold">04 / 04</span>
-          <span class="px-3 py-1 rounded-full mono text-[.55rem] tracking-[.22em] uppercase font-bold" style="background:var(--gold);color:#0a0a0a">Exotic</span>
-        </div>
-        <div class="absolute left-5 right-5 bottom-5">
-          <div class="font-[Syne] font-bold text-2xl uppercase tracking-tight gradient-text-gold" data-en="Exotic" data-es="Exóticos">Exotic</div>
-          <div class="mono text-[.6rem] tracking-[.22em] uppercase text-white/55 mt-1">Huracán · Roma · 720S</div>
-          <div class="flex items-baseline justify-between mt-4 pt-4 border-t" style="border-color:rgba(255,203,0,.30)">
-            <span class="font-[Syne] text-2xl font-bold gradient-text-gold">$899</span>
-            <span class="mono text-[.55rem] tracking-[.22em] uppercase text-white/55" data-en="/ day" data-es="/ día">/ day</span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div class="mt-14 flex flex-wrap gap-3 iv">
-      <a href="rentals.html" class="btn-premium shine">
-        <span data-en="See the full fleet" data-es="Ver flota completa">See the full fleet</span> →
-      </a>
-      <a href="booking.html?service=rental" class="btn-ghost"><span data-en="Reserve a tier" data-es="Reservar tier">Reserve a tier</span></a>
+    <div class="iv" style="border:1px solid var(--line);border-radius:12px;overflow:hidden">
+      <iframe title="CS Motor Group map" src="https://www.google.com/maps?q=520+Hicksville+Rd,+Massapequa,+NY+11758&output=embed" width="100%" height="420" style="border:0;display:block;filter:grayscale(.6) invert(.9) hue-rotate(180deg)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
-<!-- SALES TEASER — used inventory, standby until Square goes live -->
-<section class="relative py-20 md:py-24 border-t border-white/[.06] overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(800px 400px at 85% 50%,rgba(255,203,0,.07),transparent 60%)"></div>
-  <div class="relative max-w-[1500px] mx-auto px-6 md:px-12">
-    <div class="grid lg:grid-cols-12 gap-10 items-center iv">
-      <div class="lg:col-span-8">
-        <div class="flex items-center gap-3 mb-5">
-          <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ New · Sales" data-es="✦ Nuevo · Ventas">✦ New · Sales</span>
-          <span class="px-3 py-1 rounded-full mono text-[.55rem] tracking-[.22em] uppercase font-bold" style="background:rgba(255,203,0,.12);border:1px solid rgba(255,203,0,.4);color:var(--gold)" data-en="First lot arriving" data-es="Primer lote en camino">First lot arriving</span>
-        </div>
-        <h2 class="font-[Syne] uppercase leading-[.92]" style="font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.025em">
-          <span data-en="Used inventory." data-es="Inventario usado.">Used inventory.</span>
-          <span class="gradient-text-gold ml-2" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="Hand-picked." data-es="Selección propia.">Hand-picked.</span>
-        </h2>
-        <p class="mt-5 max-w-xl text-white/65 leading-relaxed"
-           data-en="Every car is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and delivery available. Tell us what you're hunting and we'll find it first."
-           data-es="Cada auto se inspecciona y detalla en nuestro propio taller antes de entrar al lote. Financiamiento, trade-ins y entrega disponibles. Dinos qué buscas y lo encontramos primero.">
-          Every car is inspected and detailed in our own shop before it hits the lot. Financing, trade-ins and delivery available. Tell us what you're hunting and we'll find it first.
-        </p>
-      </div>
-      <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-        <a href="sales.html" class="btn-premium shine w-full sm:w-auto justify-center">
-          <span data-en="Browse inventory" data-es="Ver inventario">Browse inventory</span> →
-        </a>
-        <a href="sales.html#request" class="btn-ghost w-full sm:w-auto justify-center"><span data-en="Request a car" data-es="Buscar mi auto">Request a car</span></a>
-      </div>
+<!-- ============ FAQ ============ -->
+<section class="py-16 md:py-24" style="background:var(--bg)">
+  <div class="max-w-[900px] mx-auto px-5">
+    <div class="text-center iv">
+      <h2 class="font-[Syne] font-bold" style="font-size:clamp(1.6rem,3vw,2.4rem)" data-en="Frequently Asked Questions" data-es="Preguntas Frecuentes">Frequently Asked Questions</h2>
+      <span class="h-bar h-bar-center"></span>
+    </div>
+    <div class="mt-10 flex flex-col gap-3 iv-stagger">
+      <details class="faq-item">
+        <summary data-en="Do I need an appointment for a detail?" data-es="¿Necesito cita para un detail?">Do I need an appointment for a detail?</summary>
+        <div class="a" data-en="An appointment guarantees your slot, but walk-ins are welcome and we can usually take a Gold package the same day. Platinum packages and ceramic coatings need to be scheduled because the car stays with us longer." data-es="Una cita garantiza tu cupo, pero aceptamos walk-ins y normalmente podemos hacer un paquete Gold el mismo día. Los paquetes Platinum y los coatings cerámicos requieren cita porque el auto se queda más tiempo.">An appointment guarantees your slot, but walk-ins are welcome and we can usually take a Gold package the same day. Platinum packages and ceramic coatings need to be scheduled because the car stays with us longer.</div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="How long does a ceramic coating take?" data-es="¿Cuánto tarda un coating cerámico?">How long does a ceramic coating take?</summary>
+        <div class="a" data-en="Plan on the car staying with us for one to two days. The paint has to be washed, decontaminated, corrected and wiped down before the coating goes on, and then it needs to cure before the car goes back out in the weather." data-es="Cuenta con que el auto se quede uno o dos días. La pintura se lava, descontamina, corrige y limpia antes de aplicar el coating, y después necesita curar antes de salir al clima.">Plan on the car staying with us for one to two days. The paint has to be washed, decontaminated, corrected and wiped down before the coating goes on, and then it needs to cure before the car goes back out in the weather.</div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="What do I need to rent a car?" data-es="¿Qué necesito para alquilar un auto?">What do I need to rent a car?</summary>
+        <div class="a" data-en="You must be 25 or older with a valid driver's license, proof of insurance and a credit card in your own name. Exotic tier rentals carry a higher security deposit, which we release when the vehicle comes back." data-es="Debes tener 25 años o más, con licencia válida, comprobante de seguro y tarjeta de crédito a tu nombre. El tier de exóticos lleva un depósito de seguridad mayor, que liberamos cuando el vehículo regresa.">You must be 25 or older with a valid driver's license, proof of insurance and a credit card in your own name. Exotic tier rentals carry a higher security deposit, which we release when the vehicle comes back.</div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Are the used cars inspected?" data-es="¿Los autos usados están inspeccionados?">Are the used cars inspected?</summary>
+        <div class="a" data-en="Yes. Every vehicle we list goes through our own service bay first, including a mechanical inspection, a vehicle history check and a road test. It is also fully detailed before delivery." data-es="Sí. Cada vehículo que publicamos pasa primero por nuestra bahía de servicio, con inspección mecánica, revisión de historial y prueba de manejo. También se detalla completo antes de la entrega.">Yes. Every vehicle we list goes through our own service bay first, including a mechanical inspection, a vehicle history check and a road test. It is also fully detailed before delivery.</div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Do you offer financing or take trade-ins?" data-es="¿Ofrecen financiamiento o aceptan trade-ins?">Do you offer financing or take trade-ins?</summary>
+        <div class="a" data-en="Both. We work with several lenders across the credit spectrum and we will appraise your current vehicle on the spot. Bring the car and the payoff information and we can structure the deal in one visit." data-es="Ambos. Trabajamos con varios prestamistas en todo el espectro de crédito y tasamos tu vehículo actual en el momento. Trae el auto y la información del saldo y armamos el trato en una visita.">Both. We work with several lenders across the credit spectrum and we will appraise your current vehicle on the spot. Bring the car and the payoff information and we can structure the deal in one visit.</div>
+      </details>
+      <details class="faq-item">
+        <summary data-en="Is pickup and drop-off really free?" data-es="¿El pickup y la entrega son realmente gratis?">Is pickup and drop-off really free?</summary>
+        <div class="a" data-en="Within 5 miles of the shop, yes, on any service booking. Beyond that we charge a flat mileage fee that we quote before you confirm the appointment." data-es="Dentro de 5 millas del taller, sí, en cualquier reserva de servicio. Más allá cobramos una tarifa fija por millaje que cotizamos antes de que confirmes la cita.">Within 5 miles of the shop, yes, on any service booking. Beyond that we charge a flat mileage fee that we quote before you confirm the appointment.</div>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- PROCESS 4 steps -->
-<section class="relative py-24 md:py-32 border-t border-white/[.06] noise-bg">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
-    <div class="iv mb-16">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ How it works" data-es="✦ Cómo funciona">✦ How it works</span>
-      <h2 class="font-[Syne] uppercase mt-5 leading-[.92] max-w-3xl" style="font-size:clamp(2rem,4.5vw,3.6rem);letter-spacing:-.025em">
-        <span data-en="Four steps." data-es="Cuatro pasos.">Four steps.</span>
-        <span class="gradient-text-gold ml-3" style="font-family:'Fraunces',serif;font-style:italic;font-weight:400;text-transform:none" data-en="Keys today." data-es="Llaves hoy.">Keys today.</span>
-      </h2>
-    </div>
-
-    <div class="steps-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 iv-stagger">
-      <div class="group transition-colors hover:bg-[#0f0f0f]">
-        <div class="flex items-start justify-between mb-6">
-          <span class="w-12 h-12 rounded-xl bg-[var(--gold)]/10 border border-[var(--gold)]/30 flex items-center justify-center transition group-hover:bg-[var(--gold)] group-hover:border-[var(--gold)]">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)] group-hover:text-black"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-          </span>
-          <span class="mono text-[.6rem] tracking-[.28em] text-white/40">01 / 04</span>
-        </div>
-        <h3 class="font-[Syne] font-bold text-xl uppercase" data-en="Pick a service" data-es="Elige un servicio">Pick a service</h3>
-        <p class="text-white/55 text-sm mt-3 leading-relaxed" data-en="Detail package, oil change, body work, rental tier — choose from the booking screen." data-es="Paquete detail, cambio de aceite, body work, tier de alquiler.">Detail package, oil change, body work, rental tier — choose from the booking screen.</p>
-      </div>
-
-      <div class="group transition-colors hover:bg-[#0f0f0f]">
-        <div class="flex items-start justify-between mb-6">
-          <span class="w-12 h-12 rounded-xl bg-[var(--gold)]/10 border border-[var(--gold)]/30 flex items-center justify-center transition group-hover:bg-[var(--gold)] group-hover:border-[var(--gold)]">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)] group-hover:text-black"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          </span>
-          <span class="mono text-[.6rem] tracking-[.28em] text-white/40">02 / 04</span>
-        </div>
-        <h3 class="font-[Syne] font-bold text-xl uppercase" data-en="Pick the slot" data-es="Elige el horario">Pick the slot</h3>
-        <p class="text-white/55 text-sm mt-3 leading-relaxed" data-en="Same-day windows available. We confirm by text in 30 minutes during business hours." data-es="Cupos del mismo día. Confirmamos por SMS en 30 minutos.">Same-day windows available. We confirm by text in 30 minutes during business hours.</p>
-      </div>
-
-      <div class="group transition-colors hover:bg-[#0f0f0f]">
-        <div class="flex items-start justify-between mb-6">
-          <span class="w-12 h-12 rounded-xl bg-[var(--gold)]/10 border border-[var(--gold)]/30 flex items-center justify-center transition group-hover:bg-[var(--gold)] group-hover:border-[var(--gold)]">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)] group-hover:text-black"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-          </span>
-          <span class="mono text-[.6rem] tracking-[.28em] text-white/40">03 / 04</span>
-        </div>
-        <h3 class="font-[Syne] font-bold text-xl uppercase" data-en="Drop or pickup" data-es="Entrega o pickup">Drop or pickup</h3>
-        <p class="text-white/55 text-sm mt-3 leading-relaxed" data-en="Bring the car or we'll grab it from your driveway — free pickup within 5 miles of the shop." data-es="Trae el auto o lo recogemos — pickup gratis hasta 5 millas.">Bring the car or we'll grab it from your driveway — free pickup within 5 miles of the shop.</p>
-      </div>
-
-      <div class="group transition-colors hover:bg-[#0f0f0f]">
-        <div class="flex items-start justify-between mb-6">
-          <span class="w-12 h-12 rounded-xl bg-[var(--gold)]/10 border border-[var(--gold)]/30 flex items-center justify-center transition group-hover:bg-[var(--gold)] group-hover:border-[var(--gold)]">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="text-[var(--gold)] group-hover:text-black"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-          </span>
-          <span class="mono text-[.6rem] tracking-[.28em] text-white/40">04 / 04</span>
-        </div>
-        <h3 class="font-[Syne] font-bold text-xl uppercase" data-en="Drive away" data-es="Maneja">Drive away</h3>
-        <p class="text-white/55 text-sm mt-3 leading-relaxed" data-en="We text when it's ready. Optional return car-wash on every service booking." data-es="Te avisamos cuando está listo. Lavado de cortesía en cada servicio.">We text when it's ready. Optional return car-wash on every service booking.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS CAROUSEL + CTA -->
-<section class="relative py-32 md:py-40 overflow-hidden border-t border-white/[.06]" style="background:radial-gradient(900px 600px at 50% 50%,rgba(255,203,0,.06),transparent 60%),#070707">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full" style="width:700px;height:700px;background:radial-gradient(circle,rgba(255,203,0,.10),transparent 60%);filter:blur(30px)"></div>
-  </div>
-
-  <div class="relative max-w-[1100px] mx-auto px-6 iv">
-    <div class="text-center mb-10">
-      <span class="mono text-[.66rem] tracking-[.32em] uppercase text-[var(--gold)]" data-en="✦ What the block says" data-es="✦ Lo que dice el barrio">✦ What the block says</span>
-      <div class="mt-4 flex items-center justify-center gap-3">
-        <span class="text-[var(--gold)] text-lg tracking-[.4em]">★★★★★</span>
-        <a href="https://www.google.com/maps/search/CS+Motor+Group+520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="mono text-[.62rem] tracking-[.22em] uppercase text-white/50 hover:text-[var(--gold)] underline-sweep" data-en="4.8 on Google · Read reviews ↗" data-es="4.8 en Google · Leer reseñas ↗">4.8 on Google · Read reviews ↗</a>
-      </div>
-    </div>
-
-    <!-- Carousel viewport -->
-    <div class="reviews-viewport relative overflow-hidden">
-      <div class="reviews-track flex" id="reviewsTrack" style="transition:transform .8s cubic-bezier(.16,1,.3,1)">
-
-        <!-- Slide 1 -->
-        <article class="review-slide w-full flex-shrink-0 px-6 md:px-10 text-center">
-          <p class="font-[Fraunces] italic text-white/85 leading-[1.2]" style="font-size:clamp(1.4rem,3.2vw,2.4rem);font-weight:300;font-variation-settings:'SOFT' 100,'WONK' 1">
-            <span data-en="“They detailed my G-Wagon Saturday morning, dropped it back at the office Saturday afternoon. The same crew handed me the keys to a Range Rover for the weekend. One stop, no friction — that's the whole sales pitch.”" data-es="“Detallaron mi G-Wagon el sábado en la mañana, me lo dejaron en la oficina por la tarde. El mismo equipo me entregó las llaves de un Range Rover. Una sola parada, sin fricción — ese es el pitch.”">
-              &ldquo;They detailed my G-Wagon Saturday morning, dropped it back at the office Saturday afternoon. The same crew handed me the keys to a Range Rover for the weekend. One stop, no friction &mdash; that's the whole sales pitch.&rdquo;
-            </span>
-          </p>
-          <div class="mt-8 flex items-center justify-center gap-4">
-            <span class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--gold)] to-[var(--gold-deep)] flex items-center justify-center font-[Syne] font-bold text-black">D</span>
-            <div class="text-left">
-              <div class="font-[Inter] font-semibold text-white">Daniel K.</div>
-              <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/45">Massapequa · Google</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Slide 2 -->
-        <article class="review-slide w-full flex-shrink-0 px-6 md:px-10 text-center">
-          <p class="font-[Fraunces] italic text-white/85 leading-[1.2]" style="font-size:clamp(1.4rem,3.2vw,2.4rem);font-weight:300;font-variation-settings:'SOFT' 100,'WONK' 1">
-            <span data-en="“Platinum detail on a black F-Pace I thought was a lost cause. Came out looking like the day I drove it off the lot. The ceramic add-on was worth every dollar.”" data-es="“Detail Platinum en un F-Pace negro que pensé era caso perdido. Salió como el día que lo manejé del concesionario. El cerámico vale cada dólar.”">
-              &ldquo;Platinum detail on a black F-Pace I thought was a lost cause. Came out looking like the day I drove it off the lot. The ceramic add-on was worth every dollar.&rdquo;
-            </span>
-          </p>
-          <div class="mt-8 flex items-center justify-center gap-4">
-            <span class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--gold)] to-[var(--gold-deep)] flex items-center justify-center font-[Syne] font-bold text-black">M</span>
-            <div class="text-left">
-              <div class="font-[Inter] font-semibold text-white">Marcus L.</div>
-              <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/45">Wantagh · Google</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Slide 3 -->
-        <article class="review-slide w-full flex-shrink-0 px-6 md:px-10 text-center">
-          <p class="font-[Fraunces] italic text-white/85 leading-[1.2]" style="font-size:clamp(1.4rem,3.2vw,2.4rem);font-weight:300;font-variation-settings:'SOFT' 100,'WONK' 1">
-            <span data-en="“Rented the Huracán for my brother's wedding, picked it up shining at 9am sharp, dropped it back at midnight. Easiest exotic rental on Long Island, hands down.”" data-es="“Alquilé el Huracán para la boda de mi hermano, lo recogí brillando a las 9am, lo devolví a medianoche. El alquiler exótico más fácil de Long Island, sin duda.”">
-              &ldquo;Rented the Huracán for my brother's wedding, picked it up shining at 9am sharp, dropped it back at midnight. Easiest exotic rental on Long Island, hands down.&rdquo;
-            </span>
-          </p>
-          <div class="mt-8 flex items-center justify-center gap-4">
-            <span class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--gold)] to-[var(--gold-deep)] flex items-center justify-center font-[Syne] font-bold text-black">J</span>
-            <div class="text-left">
-              <div class="font-[Inter] font-semibold text-white">Jonathan R.</div>
-              <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/45">Hicksville · Google</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Slide 4 -->
-        <article class="review-slide w-full flex-shrink-0 px-6 md:px-10 text-center">
-          <p class="font-[Fraunces] italic text-white/85 leading-[1.2]" style="font-size:clamp(1.4rem,3.2vw,2.4rem);font-weight:300;font-variation-settings:'SOFT' 100,'WONK' 1">
-            <span data-en="“They picked the car up from my driveway in Massapequa, did the oil change and body touch-up, and dropped it back washed before lunch. Free pickup is a real game-changer.”" data-es="“Recogieron el auto en mi casa en Massapequa, hicieron el cambio de aceite y un retoque de body, y me lo dejaron lavado antes del almuerzo. El pickup gratis cambia las cosas.”">
-              &ldquo;They picked the car up from my driveway in Massapequa, did the oil change and body touch-up, and dropped it back washed before lunch. Free pickup is a real game-changer.&rdquo;
-            </span>
-          </p>
-          <div class="mt-8 flex items-center justify-center gap-4">
-            <span class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--gold)] to-[var(--gold-deep)] flex items-center justify-center font-[Syne] font-bold text-black">A</span>
-            <div class="text-left">
-              <div class="font-[Inter] font-semibold text-white">Andrea P.</div>
-              <div class="mono text-[.62rem] tracking-[.22em] uppercase text-white/45">Massapequa · Google</div>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <div class="flex items-center justify-center gap-6 mt-14">
-      <button id="rPrev" class="w-10 h-10 rounded-full border border-white/15 hover:border-[var(--gold)] hover:text-[var(--gold)] transition flex items-center justify-center" aria-label="Previous">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      </button>
-      <div class="flex gap-2" id="rDots"></div>
-      <button id="rNext" class="w-10 h-10 rounded-full border border-white/15 hover:border-[var(--gold)] hover:text-[var(--gold)] transition flex items-center justify-center" aria-label="Next">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </div>
-
-    <div class="mt-16 flex flex-wrap justify-center gap-3">
-      <a href="booking.html" class="btn-premium shine">
-        <span data-en="Book a service" data-es="Reservar servicio">Book a service</span> →
-      </a>
-      <a href="tel:+16316019865" class="btn-ghost">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (631) 601-9865
-      </a>
-    </div>
-  </div>
-
-  <style>
-    .review-slide{opacity:.3;transition:opacity .8s cubic-bezier(.16,1,.3,1)}
-    .review-slide.active{opacity:1}
-    .r-dot{width:24px;height:2px;background:rgba(255,255,255,.18);transition:background .4s,width .4s;cursor:pointer;border:0;padding:0}
-    .r-dot.active{background:var(--gold);width:42px}
-  </style>
-
-  <script>
-    (function(){
-      const track = document.getElementById('reviewsTrack');
-      if(!track) return;
-      const slides = track.querySelectorAll('.review-slide');
-      const dotsEl = document.getElementById('rDots');
-      const n = slides.length;
-      let i = 0, timer;
-
-      slides.forEach((_,idx)=>{
-        const b = document.createElement('button');
-        b.className = 'r-dot' + (idx===0?' active':'');
-        b.setAttribute('aria-label','Go to review '+(idx+1));
-        b.addEventListener('click',()=>{ go(idx); reset(); });
-        dotsEl.appendChild(b);
-      });
-      slides[0].classList.add('active');
-
-      function go(idx){
-        i = (idx + n) % n;
-        track.style.transform = `translateX(${-i*100}%)`;
-        slides.forEach((s,k)=>s.classList.toggle('active', k===i));
-        dotsEl.querySelectorAll('.r-dot').forEach((d,k)=>d.classList.toggle('active', k===i));
-      }
-      function next(){ go(i+1); }
-      function reset(){ clearInterval(timer); timer = setInterval(next, 6000); }
-
-      document.getElementById('rPrev').addEventListener('click',()=>{ go(i-1); reset(); });
-      document.getElementById('rNext').addEventListener('click',()=>{ next(); reset(); });
-
-      reset();
-      // Pause on hover
-      track.parentElement.addEventListener('mouseenter',()=>clearInterval(timer));
-      track.parentElement.addEventListener('mouseleave',reset);
-    })();
-  </script>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-white/[.06] py-20" style="background:#050505">
-  <div class="max-w-[1500px] mx-auto px-6 md:px-12">
+<!-- ============ FOOTER ============ -->
+<footer style="background:var(--bg-alt);border-top:1px solid var(--line)" class="pt-16 pb-10">
+  <div class="max-w-[1200px] mx-auto px-5">
     <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <img src="assets/brand/logo.png" alt="CS Motor Group" class="brand-img" style="height:60px" />
-        <p class="text-white/55 text-sm mt-6 max-w-sm leading-relaxed"
-           data-en="The corner that's always on. Detailing, rentals, repairs, fueling — 520 Hicksville Rd, Massapequa NY."
-           data-es="La esquina que nunca cierra. Detallado, alquiler, reparaciones, combustible — 520 Hicksville Rd, Massapequa NY.">
-          The corner that's always on. Detailing, rentals, repairs, fueling — 520 Hicksville Rd, Massapequa NY.
+      <div class="md:col-span-4">
+        <img src="assets/brand/logo-mark.png" alt="CS Motor Group" class="brand-img" style="height:44px" />
+        <p class="mt-5 text-[.88rem] leading-relaxed max-w-xs" style="color:var(--text-2)"
+           data-en="Detailing, rentals, repairs and used car sales at 520 Hicksville Rd, Massapequa NY. The corner that never closes."
+           data-es="Detallado, alquiler, reparaciones y venta de autos usados en 520 Hicksville Rd, Massapequa NY. La esquina que nunca cierra.">
+          Detailing, rentals, repairs and used car sales at 520 Hicksville Rd, Massapequa NY. The corner that never closes.
         </p>
       </div>
       <div class="md:col-span-2">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Explore" data-es="Explorar">Explore</div>
-        <div class="flex flex-col gap-3 text-sm text-white/70">
-          <a href="services.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Services" data-es="Servicios">Services</a>
-          <a href="carwash.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Detailing" data-es="Detallado">Detailing</a>
-          <a href="rentals.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Rentals" data-es="Alquiler">Rentals</a>
-          <a href="sales.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Sales" data-es="Ventas">Sales</a>
-          <a href="booking.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Book" data-es="Reservar">Book</a>
-          <a href="contact.html" class="hover:text-[var(--gold)] underline-sweep" data-en="Contact" data-es="Contacto">Contact</a>
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Explore" data-es="Explorar">Explore</div>
+        <div class="flex flex-col gap-2.5 text-[.88rem]" style="color:var(--text-2)">
+          <a href="sales.html" class="hover:text-white" data-en="Inventory" data-es="Inventario">Inventory</a>
+          <a href="carwash.html" class="hover:text-white" data-en="Detailing" data-es="Detallado">Detailing</a>
+          <a href="rentals.html" class="hover:text-white" data-en="Rentals" data-es="Alquiler">Rentals</a>
+          <a href="services.html" class="hover:text-white" data-en="Services" data-es="Servicios">Services</a>
+          <a href="booking.html" class="hover:text-white" data-en="Book" data-es="Reservar">Book</a>
+          <a href="contact.html" class="hover:text-white" data-en="Contact" data-es="Contacto">Contact</a>
         </div>
-      </div>
-      <div class="md:col-span-2">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Visit" data-es="Visítanos">Visit</div>
-        <div class="text-sm text-white/70 leading-relaxed">520 Hicksville Rd<br>Massapequa, NY 11758</div>
-        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" class="text-[.7rem] mono tracking-[.18em] uppercase text-white/55 hover:text-[var(--gold)] mt-3 inline-block underline-sweep">Map ↗</a>
       </div>
       <div class="md:col-span-3">
-        <div class="mono text-[.62rem] tracking-[.32em] uppercase text-[var(--gold)] mb-4" data-en="Get in touch" data-es="Contacto">Get in touch</div>
-        <div class="flex flex-col gap-3 text-sm">
-          <a href="tel:+16316019865" class="text-white font-bold hover:text-[var(--gold)] text-lg">(631) 601-9865</a>
-          <a href="mailto:hello@csmotorgroup.com" class="text-white/70 hover:text-white">hello@csmotorgroup.com</a>
-          <div class="text-white/55 mono text-[.7rem] tracking-[.18em] uppercase pt-2" data-en="Open 24/7 · 365 days/year" data-es="Abierto 24/7 · 365 días">Open 24/7 · 365 days/year</div>
-        </div>
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Visit Us" data-es="Visítanos">Visit Us</div>
+        <div class="text-[.88rem] leading-relaxed" style="color:var(--text-2)">520 Hicksville Rd<br>Massapequa, NY 11758</div>
+        <a href="https://maps.google.com/?q=520+Hicksville+Rd+Massapequa+NY" target="_blank" rel="noopener" class="inline-block mt-3 text-[.82rem]" style="color:var(--gold)" data-en="Get directions ↗" data-es="Cómo llegar ↗">Get directions ↗</a>
+      </div>
+      <div class="md:col-span-3">
+        <div class="text-[.72rem] tracking-[.14em] uppercase font-semibold mb-4" style="color:var(--gold)" data-en="Get in Touch" data-es="Contacto">Get in Touch</div>
+        <a href="tel:+16316019865" class="block font-[Syne] font-bold text-xl" style="color:var(--gold)">(631) 601-9865</a>
+        <a href="mailto:hello@csmotorgroup.com" class="block mt-2 text-[.88rem]" style="color:var(--text-2)">hello@csmotorgroup.com</a>
+        <p class="mt-3 text-[.82rem]" style="color:var(--text-3)" data-en="Open 24 hours · 365 days a year" data-es="Abierto 24 horas · 365 días al año">Open 24 hours · 365 days a year</p>
       </div>
     </div>
-    <div class="mt-14 pt-8 border-t border-white/[.08] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[.7rem] mono tracking-[.18em] uppercase text-white/40">
+    <div class="mt-12 pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-[.78rem]" style="border-top:1px solid var(--line);color:var(--text-3)">
       <div>© <span data-year></span> CS Motor Group · Black Label AutoSpa</div>
-      <div data-en="Pickup &amp; Drop-Off · Lifetime Warranty on Detail" data-es="Pickup &amp; Drop-Off · Garantía de por vida en Detail">Pickup &amp; Drop-Off · Lifetime Warranty on Detail</div>
+      <div data-en="Free pickup &amp; drop-off · Lifetime warranty on detail packages" data-es="Pickup y entrega gratis · Garantía de por vida en paquetes de detail">Free pickup &amp; drop-off · Lifetime warranty on detail packages</div>
     </div>
   </div>
 </footer>
 
-<!-- Mobile sticky CTA -->
 <div class="mobile-cta">
-  <a href="tel:+16316019865" class="btn-premium shine">Call</a>
+  <a href="tel:+16316019865" class="btn" data-en="Call" data-es="Llamar">Call</a>
   <a href="booking.html" class="btn-ghost" data-en="Book" data-es="Reservar">Book</a>
 </div>
 
