@@ -175,6 +175,27 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--p
 .cat-card .t{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;}
 .cat-card .d{font-size:.78rem;color:var(--text-2);line-height:1.45;}
 
+/* Service index pills (services.html section jump-links) */
+.svc-pill{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;background:var(--surface);border:1px solid var(--line);border-radius:8px;color:var(--text-2);text-decoration:none;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:500;transition:border-color .25s,color .25s;}
+.svc-pill:hover{border-color:var(--gold);color:var(--gold);}
+.svc-pill .ico{display:inline-flex;color:var(--gold);flex-shrink:0;}
+
+/* Mechanical service card */
+.mech-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;transition:border-color .25s;}
+.mech-card:hover{border-color:var(--gold);}
+.mech-card .ico{width:42px;height:42px;border-radius:9px;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;}
+.mech-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.15rem;margin-top:16px;}
+.mech-card p{color:var(--text-2);font-size:.88rem;line-height:1.6;margin-top:10px;}
+.mech-card .meta{margin-top:auto;padding-top:16px;font-size:.8rem;color:var(--text-3);}
+.mech-card .price{font-family:'Syne',sans-serif;font-weight:700;font-size:1.5rem;color:var(--gold);}
+.mech-card.heavy{border-color:rgba(255,203,0,.45);}
+.mech-tag{display:inline-block;padding:.28rem .65rem;border-radius:6px;background:var(--gold);color:#0b0b0c;font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+
+/* Prompt band — plain-language "is your car not running?" lead-ins */
+.prompt-band{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:22px 24px;}
+.prompt-band p{color:var(--paper);font-size:1rem;line-height:1.6;margin:0;}
+.prompt-band .sub{color:var(--text-2);font-size:.88rem;margin-top:8px;}
+
 /* Check rows (Stampede checklist) */
 .check-row{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;}
 .check-row .ck{flex-shrink:0;width:26px;height:26px;border-radius:6px;background:var(--gold);color:#0b0b0c;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;}
