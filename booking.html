@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=5">
+<link rel="stylesheet" href="assets/styles.css?v=6">
 </head>
 <body>
 
@@ -110,7 +110,9 @@
           <label class="svc-pick"><input type="radio" name="service" value="detail-platinum" class="sr-only" data-price="250"><div><div class="condensed text-xl" data-en="Platinum Detail" data-es="Detail Platinum">Platinum Detail</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">Sedan $250 · SUV $300</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
           <label class="svc-pick"><input type="radio" name="service" value="paint-correction" class="sr-only" data-price="150"><div><div class="condensed text-xl" data-en="Paint Correction" data-es="Corrección de Pintura">Paint Correction</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">Stage 1 $150 · Stage 2 $250</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
           <label class="svc-pick"><input type="radio" name="service" value="ceramic-5yr" class="sr-only" data-price="400"><div><div class="condensed text-xl" data-en="5-Year Ceramic Coat" data-es="Cerámico 5 años">5-Year Ceramic Coat</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">From $400</div></div><span class="badge" data-en="Detailing" data-es="Detallado">Detailing</span></label>
-          <label class="svc-pick"><input type="radio" name="service" value="oil-change" class="sr-only" data-price="65"><div><div class="condensed text-xl" data-en="Oil Change" data-es="Cambio de Aceite">Oil Change</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1">From $65 · 25 min</div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="oil-change" class="sr-only" data-price="70"><div><div class="condensed text-xl" data-en="Oil Change" data-es="Cambio de Aceite">Oil Change</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1"><span data-sq-price="regular-oil-change" data-sq-prefix="From" data-sq-sync="input[value=oil-change]">From $70</span> · 25 min</div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="inspection" class="sr-only" data-price="37"><div><div class="condensed text-xl" data-en="NY State Inspection" data-es="Inspección Estatal NY">NY State Inspection</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1"><span data-sq-price="new-york-state-inspection" data-sq-sync="input[value=inspection]">$37</span> · <span data-en="while you wait" data-es="mientras esperas">while you wait</span></div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
+          <label class="svc-pick"><input type="radio" name="service" value="tire" class="sr-only" data-price="30"><div><div class="condensed text-xl" data-en="Tire Repair" data-es="Reparación de Llantas">Tire Repair</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1"><span data-sq-price="tire-plug" data-sq-sync="input[value=tire]">$30</span> · <span data-en="walk-ins welcome" data-es="sin cita">walk-ins welcome</span></div></div><span class="badge" data-en="Service" data-es="Servicio">Service</span></label>
           <label class="svc-pick"><input type="radio" name="service" value="engine" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Engine Repair or Replacement" data-es="Reparación o Cambio de Motor">Engine Repair or Replacement</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Heavy mechanical · quote after diagnostic" data-es="Mecánica pesada · cotización tras diagnóstico">Heavy mechanical · quote after diagnostic</div></div><span class="badge" data-en="Mechanical" data-es="Mecánica">Mechanical</span></label>
           <label class="svc-pick"><input type="radio" name="service" value="transmission" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Transmission Repair or Replacement" data-es="Reparación o Cambio de Transmisión">Transmission Repair or Replacement</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Heavy mechanical · quote after diagnostic" data-es="Mecánica pesada · cotización tras diagnóstico">Heavy mechanical · quote after diagnostic</div></div><span class="badge" data-en="Mechanical" data-es="Mecánica">Mechanical</span></label>
           <label class="svc-pick"><input type="radio" name="service" value="general-repairs" class="sr-only" data-price="0"><div><div class="condensed text-xl" data-en="Brakes, Suspension &amp; Electrical" data-es="Frenos, Suspensión y Eléctrico">Brakes, Suspension &amp; Electrical</div><div class="mono text-[.6rem] tracking-[.18em] uppercase text-white/45 mt-1" data-en="Free diagnostic with quote" data-es="Diagnóstico gratis con cotización">Free diagnostic with quote</div></div><span class="badge" data-en="Mechanical" data-es="Mecánica">Mechanical</span></label>
@@ -265,7 +267,7 @@
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 </style>
 
-<script src="assets/app.js?v=5"></script>
+<script src="assets/app.js?v=6"></script>
 <script>
 (function(){
   const form = document.getElementById('bookingForm');
@@ -295,6 +297,8 @@
       'paint-correction':'Paint Correction',
       'ceramic-5yr':'5-Year Ceramic Coat',
       'oil-change':'Oil Change',
+      'inspection':'NY State Inspection',
+      'tire':'Tire Repair',
       'engine':'Engine Repair or Replacement',
       'transmission':'Transmission Repair or Replacement',
       'general-repairs':'General Repairs',

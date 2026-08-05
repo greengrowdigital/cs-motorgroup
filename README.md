@@ -67,6 +67,31 @@ Se filtran los items **sin precio** y los que están **sin stock**. Cache de 5 m
 
 Pagos: el marketplace es de *listado*; depósitos/apartados vía Square Checkout Links.
 
+## Precios de servicios en vivo desde Square
+
+[`api/services.js`](api/services.js) expone el catálogo de servicios con precio fijo. En el HTML, cualquier elemento con `data-sq-price="<slug>"` muestra el precio real de Square.
+
+**El slug sale del nombre del item en Square**, normalizado: minúsculas, sin acentos, espacios → guiones. Así que `"Synthetic Oil Change "` (con el espacio de más que trae) se convierte en `synthetic-oil-change`.
+
+Slots actualmente conectados:
+
+| Slug | Item en Square | Dónde aparece |
+|---|---|---|
+| `regular-oil-change` | Regular Oil Change | services.html, booking.html |
+| `synthetic-oil-change` | Synthetic Oil Change | services.html |
+| `new-york-state-inspection` | NEW YORK STATE INSPECTION | services.html, booking.html |
+| `tire-plug` | Tire Plug | services.html, booking.html |
+
+**El HTML siempre lleva un precio escrito a mano como fallback.** Solo se sobrescribe cuando Square responde con ese item; si el endpoint falla, no hay token, o el item no existe, la página se lee igual de bien. Los items con *precio variable* se ignoran a propósito — "lo que salga en el mostrador" no se publica en una web.
+
+Atributos opcionales:
+- `data-sq-prefix="From"` → renderiza `From $70`
+- `data-sq-sync="<selector>"` → copia el precio al `data-price` de un input del booking
+
+**Para conectar un servicio nuevo**: créalo en Square con precio fijo y pon `data-sq-price="<slug-del-nombre>"` en el HTML. Nada más.
+
+Cache de 1 hora (`s-maxage=3600`).
+
 ## Deploy
 
 ```

@@ -21,36 +21,7 @@
  * showing an error to visitors.
  */
 
-const SQUARE_VERSION = '2025-01-23';
-
-const host = () =>
-  process.env.SQUARE_ENVIRONMENT === 'sandbox'
-    ? 'https://connect.squareupsandbox.com'
-    : 'https://connect.squareup.com';
-
-async function square(path, token, options = {}) {
-  const res = await fetch(host() + path, {
-    ...options,
-    headers: {
-      'Square-Version': SQUARE_VERSION,
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      ...(options.headers || {})
-    }
-  });
-  const body = await res.json().catch(() => ({}));
-  if (!res.ok) {
-    const detail = body?.errors?.[0]?.detail || res.statusText;
-    const err = new Error(`Square ${path} failed: ${detail}`);
-    err.status = res.status;
-    throw err;
-  }
-  return body;
-}
-
-/** Square money is in the smallest denomination (cents). */
-const toDollars = (money) =>
-  money && money.amount != null ? Math.round(Number(money.amount) / 100) : null;
+import { square, toDollars } from './_square.js';
 
 /**
  * Custom attribute keys arrive namespaced as "<app-id>:<key>". Build a plain
@@ -100,8 +71,9 @@ function toVehicle(item, imageMap, inStockIds) {
   if (!anyInStock) return null;
 
   const attrs = readAttributes(item);
-  const price = toDollars(varData.price_money);
-  if (price == null) return null; // no price = not ready to list
+  const dollars = toDollars(varData.price_money);
+  if (dollars == null) return null; // no price = not ready to list
+  const price = Math.round(dollars);
 
   const imgs = (data.image_ids || []).map(id => imageMap.get(id)).filter(Boolean);
 

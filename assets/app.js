@@ -152,3 +152,36 @@ document.querySelectorAll('.ba-slider').forEach(slider => {
   // Hover-glide when not dragging (desktop nicety)
   slider.addEventListener('mousemove', e => { if (!dragging && e.buttons === 0) setPos(e.clientX); });
 });
+
+// ============ LIVE PRICING FROM SQUARE ============
+// Elements carrying data-sq-price="<slug>" show the shop's real Square price.
+// The markup keeps a hardcoded price as its text, so if Square is unreachable,
+// not yet configured, or simply has no matching item, the page still reads
+// correctly — we only ever overwrite on a confirmed hit.
+(function () {
+  const slots = document.querySelectorAll('[data-sq-price]');
+  if (!slots.length) return;
+
+  const money = (n) =>
+    '$' + (Number.isInteger(n) ? n.toLocaleString('en-US')
+                               : n.toLocaleString('en-US', { minimumFractionDigits: 2 }));
+
+  fetch('/api/services')
+    .then(r => (r.ok ? r.json() : null))
+    .then(data => {
+      const services = data && data.services ? data.services : {};
+      slots.forEach(el => {
+        const svc = services[el.dataset.sqPrice];
+        if (!svc || typeof svc.price !== 'number') return;
+
+        // data-sq-prefix renders things like "From $70"
+        el.textContent = (el.dataset.sqPrefix ? el.dataset.sqPrefix + ' ' : '') + money(svc.price);
+        el.setAttribute('data-sq-live', '');
+
+        // Keep any linked booking option in sync with the live price
+        const target = el.dataset.sqSync && document.querySelector(el.dataset.sqSync);
+        if (target) target.setAttribute('data-price', String(svc.price));
+      });
+    })
+    .catch(() => { /* hardcoded prices stay on screen */ });
+})();
